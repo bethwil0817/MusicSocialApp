@@ -1,0 +1,21 @@
+.center {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    height: 50px;
+    width: 200px;
+}
+
+img {
+    height: 500px;
+    width: 500px;
+}
+
+h1 {
+    color: red;
+}

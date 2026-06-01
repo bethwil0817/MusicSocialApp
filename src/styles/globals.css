@@ -1,21 +1,29 @@
+@import "tailwindcss";
+
 .center {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-button {
-    height: 50px;
-    width: 200px;
-}
-
-img {
-    height: 500px;
-    width: 500px;
+.carousel::-webkit-scrollbar {
+	display: none;
 }
 
 h1 {
-    color: red;
+	color: red;
+}
+
+@keyframes slide {
+	from {
+		translate: 0;
+	}
+	to {
+		translate: -100% 0;
+	}
+}
+
+.group {
+	animation: slide 15s infinite linear;
 }

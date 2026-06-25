@@ -1119,7 +1119,15 @@ export default function App() {
 														music and am a releasing artist on Spotify.
 													</div>
 													<div className="mt-4 md:mt-6 flex flex-col gap-6">
-														<button className="bg-[#a86933] p-2 w-max rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
+														<button
+															className="bg-[#a86933] p-2 w-max rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]"
+															onClick={() => {
+																window.open(
+																	"https://linktr.ee/thomasdijkstramusic",
+																	"_blank",
+																);
+															}}
+														>
 															Link Tree
 														</button>
 													</div>

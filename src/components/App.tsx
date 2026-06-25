@@ -74,7 +74,7 @@ export default function App() {
 	}, []);
 
 	useEffect(() => {
-		let timeoutRef = null;
+		let timeoutRef: any = null;
 
 		const handleScrollUp = () => {
 			setScrollUp(window.scrollY);
@@ -183,7 +183,7 @@ export default function App() {
 									display: "flex",
 								}}
 							>
-								<div className="my-auto w-full text-8xl gap-y-2 items-center justify-center tracking-wide sm:tracking-[0.35em] text-[#f3e5cd] text-center uppercase">
+								<div className="my-auto w-full text-base md:text-8xl gap-y-2 items-center justify-center tracking-wide sm:tracking-[0.35em] text-[#f3e5cd] text-center uppercase">
 									Revolūtiō
 								</div>
 							</motion.div>

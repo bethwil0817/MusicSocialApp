@@ -1,7 +1,13 @@
 import "../styles/App.module.css";
 import Login from "./Login";
 import UserHome from "./UserHome";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import {
+	HashRouter,
+	BrowserRouter,
+	Routes,
+	Route,
+	Link,
+} from "react-router-dom";
 import bannerVideo from "../images/revolutiobannercompress.mp4";
 import bannerVideoMobile from "../images/mobilebannercompress.mp4";
 import leftMountain from "../images/leftmountain.png";
@@ -108,7 +114,7 @@ export default function App() {
 	};
 
 	return (
-		<BrowserRouter>
+		<HashRouter>
 			<div
 				className="w-full mx-auto"
 				style={{ fontFamily: "'Montserrat', sans-serif" }}
@@ -1234,7 +1240,7 @@ export default function App() {
 										<div className="mb-8 mt-2 xl:mt-6 grid gap-6 text-[30px] md:text-[40px] tracking-wide sm:tracking-[0.35em] text-[rgb(255,226,190)] text-center m-auto uppercase">
 											Revolūtiō Global Culture Club
 										</div>
-										<div className="flex mb-6 text-xl w-full justify-between text-[rgb(255,226,190)] text-center m-auto">
+										<div className="flex-col md:flex-row flex mb-6 text-xl w-full justify-between text-[rgb(255,226,190)] text-center m-auto">
 											<div>Story.</div>
 											<div>Culture.</div>
 											<div>Connection.</div>
@@ -1288,6 +1294,6 @@ export default function App() {
 					</div>
 				</div>
 			</div>
-		</BrowserRouter>
+		</HashRouter>
 	);
 }

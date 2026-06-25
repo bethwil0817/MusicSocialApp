@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@media (prefers-reduced-motion) {
+	:root {
+		--scale: 0;
+	}
+}
+
 .center {
 	display: flex;
 	flex-direction: column;
@@ -25,5 +31,174 @@ h1 {
 }
 
 .group {
-	animation: slide 15s infinite linear;
+	animation: slide 10s infinite linear;
+}
+
+.textSlider {
+	animation: infinite-scroll 10s linear infinite;
+}
+
+@keyframes infinite-scroll {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+#container {
+	height: 100%;
+	min-height: 100vh;
+	width: 100%;
+	background: linear-gradient(
+		45deg,
+		rgb(10, 25, 15),
+		rgb(86, 109, 94),
+		rgb(10, 25, 15),
+		rgb(86, 109, 94)
+	);
+	background-size: 300% 300%;
+	animation: colorAni 7s ease-in-out infinite;
+}
+
+@keyframes colorAni {
+	0% {
+		background-position: 0 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0 50%;
+	}
+}
+
+.stack {
+	perspective: 1200px;
+
+	/* Add padding at the bottom so cards have room to scroll past each other */
+	padding-bottom: 50vh;
+	display: flex;
+	flex-direction: column;
+	gap: 20px; /* Spacing between cards before they stack */
+}
+
+.card {
+	position: sticky;
+	top: calc(var(--i) * 40px);
+	transform-style: preserve-3d;
+	width: min(950px, 80%);
+	height: 400px;
+	margin: 0 auto;
+
+	/* Fixed keyframe timeline attachment */
+	animation: stack linear both;
+	animation-timeline: view();
+	animation-range: entry 0% exit 50%;
+}
+
+.card1 {
+	--i: 1;
+}
+
+.card2 {
+	--i: 2;
+}
+
+@keyframes stack {
+	0% {
+		transform: translateY(0) translateZ(0) rotate(0) scale(1);
+	}
+	35% {
+		transform: translateY(100px) translateZ(-200px) rotate(8deg) scale(0.92);
+	}
+	70% {
+		transform: translateY(20px) translateZ(-120px) rotate(2deg) scale(0.95);
+	}
+	100% {
+		transform: translateY(0) translateZ(0) rotate(0) scale(1);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.image1 {
+		animation: opaque1 linear;
+		animation-timeline: scroll();
+	}
+
+	.image2 {
+		animation: opaque2 linear;
+		animation-timeline: scroll();
+	}
+
+	.image3 {
+		animation: opaque3 linear;
+		animation-timeline: scroll();
+	}
+
+	.image4 {
+		animation: opaque4 linear;
+		animation-timeline: scroll();
+	}
+
+	@keyframes opaque1 {
+		0% {
+			opacity: 1;
+			scale: 0.9;
+		}
+		70% {
+			opacity: 1;
+			scale: 1;
+		}
+		100% {
+			opacity: 0.8;
+			scale: 0.9;
+		}
+	}
+
+	@keyframes opaque2 {
+		0% {
+			opacity: 0.8;
+			scale: 0.9;
+		}
+		70% {
+			opacity: 1;
+			scale: 1;
+		}
+		100% {
+			opacity: 0.8;
+			scale: 0.93;
+		}
+	}
+
+	@keyframes opaque3 {
+		0% {
+			opacity: 0.8;
+			scale: 0.9;
+		}
+		90% {
+			opacity: 1;
+			scale: 1;
+		}
+		100% {
+			opacity: 0.8;
+			scale: 0.96;
+		}
+	}
+
+	@keyframes opaque4 {
+		0% {
+			opacity: 0.8;
+			scale: 0.9;
+		}
+		20% {
+			opacity: 1;
+			scale: 1;
+		}
+		100% {
+			opacity: 1;
+			scale: 1;
+		}
+	}
 }

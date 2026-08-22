@@ -1112,7 +1112,7 @@ export function Home() {
 
 export default function App() {
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename="/MusicSocialApp">
 			<Routes>
 				<Route
 					path="/"

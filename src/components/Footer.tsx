@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
 export default function Footer() {
+	const githubLink = window?.location?.href?.includes("github");
+
 	return (
 		<div className="bg-[rgb(10,25,15)] -mt-6 text-[rgb(255,226,190)]">
 			<div className="grid gap-6 md:grid-cols-2 relative w-full px-4 lg:px-20 pt-20">
@@ -30,7 +32,7 @@ export default function Footer() {
 						<Link
 							className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]"
 							to="/experiences"
-							reloadDocument
+							reloadDocument={githubLink}
 						>
 							Experiences
 						</Link>
@@ -40,7 +42,7 @@ export default function Footer() {
 						<Link
 							className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]"
 							to="/destinations"
-							reloadDocument
+							reloadDocument={githubLink}
 						>
 							Destinations
 						</Link>
@@ -59,14 +61,14 @@ export default function Footer() {
 						<Link
 							className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]"
 							to="/about"
-							reloadDocument
+							reloadDocument={githubLink}
 						>
 							About
 						</Link>
 						<Link
 							className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]"
 							to="/contact"
-							reloadDocument
+							reloadDocument={githubLink}
 						>
 							Contact
 						</Link>

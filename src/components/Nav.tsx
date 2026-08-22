@@ -8,6 +8,7 @@ export function Nav() {
 	const [showNav, setShowNav] = useState(true);
 	const [scrollUp, setScrollUp] = useState(0);
 	const [originalScroll, setOriginalScroll] = useState(0);
+	const githubLink = window?.location?.href?.includes("github");
 
 	useEffect(() => {
 		let timeoutRef: any = null;
@@ -91,7 +92,7 @@ export function Nav() {
 						<Link
 							to="/experiences"
 							className="hover:text-[#ffffff] cursor-pointer"
-							reloadDocument
+							reloadDocument={githubLink}
 						>
 							EXPERIENCES
 						</Link>
@@ -107,14 +108,14 @@ export function Nav() {
 						<Link
 							to="/contact"
 							className="hover:text-[#ffffff] cursor-pointer"
-							reloadDocument
+							reloadDocument={githubLink}
 						>
 							CONTACT/APPLY
 						</Link>
 						<Link
 							to="/about"
 							className="hover:text-[#ffffff] cursor-pointer"
-							reloadDocument
+							reloadDocument={githubLink}
 						>
 							ABOUT
 						</Link>
@@ -163,7 +164,7 @@ export function Nav() {
 						<Link
 							to="/experiences"
 							className="hover:text-[#8c6e56] cursor-pointer"
-							reloadDocument
+							reloadDocument={githubLink}
 						>
 							EXPERIENCES
 						</Link>
@@ -189,14 +190,14 @@ export function Nav() {
 						<Link
 							to="/contact"
 							className="hover:text-[#8c6e56] cursor-pointer"
-							reloadDocument
+							reloadDocument={githubLink}
 						>
 							CONTACT/APPLY
 						</Link>
 						<Link
 							to="/about"
 							className="hover:text-[#8c6e56] cursor-pointer"
-							reloadDocument
+							reloadDocument={githubLink}
 						>
 							ABOUT
 						</Link>

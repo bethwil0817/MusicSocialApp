@@ -9,11 +9,15 @@ module.exports = {
 		filename: "bundle.js",
 		path: path.resolve(__dirname, "dist"),
 		assetModuleFilename: "images/[name][ext]",
-		publicPath: "./",
+		// publicPath: "./",
 	},
 	devServer: {
-		static: path.resolve(__dirname, "dist"),
+		static: {
+			directory: path.resolve(__dirname, "dist"),
+		},
 		port: 8000,
+		hot: true,
+		historyApiFallback: true,
 	},
 	plugins: [
 		new HtmlWebpackPlugin({

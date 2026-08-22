@@ -1,13 +1,9 @@
 import "../styles/App.module.css";
-import Login from "./Login";
-import UserHome from "./UserHome";
-import {
-	HashRouter,
-	BrowserRouter,
-	Routes,
-	Route,
-	Link,
-} from "react-router-dom";
+import About from "./About";
+import { Link } from "react-router-dom";
+import Contact from "./Contact";
+import Experiences from "./Experiences";
+import { Routes, Route, BrowserRouter, useLocation } from "react-router-dom";
 import bannerVideo from "../images/revolutiobannercompress.mp4";
 import bannerVideoMobile from "../images/mobilebannercompress.mp4";
 import leftMountain from "../images/leftmountain.png";
@@ -35,71 +31,53 @@ import wavesComing from "../images/sunsetwaves.mp4";
 import { Reveal } from "./Reveal";
 import { useState, useEffect, useRef } from "react";
 import { useInView, motion, AnimatePresence } from "framer-motion";
+import { Nav } from "./Nav";
+import Footer from "./Footer";
 
-export default function App() {
-	const [showExperienceNav, setShowExperienceNav] = useState(false);
-	const [showAboutNav, setShowAboutNav] = useState(false);
-	const [showMobileMenu, setShowMobileMenu] = useState(false);
+export function Home() {
+	const locationRouter = useLocation();
+	const showIntro = locationRouter.state?.showIntro;
+
+	useEffect(() => {
+		// "instant" prevents jerky scrolling animations during a loader swap
+		document.documentElement.scrollTo({
+			top: 0,
+			left: 0,
+			behavior: "instant",
+		});
+	}, []);
+
 	const [selectedPath, setSelectedPath] = useState("artist");
 	const [world, setWorld] = useState("beach");
-	const [scrollUp, setScrollUp] = useState(0);
-	const [originalScroll, setOriginalScroll] = useState(0);
-	const [showNav, setShowNav] = useState(true);
-	const [showRLoad, setShowRLoad] = useState(true);
+	const [showRLoad, setShowRLoad] = useState(showIntro ?? true);
 	const [showRevolLoad, setShowRevolLoad] = useState(false);
 	const videoRef = useRef(null);
 
 	const isInView = useInView(videoRef);
 
 	useEffect(() => {
-		document.body.style.overflow = "hidden";
+		if (showRLoad) {
+			document.body.style.overflow = "hidden";
 
-		// Timer 1: Show the div after 2.5 seconds
-		const showTimer = setTimeout(() => {
-			setShowRLoad(false);
-			setShowRevolLoad(true);
-		}, 3000); // 2500 milliseconds = 2.5 seconds
+			// Timer 1: Show the div after 2.5 seconds
+			const showTimer = setTimeout(() => {
+				setShowRLoad(false);
+				setShowRevolLoad(true);
+			}, 3000); // 2500 milliseconds = 2.5 seconds
 
-		// Timer 2: Hide the div after 5 seconds total
-		const hideTimer = setTimeout(() => {
-			setShowRevolLoad(false);
-			document.body.style.overflow = "auto";
-		}, 5000); // 5000 milliseconds = 5 seconds
+			// Timer 2: Hide the div after 5 seconds total
+			const hideTimer = setTimeout(() => {
+				setShowRevolLoad(false);
+				document.body.style.overflow = "auto";
+			}, 5000); // 5000 milliseconds = 5 seconds
 
-		// Clean up both timers to avoid memory leaks if the user navigates away
-		return () => {
-			clearTimeout(showTimer);
-			clearTimeout(hideTimer);
-		};
+			// Clean up both timers to avoid memory leaks if the user navigates away
+			return () => {
+				clearTimeout(showTimer);
+				clearTimeout(hideTimer);
+			};
+		}
 	}, []);
-
-	useEffect(() => {
-		let timeoutRef: any = null;
-
-		const handleScrollUp = () => {
-			setScrollUp(window.scrollY);
-
-			if (scrollUp > originalScroll) {
-				setShowNav(false);
-				console.log(scrollUp, originalScroll);
-			} else {
-				setShowNav(true);
-			}
-
-			timeoutRef = setTimeout(() => {
-				setOriginalScroll(scrollUp);
-			}, 1);
-			console.log(scrollUp, originalScroll);
-		};
-
-		window.addEventListener("scroll", handleScrollUp, { passive: true });
-		return () => {
-			removeEventListener("scroll", handleScrollUp);
-			if (timeoutRef) {
-				clearTimeout(timeoutRef);
-			}
-		};
-	}, [window.scrollY, scrollUp, originalScroll]);
 
 	const getBg = () => {
 		if (world === "beach") {
@@ -114,7 +92,7 @@ export default function App() {
 	};
 
 	return (
-		<HashRouter>
+		<div>
 			<div
 				className="w-full mx-auto"
 				style={{ fontFamily: "'Montserrat', sans-serif" }}
@@ -190,20 +168,7 @@ export default function App() {
 						)}
 					</AnimatePresence>
 				</div>
-				<Routes>
-					<Route
-						path="/login"
-						element={<Login login={true} />}
-					/>
-					<Route
-						path="/signup"
-						element={<Login login={false} />}
-					/>
-					<Route
-						path="/home"
-						element={<UserHome />}
-					/>
-				</Routes>
+
 				<div
 					className="center text-2xl"
 					style={{ fontFamily: "'Montserrat', sans-serif" }}
@@ -241,132 +206,7 @@ export default function App() {
 								/>
 							</video>
 						</div>
-						<div
-							className={`flex flex-col transition-all ease-in-out duration-200 md:hidden bg-[rgba(255,255,255,0.6)] justify-end h-15 w-full fixed top-0 right-0 z-40 pl-6 ${showNav ? "opacity-100 visible" : "pointer-events-none opacity-0 invisible"}`}
-						>
-							<div>
-								<button
-									id="mobile-menu-button"
-									type="button"
-									className="text-gray-700 w-auto bg-transparent focus:outline-none cursor-pointer justify-self-end"
-									onClick={() => {
-										setShowMobileMenu(!showMobileMenu);
-									}}
-								>
-									<svg
-										className="h-10 w-10"
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke="currentColor"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M4 6h16M4 12h16M4 18h16"
-										/>
-									</svg>
-								</button>
-								<div
-									className={`bg-[rgba(255,255,255,0.6)] fixed -ml-4 top-15 text-[#88572c] flex-col flex p-3 w-full text-xl gap-2 rounded-b-lg transition-all ease-in-out ${showMobileMenu ? "visible opacity-100" : "hidden invisible opacity-0"}`}
-								>
-									<a
-										className="hover:text-[#ffffff] cursor-pointer"
-										id="montFont"
-									>
-										HOME
-									</a>
-									<hr></hr>
-									<a
-										className="hover:text-[#ffffff] cursor-pointer"
-										id="montFont"
-									>
-										DESTINATIONS
-									</a>
-									<a className="hover:text-[#ffffff] cursor-pointer">
-										RESIDENCIES
-									</a>
-									<a className="hover:text-[#ffffff] cursor-pointer">
-										EXPERIENCES
-									</a>
-									<hr></hr>
-									<a className="hover:text-[#ffffff] cursor-pointer">
-										MEMBERSHIP
-									</a>
-									<a className="hover:text-[#ffffff] cursor-pointer">EVENTS</a>
-									<a className="hover:text-[#ffffff] cursor-pointer">
-										CONSULTING
-									</a>
-									<a className="hover:text-[#ffffff] cursor-pointer">ARTISTS</a>
-									<a className="hover:text-[#ffffff] cursor-pointer">
-										CONTACT/APPLY
-									</a>
-									<a className="hover:text-[#ffffff] cursor-pointer">ABOUT</a>
-								</div>
-							</div>
-						</div>
-						<div
-							className={`hidden md:flex transition-all duration-200 ease-in-out bg-[rgba(255,255,255,0.7)] h-20 w-full gap-16 justify-end fixed top-0 right-0 z-40 p-6 pr-10 ${showNav ? "opacity-100 visible" : "pointer-events-none opacity-0 invisible"}`}
-						>
-							<div className="text-[#88572c] text-2xl">
-								<div className="hover:cursor-pointer montserrat">HOME</div>
-							</div>
-							<div
-								className="text-2xl montserrat"
-								onMouseOver={() => {
-									setShowExperienceNav(true);
-									console.log(showExperienceNav);
-								}}
-								onMouseLeave={() => {
-									setShowExperienceNav(false);
-									console.log(showExperienceNav);
-								}}
-							>
-								<div className="text-[#88572c] hover:cursor-pointer">
-									EXPERIENCES
-								</div>
-								<div
-									className={`bg-[rgba(255,255,255,0.9)] text-[#88572c] flex-col flex p-3 text-xl gap-2 rounded-lg transition-all ease-in-out ${showExperienceNav ? "visible opacity-100" : "invisible opacity-0"}`}
-								>
-									<a
-										className="hover:text-[#8c6e56] cursor-pointer"
-										id="montFont"
-									>
-										DESTINATIONS
-									</a>
-									<a className="hover:text-[#8c6e56] cursor-pointer">
-										RESIDENCIES
-									</a>
-									<a className="hover:text-[#8c6e56] cursor-pointer">
-										EXPERIENCES
-									</a>
-								</div>
-							</div>
-							<div
-								className="text-2xl montserrat mr-10"
-								onMouseOver={() => setShowAboutNav(true)}
-								onMouseOut={() => setShowAboutNav(false)}
-							>
-								<div className="text-[#88572c] hover:cursor-pointer">ABOUT</div>
-								<div
-									className={`bg-[rgba(255,255,255,0.9)] text-[#88572c] flex-col flex p-3 text-xl gap-2 rounded-lg ${showAboutNav ? "visible opacity-100" : "invisible opacity-0"}`}
-								>
-									<a className="hover:text-[#8c6e56] cursor-pointer">
-										MEMBERSHIP
-									</a>
-									<a className="hover:text-[#8c6e56] cursor-pointer">EVENTS</a>
-									<a className="hover:text-[#8c6e56] cursor-pointer">
-										CONSULTING
-									</a>
-									<a className="hover:text-[#8c6e56] cursor-pointer">ARTISTS</a>
-									<a className="hover:text-[#8c6e56] cursor-pointer">
-										CONTACT/APPLY
-									</a>
-									<a className="hover:text-[#8c6e56] cursor-pointer">ABOUT</a>
-								</div>
-							</div>
-						</div>
+						<Nav />
 					</div>
 				</div>
 				<div className="mt-137.5 sm:mt-200">
@@ -564,7 +404,7 @@ export default function App() {
 									</div>
 									<div className="relative w-full p-6 rounded-b-lg bg-[#a86933]! text-white flex-col flex-grow flex items-center justify-center min-h-[600px] sm:min-h-[450px]">
 										<div
-											className={`absolute inset-0 justify-center flex flex-col p-6 py-4 m-auto items-center text-center gap-6 transition-all ease-in-out duration-700 pointer-events-none ${selectedPath === "artist" ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95"}`}
+											className={`absolute inset-0 justify-center flex flex-col p-6 py-4 m-auto items-center text-center gap-6 transition-all ease-in-out duration-700 pointer-events-none ${selectedPath === "artist" ? "z-100 opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95"}`}
 										>
 											<img
 												className="mx-auto"
@@ -576,12 +416,15 @@ export default function App() {
 												visual artists, performers, and creative entrepreneurs
 												seeking space to create, connect, and share work.
 											</div>
-											<button className="p-2 mx-auto cursor-pointer bg-[#e7cdb6] hover:bg-white text-[#a86933] rounded-lg w-max">
+											<Link
+												className="p-2 z-200 pointer-events-auto mx-auto hover:cursor-pointer bg-[#e7cdb6] hover:bg-white text-[#a86933] rounded-lg w-max"
+												to="/contact?form=Residency"
+											>
 												Apply for a Residency
-											</button>
+											</Link>
 										</div>
 										<div
-											className={`absolute inset-0 justify-center flex flex-col p-6 m-auto items-center text-center gap-6 transition-all ease-in-out duration-700 pointer-events-none ${selectedPath === "join" ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95"}`}
+											className={`absolute inset-0 justify-center flex flex-col p-6 m-auto items-center text-center gap-6 transition-all ease-in-out duration-700 pointer-events-none ${selectedPath === "join" ? "z-100 opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95"}`}
 										>
 											<img
 												className="mx-auto"
@@ -593,12 +436,15 @@ export default function App() {
 												experiences, entertainment, travel planning, events,
 												artist showcases, and cultural opportunities.
 											</div>
-											<button className="p-2 mx-auto cursor-pointer bg-[#e7cdb6] hover:bg-white text-[#a86933] rounded-lg w-max">
+											<Link
+												className="p-2 z-200 pointer-events-auto mx-auto hover:cursor-pointer bg-[#e7cdb6] hover:bg-white text-[#a86933] rounded-lg w-max"
+												to="/contact?form=Membership"
+											>
 												Join the Culture Club
-											</button>
+											</Link>
 										</div>
 										<div
-											className={`absolute inset-0 justify-center flex flex-col p-6 m-auto items-center text-center gap-6 transition-all ease-in-out duration-700 pointer-events-none ${selectedPath === "partner" ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95"}`}
+											className={`absolute inset-0 justify-center flex flex-col p-6 m-auto items-center text-center gap-6 transition-all ease-in-out duration-700 pointer-events-none ${selectedPath === "partner" ? "z-100 opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95"}`}
 										>
 											<img
 												className="mx-auto"
@@ -611,9 +457,12 @@ export default function App() {
 												programming, events, funding strategy, creative
 												direction, or cultural development.
 											</div>
-											<button className="p-2 mx-auto cursor-pointer bg-[#e7cdb6] hover:bg-white text-[#a86933] rounded-lg w-max">
+											<Link
+												className="p-2 z-200 pointer-events-auto mx-auto hover:cursor-pointer bg-[#e7cdb6] hover:bg-white text-[#a86933] rounded-lg w-max"
+												to="/contact?form=Partner"
+											>
 												Work With Revolūtiō
-											</button>
+											</Link>
 										</div>
 									</div>
 								</div>
@@ -768,7 +617,7 @@ export default function App() {
 					</div>
 					<div className="relative w-full min-h-[200vh]">
 						<div className="w-full sticky h-screen bg-[rgba(253,240,214,0.7)] top-0 flex items-center justify-center">
-							<div className="w-full p-4 md:p-6 py-20 relative">
+							<div className="w-full py-20 relative">
 								<video
 									className="w-full h-full md:bg-center object-right object-cover absolute top-0 right-0 z-10 opacity-50"
 									playsInline
@@ -1067,7 +916,9 @@ export default function App() {
 										</Reveal>
 										<Reveal>
 											<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-max text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-												View Consulting Services
+												<Link to="/contact?form=Consulting">
+													Inquire For Consulting
+												</Link>
 											</button>
 										</Reveal>
 									</div>
@@ -1218,90 +1069,68 @@ export default function App() {
 										<div className="md:border-r border-[#a86933] px-2 md:px-6 md:py-10">
 											<Reveal xVal={-200}>
 												<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-													Plan My Experience
+													<Link to="/contact?form=Experience">
+														Plan My Experience
+													</Link>
 												</button>
 											</Reveal>
 											<Reveal xVal={-200}>
-												<button className="bg-[#a86933] border-b mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-													Apply as an Artist
+												<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
+													<Link to="/contact?form=Residency">
+														Apply as an Artist
+													</Link>
 												</button>
 											</Reveal>
 										</div>
 										<div className="md:px-6 py-4 md:py-10">
 											<Reveal xVal={200}>
 												<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-													Join the Culture Club
+													<Link to="/contact?form=Membership">
+														Join the Culture Club
+													</Link>
 												</button>
 											</Reveal>
 											<Reveal xVal={200}>
 												<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-													Partner With Us
+													<Link to="/contact?form=Partner">
+														Partner With Us
+													</Link>
 												</button>
 											</Reveal>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div className="bg-[rgb(10,25,15)] -mt-6 text-[rgb(255,226,190)]">
-								<div className="grid gap-6 md:grid-cols-2 relative w-full px-4 lg:px-20 pt-20">
-									<div className="lg:border-r border-[rgb(255,226,190)] p-8 my-auto">
-										<div className="mb-8 mt-2 xl:mt-6 grid gap-6 text-[30px] md:text-[40px] tracking-wide sm:tracking-[0.35em] text-[rgb(255,226,190)] text-center m-auto uppercase">
-											Revolūtiō Global Culture Club
-										</div>
-										<div className="flex-col md:flex-row flex mb-6 text-xl w-full justify-between text-[rgb(255,226,190)] text-center m-auto">
-											<div>Story.</div>
-											<div>Culture.</div>
-											<div>Connection.</div>
-											<div>Experience.</div>
-										</div>
-									</div>
-									<div>
-										<div className="underline uppercase flex text-center text-[rgb(255,226,190)] justify-center underline-offset-8 text-xl tracking-wide sm:tracking-[0.35em] pb-6">
-											Navigation
-										</div>
-										<div className="grid grid-cols-1 md:grid-cols-2 text-[rgb(255,226,190)]">
-											<button className="p-2 lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]">
-												Home
-											</button>
-											<button className="p-2 lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]">
-												Experiences
-											</button>
-											<button className="p-2 lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]">
-												Residencies
-											</button>
-											<button className="p-2 lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]">
-												Destinations
-											</button>
-											<button className="p-2 lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]">
-												Membership
-											</button>
-											<button className="p-2 lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]">
-												Events
-											</button>
-											<button className="p-2 lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]">
-												Consulting
-											</button>
-											<button className="p-2 lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]">
-												Artists
-											</button>
-											<button className="p-2 lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]">
-												About
-											</button>
-											<button className="p-2 lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]">
-												Contact
-											</button>
-										</div>
-									</div>
-								</div>
-								<div className="text-center m-auto p-6">
-									Revolūtiō Global Culture Club © 2026 Beth Willner. All Rights
-									Reserved.
-								</div>
-							</div>
+							<Footer />
 						</div>
 					</div>
 				</div>
 			</div>
-		</HashRouter>
+		</div>
+	);
+}
+
+export default function App() {
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route
+					path="/"
+					element={<Home />}
+				></Route>
+				<Route
+					path="/about"
+					element={<About />}
+				></Route>
+				<Route
+					path="/contact"
+					element={<Contact />}
+				></Route>
+				<Route
+					path="/experiences"
+					element={<Experiences />}
+				></Route>
+			</Routes>
+		</BrowserRouter>
 	);
 }

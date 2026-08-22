@@ -17,10 +17,6 @@
 	display: none;
 }
 
-h1 {
-	color: red;
-}
-
 @keyframes slide {
 	from {
 		translate: 0;

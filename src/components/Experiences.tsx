@@ -101,7 +101,11 @@ export default function Experiences() {
 				fontFamily: "'Montserrat', sans-serif",
 			}}
 		>
-			<Nav />
+			<img
+				src={guatmount}
+				loading="lazy"
+				className="hidden invisible"
+			/>
 			<div className="mx-auto">
 				<div
 					className="px-2 md:px-6 pt-20 pb-10"
@@ -284,7 +288,6 @@ export default function Experiences() {
 					</div>
 				</div>
 			</div>
-			<Footer />
 		</div>
 	);
 }

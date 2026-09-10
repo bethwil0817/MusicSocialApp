@@ -1,22 +1,32 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const isProduction = process.env.NODE_ENV === "production";
+const webpack = require("webpack");
 
 module.exports = {
-	mode: "development",
+	mode: isProduction ? "production" : "development",
 	target: "web",
-	entry: "./src/index.tsx",
+	entry: {
+		main: [
+			"webpack-hot-middleware/client?reload=true&timeout=2000",
+			"./src/index.tsx", // Enables HMR
+		],
+	},
 	output: {
 		filename: "bundle.js",
 		path: path.resolve(__dirname, "dist"),
 		assetModuleFilename: "images/[name][ext]",
-		publicPath: "./",
+		// publicPath: "./", NOT SURE IF THIS IS NEEDED FOR DEPLOYMNET
+		publicPath: isProduction ? "/MusicSocialApp/" : "/",
 	},
 	devServer: {
 		static: path.resolve(__dirname, "dist"),
 		// static: {
 		// 	directory: path.resolve(__dirname, "dist"),
 		// },
-		port: 8000,
+		// port: 8000 FOR GITHUB DEPLOY
+		historyApiFallback: true,
+		port: 8001,
 		// hot: true,
 		// historyApiFallback: true,
 	},
@@ -24,6 +34,8 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: "./src/index.html",
 		}),
+		new webpack.EnvironmentPlugin(["NODE_ENV", "SERVER_HOST", "SERVER_PORT"]),
+		new webpack.HotModuleReplacementPlugin(), // Enables HMR
 	],
 	module: {
 		rules: [

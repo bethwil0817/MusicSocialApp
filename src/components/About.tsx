@@ -17,7 +17,6 @@ export default function About() {
 					backgroundSize: "cover",
 				}}
 			>
-				<Nav />
 				<Reveal>
 					<img
 						src={revlogo}
@@ -173,7 +172,6 @@ export default function About() {
 					</Reveal>
 				</div>
 			</div>
-			<Footer />
 		</div>
 	);
 }

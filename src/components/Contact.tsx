@@ -4,8 +4,10 @@ import { Reveal } from "./Reveal";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { hasTransform } from "framer-motion";
 import Footer from "./Footer";
+import { useFetch } from "../hooks/useFetch";
 
 export default function Contact() {
+	const data = useFetch("/api/home");
 	const [searchParams] = useSearchParams();
 	const formAuto = searchParams.get("form") as
 		| "Experience"
@@ -35,7 +37,6 @@ export default function Contact() {
 				className="bg-[rgb(59,33,2)] pb-20 w-full h-full  min-h-screen"
 				style={{ fontFamily: "'Montserrat', sans-serif" }}
 			>
-				<Nav />
 				<div className="p-6">
 					<Reveal delayVal={0}>
 						<h1 className="pt-30 text-[48px] xl:text-6xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(195,112,10)] text-center justify-center items-center uppercase">
@@ -598,7 +599,6 @@ export default function Contact() {
 					</div>
 				</div>
 			</div>
-			<Footer />
 		</div>
 	);
 }

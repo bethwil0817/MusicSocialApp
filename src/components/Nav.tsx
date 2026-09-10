@@ -70,14 +70,13 @@ export function Nav() {
 					<div
 						className={`bg-[rgba(255,255,255,0.6)] fixed -ml-4 top-15 text-[#88572c] flex-col flex p-3 w-full text-xl gap-2 rounded-b-lg transition-all ease-in-out ${showMobileMenu ? "visible opacity-100" : "hidden invisible opacity-0"}`}
 					>
-						<Link
+						<a
 							className="hover:text-[#ffffff] cursor-pointer"
 							id="montFont"
-							to="/"
-							state={{ showIntro: false }}
+							href="/"
 						>
 							HOME
-						</Link>
+						</a>
 						<hr></hr>
 						<a
 							className="hover:text-[#ffffff] cursor-pointer"
@@ -88,13 +87,12 @@ export function Nav() {
 						{/* <a className="hover:text-[#ffffff] cursor-pointer">
 										RESIDENCIES
 									</a> */}
-						<Link
-							to="/experiences"
+						<a
+							href="/experiences"
 							className="hover:text-[#ffffff] cursor-pointer"
-							// reloadDocument={githubLink}
 						>
 							EXPERIENCES
-						</Link>
+						</a>
 						<hr></hr>
 						{/* <a className="hover:text-[#ffffff] cursor-pointer">
 										MEMBERSHIP
@@ -104,20 +102,18 @@ export function Nav() {
 										CONSULTING
 									</a> */}
 						{/* <a className="hover:text-[#ffffff] cursor-pointer">ARTISTS</a> */}
-						<Link
-							to="/contact"
+						<a
+							href="/contact"
 							className="hover:text-[#ffffff] cursor-pointer"
-							// reloadDocument={githubLink}
 						>
 							CONTACT/APPLY
-						</Link>
-						<Link
-							to="/about"
+						</a>
+						<a
+							href="/about"
 							className="hover:text-[#ffffff] cursor-pointer"
-							// reloadDocument={githubLink}
 						>
 							ABOUT
-						</Link>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -125,13 +121,12 @@ export function Nav() {
 				className={`hidden md:flex transition-all duration-200 ease-in-out bg-[rgba(255,255,255,0.7)] h-20 w-full gap-16 justify-end fixed top-0 right-0 z-40 p-6 pr-10 ${showNav ? "opacity-100 visible" : "pointer-events-none opacity-0 invisible"}`}
 			>
 				<div className="text-[#88572c] text-2xl">
-					<Link
+					<a
 						className="hover:cursor-pointer montserrat"
-						to="/"
-						state={{ showIntro: false }}
+						href="/"
 					>
 						HOME
-					</Link>
+					</a>
 				</div>
 				<div
 					className="text-2xl montserrat"
@@ -160,13 +155,12 @@ export function Nav() {
 									>
 										RESIDENCIES
 									</a> */}
-						<Link
-							to="/experiences"
+						<a
+							href="/experiences"
 							className="hover:text-[#8c6e56] cursor-pointer"
-							// reloadDocument={githubLink}
 						>
 							EXPERIENCES
-						</Link>
+						</a>
 					</div>
 				</div>
 				<div
@@ -186,20 +180,18 @@ export function Nav() {
 										CONSULTING
 									</a>
 									<a className="hover:text-[#8c6e56] cursor-pointer">ARTISTS</a> */}
-						<Link
-							to="/contact"
+						<a
+							href="/contact"
 							className="hover:text-[#8c6e56] cursor-pointer"
-							// reloadDocument={githubLink}
 						>
 							CONTACT/APPLY
-						</Link>
-						<Link
-							to="/about"
+						</a>
+						<a
+							href="/about"
 							className="hover:text-[#8c6e56] cursor-pointer"
-							// reloadDocument={githubLink}
 						>
 							ABOUT
-						</Link>
+						</a>
 					</div>
 				</div>
 			</div>

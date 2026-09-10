@@ -1,6 +1,6 @@
 import "../styles/App.module.css";
 import About from "./About";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Contact from "./Contact";
 import Experiences from "./Experiences";
 import { Routes, Route, BrowserRouter, useLocation } from "react-router-dom";
@@ -33,10 +33,12 @@ import { useState, useEffect, useRef } from "react";
 import { useInView, motion, AnimatePresence } from "framer-motion";
 import { Nav } from "./Nav";
 import Footer from "./Footer";
+import { useFetch } from "../hooks/useFetch";
 
 export function Home() {
 	const locationRouter = useLocation();
-	const showIntro = locationRouter.state?.showIntro;
+	const data = useFetch("/api/");
+	// const showIntro = useState(data.message !== "Home API route works!")[0];
 
 	useEffect(() => {
 		// "instant" prevents jerky scrolling animations during a loader swap
@@ -49,35 +51,35 @@ export function Home() {
 
 	const [selectedPath, setSelectedPath] = useState("artist");
 	const [world, setWorld] = useState("beach");
-	const [showRLoad, setShowRLoad] = useState(showIntro ?? true);
+	// const [showRLoad, setShowRLoad] = useState(showIntro ?? true);
 	const [showRevolLoad, setShowRevolLoad] = useState(false);
 	const videoRef = useRef(null);
 
 	const isInView = useInView(videoRef);
 
-	useEffect(() => {
-		if (showRLoad) {
-			document.body.style.overflow = "hidden";
+	// useEffect(() => {
+	// 	if (showRLoad) {
+	// 		document.body.style.overflow = "hidden";
 
-			// Timer 1: Show the div after 2.5 seconds
-			const showTimer = setTimeout(() => {
-				setShowRLoad(false);
-				setShowRevolLoad(true);
-			}, 3000); // 2500 milliseconds = 2.5 seconds
+	// 		// Timer 1: Show the div after 2.5 seconds
+	// 		const showTimer = setTimeout(() => {
+	// 			setShowRLoad(false);
+	// 			setShowRevolLoad(true);
+	// 		}, 3000); // 2500 milliseconds = 2.5 seconds
 
-			// Timer 2: Hide the div after 5 seconds total
-			const hideTimer = setTimeout(() => {
-				setShowRevolLoad(false);
-				document.body.style.overflow = "auto";
-			}, 5000); // 5000 milliseconds = 5 seconds
+	// 		// Timer 2: Hide the div after 5 seconds total
+	// 		const hideTimer = setTimeout(() => {
+	// 			setShowRevolLoad(false);
+	// 			document.body.style.overflow = "auto";
+	// 		}, 5000); // 5000 milliseconds = 5 seconds
 
-			// Clean up both timers to avoid memory leaks if the user navigates away
-			return () => {
-				clearTimeout(showTimer);
-				clearTimeout(hideTimer);
-			};
-		}
-	}, []);
+	// 		// Clean up both timers to avoid memory leaks if the user navigates away
+	// 		return () => {
+	// 			clearTimeout(showTimer);
+	// 			clearTimeout(hideTimer);
+	// 		};
+	// 	}
+	// }, []);
 
 	const getBg = () => {
 		if (world === "beach") {
@@ -97,7 +99,7 @@ export function Home() {
 				className="w-full mx-auto"
 				style={{ fontFamily: "'Montserrat', sans-serif" }}
 			>
-				<div
+				{/* <div
 					id="container"
 					className={`fixed top-0 flex transition-all duration-400 justify-center items-center bottom-0 left-0 right-0 min-h-screen bg-radial from-[rgb(10,25,15)] via-[rgb(10,25,15)] to-[rgb(33,45,37)] ${!showRLoad && !showRevolLoad ? "opacity-0 z-0" : "z-100 opacity-100"}`}
 					style={{ fontFamily: "'Montserrat', sans-serif" }}
@@ -167,7 +169,7 @@ export function Home() {
 							</motion.div>
 						)}
 					</AnimatePresence>
-				</div>
+				</div> */}
 
 				<div
 					className="center text-2xl"
@@ -206,7 +208,6 @@ export function Home() {
 								/>
 							</video>
 						</div>
-						<Nav />
 					</div>
 				</div>
 				<div className="mt-137.5 sm:mt-200">
@@ -1101,7 +1102,6 @@ export function Home() {
 									</div>
 								</div>
 							</div>
-							<Footer />
 						</div>
 					</div>
 				</div>
@@ -1112,25 +1112,10 @@ export function Home() {
 
 export default function App() {
 	return (
-		<BrowserRouter basename="/MusicSocialApp">
-			<Routes>
-				<Route
-					path="/"
-					element={<Home />}
-				></Route>
-				<Route
-					path="/about"
-					element={<About />}
-				></Route>
-				<Route
-					path="/contact"
-					element={<Contact />}
-				></Route>
-				<Route
-					path="/experiences"
-					element={<Experiences />}
-				></Route>
-			</Routes>
-		</BrowserRouter>
+		<>
+			<Nav />
+			<Outlet />
+			<Footer />
+		</>
 	);
 }

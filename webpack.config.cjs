@@ -25,10 +25,7 @@ module.exports = {
 		path: path.resolve(__dirname, "dist"),
 		assetModuleFilename: "images/[name][ext]",
 		// publicPath: "./", NOT SURE IF THIS IS NEEDED FOR DEPLOYMNET
-		publicPath:
-			isProduction && !process.env.VERCEL
-				? "https://bethwil0817.github.io/MusicSocialApp/"
-				: "/",
+		publicPath: "/",
 	},
 	devServer: {
 		static: path.resolve(__dirname, "dist"),

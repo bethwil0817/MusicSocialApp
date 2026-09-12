@@ -7,6 +7,8 @@ const webpack = require("webpack");
 require("dotenv").config();
 const Dotenv = require("dotenv-webpack");
 
+const isProduction = process?.env?.NODE_ENV === "production";
+
 module.exports = {
 	mode: isProduction ? "production" : "development",
 	target: "web",

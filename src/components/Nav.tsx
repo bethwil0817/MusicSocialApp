@@ -70,29 +70,30 @@ export function Nav() {
 					<div
 						className={`bg-[rgba(255,255,255,0.6)] fixed -ml-4 top-15 text-[#88572c] flex-col flex p-3 w-full text-xl gap-2 rounded-b-lg transition-all ease-in-out ${showMobileMenu ? "visible opacity-100" : "hidden invisible opacity-0"}`}
 					>
-						<a
+						<Link
 							className="hover:text-[#ffffff] cursor-pointer"
 							id="montFont"
-							href="/"
+							to="/"
 						>
 							HOME
-						</a>
+						</Link>
 						<hr></hr>
-						<a
+						{/* <Link
+							to="/destinations"
 							className="hover:text-[#ffffff] cursor-pointer"
 							id="montFont"
 						>
 							DESTINATIONS
-						</a>
+						</Link> */}
 						{/* <a className="hover:text-[#ffffff] cursor-pointer">
 										RESIDENCIES
 									</a> */}
-						<a
-							href="/experiences"
+						<Link
+							to="/experiences"
 							className="hover:text-[#ffffff] cursor-pointer"
 						>
 							EXPERIENCES
-						</a>
+						</Link>
 						<hr></hr>
 						{/* <a className="hover:text-[#ffffff] cursor-pointer">
 										MEMBERSHIP
@@ -102,18 +103,18 @@ export function Nav() {
 										CONSULTING
 									</a> */}
 						{/* <a className="hover:text-[#ffffff] cursor-pointer">ARTISTS</a> */}
-						<a
-							href="/contact"
+						<Link
+							to="/contact"
 							className="hover:text-[#ffffff] cursor-pointer"
 						>
 							CONTACT/APPLY
-						</a>
-						<a
-							href="/about"
+						</Link>
+						<Link
+							to="/about"
 							className="hover:text-[#ffffff] cursor-pointer"
 						>
 							ABOUT
-						</a>
+						</Link>
 					</div>
 				</div>
 			</div>
@@ -121,12 +122,12 @@ export function Nav() {
 				className={`hidden md:flex transition-all duration-200 ease-in-out bg-[rgba(255,255,255,0.7)] h-20 w-full gap-16 justify-end fixed top-0 right-0 z-40 p-6 pr-10 ${showNav ? "opacity-100 visible" : "pointer-events-none opacity-0 invisible"}`}
 			>
 				<div className="text-[#88572c] text-2xl">
-					<a
+					<Link
 						className="hover:cursor-pointer montserrat"
-						href="/"
+						to="/"
 					>
 						HOME
-					</a>
+					</Link>
 				</div>
 				<div
 					className="text-2xl montserrat"
@@ -143,24 +144,24 @@ export function Nav() {
 					<div
 						className={`bg-[rgba(255,255,255,0.9)] text-[#88572c] flex-col flex p-3 text-xl gap-2 rounded-lg transition-all ease-in-out ${showExperienceNav ? "visible opacity-100" : "invisible opacity-0"}`}
 					>
-						<a
+						{/* <a
 							className="hover:text-[#8c6e56] cursor-pointer"
 							id="montFont"
 						>
 							DESTINATIONS
-						</a>
+						</a> */}
 						{/* <a
 										className="hover:text-[#8c6e56] cursor-pointer"
 										id="montFont"
 									>
 										RESIDENCIES
 									</a> */}
-						<a
-							href="/experiences"
+						<Link
+							to="/experiences"
 							className="hover:text-[#8c6e56] cursor-pointer"
 						>
 							EXPERIENCES
-						</a>
+						</Link>
 					</div>
 				</div>
 				<div
@@ -180,18 +181,18 @@ export function Nav() {
 										CONSULTING
 									</a>
 									<a className="hover:text-[#8c6e56] cursor-pointer">ARTISTS</a> */}
-						<a
-							href="/contact"
+						<Link
+							to="/contact"
 							className="hover:text-[#8c6e56] cursor-pointer"
 						>
 							CONTACT/APPLY
-						</a>
-						<a
-							href="/about"
+						</Link>
+						<Link
+							to="/about"
 							className="hover:text-[#8c6e56] cursor-pointer"
 						>
 							ABOUT
-						</a>
+						</Link>
 					</div>
 				</div>
 			</div>

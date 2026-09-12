@@ -2,6 +2,7 @@ import { Nav } from "./Nav";
 import guatmount from "../images/guatmount.jpg";
 import { Reveal } from "./Reveal";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 export default function Experiences() {
 	const planningPricingData: {
@@ -163,14 +164,13 @@ export default function Experiences() {
 								<div>Custom itinerary planning</div>
 							</div>
 							<div className="text-center mt-10 flex flex-col md:flex-row gap-6 justify-center items-center">
-								<button
+								<Link
 									className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
-									onClick={() =>
-										window.location.assign("/contact?form=Experience")
-									}
+									to="/contact?form=Experience"
+									reloadDocument={true}
 								>
 									Experience Inquiry Form
-								</button>
+								</Link>
 								<button className="p-4 min-w-[230px] rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer">
 									View Pricing
 								</button>

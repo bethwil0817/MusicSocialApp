@@ -1,9 +1,6 @@
 import "../styles/App.module.css";
-import About from "./About";
 import { Link, Outlet } from "react-router-dom";
-import Contact from "./Contact";
-import Experiences from "./Experiences";
-import { Routes, Route, BrowserRouter, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import bannerVideo from "../images/revolutiobannercompress.mp4";
 import bannerVideoMobile from "../images/mobilebannercompress.mp4";
 import leftMountain from "../images/leftmountain.png";
@@ -30,16 +27,12 @@ import bioPic1 from "../images/biopic.jpg";
 import wavesComing from "../images/sunsetwaves.mp4";
 import { Reveal } from "./Reveal";
 import { useState, useEffect, useRef } from "react";
-import { useInView, motion, AnimatePresence } from "framer-motion";
+import { useInView } from "framer-motion";
 import { Nav } from "./Nav";
 import Footer from "./Footer";
 import { useFetch } from "../hooks/useFetch";
 
 export function Home() {
-	const locationRouter = useLocation();
-	const data = useFetch("/api/");
-	// const showIntro = useState(data.message !== "Home API route works!")[0];
-
 	useEffect(() => {
 		// "instant" prevents jerky scrolling animations during a loader swap
 		document.documentElement.scrollTo({
@@ -248,18 +241,27 @@ export function Home() {
 										community.
 									</div>
 									<div className="flex flex-col lg:flex-row gap-6 items-center justify-center">
-										<button
+										<Link
 											className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
-											onClick={() => window.location.assign("/experiences")}
+											to="/experiences"
+											reloadDocument={true}
 										>
 											Plan My Experience
-										</button>
-										<button className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer">
+										</Link>
+										<Link
+											className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
+											to="/residencies"
+											reloadDocument={true}
+										>
 											Explore Residencies
-										</button>
-										<button className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer">
+										</Link>
+										<Link
+											className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
+											to=""
+											reloadDocument={true}
+										>
 											Join the Culture Club
-										</button>
+										</Link>
 									</div>
 								</>
 							</Reveal>
@@ -420,12 +422,13 @@ export function Home() {
 												visual artists, performers, and creative entrepreneurs
 												seeking space to create, connect, and share work.
 											</div>
-											<a
+											<Link
 												className="p-2 z-200 pointer-events-auto mx-auto hover:cursor-pointer bg-[#e7cdb6] hover:bg-white text-[#a86933] rounded-lg w-max"
-												href="/contact?form=Residency"
+												to="/contact?form=Residency"
+												reloadDocument={true}
 											>
 												Apply for a Residency
-											</a>
+											</Link>
 										</div>
 										<div
 											className={`absolute inset-0 justify-center flex flex-col p-6 m-auto items-center text-center gap-6 transition-all ease-in-out duration-700 pointer-events-none ${selectedPath === "join" ? "z-100 opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95"}`}
@@ -440,12 +443,13 @@ export function Home() {
 												experiences, entertainment, travel planning, events,
 												artist showcases, and cultural opportunities.
 											</div>
-											<a
+											<Link
 												className="p-2 z-200 pointer-events-auto mx-auto hover:cursor-pointer bg-[#e7cdb6] hover:bg-white text-[#a86933] rounded-lg w-max"
-												href="/contact?path=Membership"
+												to="/contact?path=Membership"
+												reloadDocument={true}
 											>
 												Join the Culture Club
-											</a>
+											</Link>
 										</div>
 										<div
 											className={`absolute inset-0 justify-center flex flex-col p-6 m-auto items-center text-center gap-6 transition-all ease-in-out duration-700 pointer-events-none ${selectedPath === "partner" ? "z-100 opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95"}`}
@@ -461,12 +465,13 @@ export function Home() {
 												programming, events, funding strategy, creative
 												direction, or cultural development.
 											</div>
-											<a
+											<Link
 												className="p-2 z-200 pointer-events-auto mx-auto hover:cursor-pointer bg-[#e7cdb6] hover:bg-white text-[#a86933] rounded-lg w-max"
-												href="/contact?form=Partner"
+												to="/contact?form=Partner"
+												reloadDocument={true}
 											>
 												Work With Revolūtiō
-											</a>
+											</Link>
 										</div>
 									</div>
 								</div>
@@ -920,9 +925,12 @@ export function Home() {
 										</Reveal>
 										<Reveal>
 											<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-max text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-												<a href="/contact?form=Consulting">
+												<Link
+													to="/contact?form=Consulting"
+													reloadDocument={true}
+												>
 													Inquire For Consulting
-												</a>
+												</Link>
 											</button>
 										</Reveal>
 									</div>
@@ -1073,28 +1081,44 @@ export function Home() {
 										<div className="md:border-r border-[#a86933] px-2 md:px-6 md:py-10">
 											<Reveal xVal={-200}>
 												<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-													<a href="/experiences">Plan My Experience</a>
+													<Link
+														to="/experiences"
+														reloadDocument={true}
+													>
+														Plan My Experience
+													</Link>
 												</button>
 											</Reveal>
 											<Reveal xVal={-200}>
 												<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-													<a href="/contact?path=Residency">
+													<Link
+														to="/contact?path=Residency"
+														reloadDocument={true}
+													>
 														Apply as an Artist
-													</a>
+													</Link>
 												</button>
 											</Reveal>
 										</div>
 										<div className="md:px-6 py-4 md:py-10">
 											<Reveal xVal={200}>
 												<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-													<a href="/contact?path=Membership">
+													<Link
+														to="/contact?path=Membership"
+														reloadDocument={true}
+													>
 														Join the Culture Club
-													</a>
+													</Link>
 												</button>
 											</Reveal>
 											<Reveal xVal={200}>
 												<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-													<a href="/contact?path=Partner">Partner With Us</a>
+													<Link
+														to="/contact?path=Partner"
+														reloadDocument={true}
+													>
+														Partner With Us
+													</Link>
 												</button>
 											</Reveal>
 										</div>

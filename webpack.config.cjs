@@ -1,23 +1,32 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
-const isProduction = process.env.NODE_ENV === "production";
+const isGitHubPages =
+	process.env.NODE_ENV === "production" && !process.env.VERCEL;
+const basename = isGitHubPages ? "/MusicSocialApp" : "/";
 const webpack = require("webpack");
+require("dotenv").config();
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
 	mode: isProduction ? "production" : "development",
 	target: "web",
 	entry: {
-		main: [
-			"webpack-hot-middleware/client?reload=true&timeout=2000",
-			"./src/index.tsx", // Enables HMR
-		],
+		main: isProduction
+			? "./src/index.tsx"
+			: [
+					"webpack-hot-middleware/client?reload=true&timeout=2000",
+					"./src/index.tsx",
+				],
 	},
 	output: {
 		filename: "bundle.js",
 		path: path.resolve(__dirname, "dist"),
 		assetModuleFilename: "images/[name][ext]",
 		// publicPath: "./", NOT SURE IF THIS IS NEEDED FOR DEPLOYMNET
-		publicPath: isProduction ? "/MusicSocialApp/" : "/",
+		publicPath:
+			isProduction && !process.env.VERCEL
+				? "https://bethwil0817.github.io/MusicSocialApp/"
+				: "/",
 	},
 	devServer: {
 		static: path.resolve(__dirname, "dist"),
@@ -35,7 +44,14 @@ module.exports = {
 			template: "./src/index.html",
 		}),
 		new webpack.EnvironmentPlugin(["NODE_ENV", "SERVER_HOST", "SERVER_PORT"]),
+		new webpack.EnvironmentPlugin({
+			NODE_ENV: "production",
+			SERVER_HOST: "localhost", // Fallback for local, Vercel will override this
+			SERVER_PORT: "8001", // Fallback for local, Vercel will override this
+		}),
 		new webpack.HotModuleReplacementPlugin(), // Enables HMR
+		new Dotenv(),
+		...(!isProduction ? [new webpack.HotModuleReplacementPlugin()] : []),
 	],
 	module: {
 		rules: [

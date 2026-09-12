@@ -248,7 +248,10 @@ export function Home() {
 										community.
 									</div>
 									<div className="flex flex-col lg:flex-row gap-6 items-center justify-center">
-										<button className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer">
+										<button
+											className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
+											onClick={() => window.location.assign("/experiences")}
+										>
 											Plan My Experience
 										</button>
 										<button className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer">
@@ -417,12 +420,12 @@ export function Home() {
 												visual artists, performers, and creative entrepreneurs
 												seeking space to create, connect, and share work.
 											</div>
-											<Link
+											<a
 												className="p-2 z-200 pointer-events-auto mx-auto hover:cursor-pointer bg-[#e7cdb6] hover:bg-white text-[#a86933] rounded-lg w-max"
-												to="/contact?form=Residency"
+												href="/contact?form=Residency"
 											>
 												Apply for a Residency
-											</Link>
+											</a>
 										</div>
 										<div
 											className={`absolute inset-0 justify-center flex flex-col p-6 m-auto items-center text-center gap-6 transition-all ease-in-out duration-700 pointer-events-none ${selectedPath === "join" ? "z-100 opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95"}`}
@@ -437,12 +440,12 @@ export function Home() {
 												experiences, entertainment, travel planning, events,
 												artist showcases, and cultural opportunities.
 											</div>
-											<Link
+											<a
 												className="p-2 z-200 pointer-events-auto mx-auto hover:cursor-pointer bg-[#e7cdb6] hover:bg-white text-[#a86933] rounded-lg w-max"
-												to="/contact?form=Membership"
+												href="/contact?path=Membership"
 											>
 												Join the Culture Club
-											</Link>
+											</a>
 										</div>
 										<div
 											className={`absolute inset-0 justify-center flex flex-col p-6 m-auto items-center text-center gap-6 transition-all ease-in-out duration-700 pointer-events-none ${selectedPath === "partner" ? "z-100 opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95"}`}
@@ -458,12 +461,12 @@ export function Home() {
 												programming, events, funding strategy, creative
 												direction, or cultural development.
 											</div>
-											<Link
+											<a
 												className="p-2 z-200 pointer-events-auto mx-auto hover:cursor-pointer bg-[#e7cdb6] hover:bg-white text-[#a86933] rounded-lg w-max"
-												to="/contact?form=Partner"
+												href="/contact?form=Partner"
 											>
 												Work With Revolūtiō
-											</Link>
+											</a>
 										</div>
 									</div>
 								</div>
@@ -917,9 +920,9 @@ export function Home() {
 										</Reveal>
 										<Reveal>
 											<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-max text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-												<Link to="/contact?form=Consulting">
+												<a href="/contact?form=Consulting">
 													Inquire For Consulting
-												</Link>
+												</a>
 											</button>
 										</Reveal>
 									</div>
@@ -1070,32 +1073,28 @@ export function Home() {
 										<div className="md:border-r border-[#a86933] px-2 md:px-6 md:py-10">
 											<Reveal xVal={-200}>
 												<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-													<Link to="/contact?form=Experience">
-														Plan My Experience
-													</Link>
+													<a href="/experiences">Plan My Experience</a>
 												</button>
 											</Reveal>
 											<Reveal xVal={-200}>
 												<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-													<Link to="/contact?form=Residency">
+													<a href="/contact?path=Residency">
 														Apply as an Artist
-													</Link>
+													</a>
 												</button>
 											</Reveal>
 										</div>
 										<div className="md:px-6 py-4 md:py-10">
 											<Reveal xVal={200}>
 												<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-													<Link to="/contact?form=Membership">
+													<a href="/contact?path=Membership">
 														Join the Culture Club
-													</Link>
+													</a>
 												</button>
 											</Reveal>
 											<Reveal xVal={200}>
 												<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-													<Link to="/contact?form=Partner">
-														Partner With Us
-													</Link>
+													<a href="/contact?path=Partner">Partner With Us</a>
 												</button>
 											</Reveal>
 										</div>
@@ -1112,10 +1111,10 @@ export function Home() {
 
 export default function App() {
 	return (
-		<>
+		<div style={{ fontFamily: "'Montserrat', sans-serif" }}>
 			<Nav />
 			<Outlet />
 			<Footer />
-		</>
+		</div>
 	);
 }

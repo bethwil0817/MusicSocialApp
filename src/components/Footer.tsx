@@ -20,30 +20,29 @@ export default function Footer() {
 						Navigation
 					</div>
 					<div className="grid text-center grid-cols-1 text-[rgb(255,226,190)]">
-						<Link
+						<a
 							className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]"
-							to="/"
-							state={{ showIntro: false }}
+							href="/"
 						>
 							Home
-						</Link>
-						<Link
+						</a>
+						<a
 							className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]"
-							to="/experiences"
+							href="/experiences"
 							// reloadDocument={githubLink}
 						>
 							Experiences
-						</Link>
+						</a>
 						{/* <button className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]">
 							Residencies
 						</button> */}
-						<Link
+						<a
 							className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]"
-							to="/destinations"
+							href="/destinations"
 							// reloadDocument={githubLink}
 						>
 							Destinations
-						</Link>
+						</a>
 						{/* <button className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]">
 							Membership
 						</button> */}
@@ -56,20 +55,20 @@ export default function Footer() {
 						{/* <button className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]">
 							Artists
 						</button> */}
-						<Link
+						<a
 							className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]"
-							to="/about"
+							href="/about"
 							// reloadDocument={githubLink}
 						>
 							About
-						</Link>
-						<Link
+						</a>
+						<a
 							className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]"
-							to="/contact"
+							href="/contact"
 							// reloadDocument={githubLink}
 						>
 							Contact
-						</Link>
+						</a>
 					</div>
 				</div>
 			</div>

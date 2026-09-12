@@ -48,6 +48,10 @@ ApiRouter.get("/", (req, res) => {
 	return res.json({ message: "Home API route works!" });
 });
 
+// ApiRouter.get("/contact", (req, res) => {
+// 	return res.json({ path: req.query.path || "Contact API route works!" });
+// });
+
 // Uses the ApiRouter for all routes starting with /api
 app.use("/api", ApiRouter);
 

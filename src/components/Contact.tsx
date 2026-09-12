@@ -7,22 +7,34 @@ import Footer from "./Footer";
 import { useFetch } from "../hooks/useFetch";
 
 export default function Contact() {
-	const data = useFetch("/api/home");
+	const data = useFetch("/api/contact");
 	const [searchParams] = useSearchParams();
-	const formAuto = searchParams.get("form") as
-		| "Experience"
-		| "Residency"
-		| "Membership"
-		| "Partner"
-		| "Consulting"
-		| null;
+	const formSearch = window.location.search || null;
+	// const formAuto = searchParams.get("form") as
+	// 	| "Experience"
+	// 	| "Residency"
+	// 	| "Membership"
+	// 	| "Partner"
+	// 	| "Consulting"
+	// 	| null;
 	const [formState, setFormState] = useState<
 		"Experience" | "Residency" | "Membership" | "Partner" | "Consulting" | null
-	>(formAuto ?? null);
+	>(null);
 	const autoRef = useRef<HTMLDivElement | null>(null);
 
 	useEffect(() => {
-		if (formAuto) {
+		if (formSearch) {
+			if (formSearch.includes("Experience")) {
+				setFormState("Experience");
+			} else if (formSearch.includes("Residency")) {
+				setFormState("Residency");
+			} else if (formSearch.includes("Membership")) {
+				setFormState("Membership");
+			} else if (formSearch.includes("Partner")) {
+				setFormState("Partner");
+			} else if (formSearch.includes("Consulting")) {
+				setFormState("Consulting");
+			}
 			handleScroll(autoRef);
 		}
 	}, []);

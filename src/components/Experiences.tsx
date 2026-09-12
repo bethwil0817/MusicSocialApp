@@ -163,7 +163,12 @@ export default function Experiences() {
 								<div>Custom itinerary planning</div>
 							</div>
 							<div className="text-center mt-10 flex flex-col md:flex-row gap-6 justify-center items-center">
-								<button className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer">
+								<button
+									className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
+									onClick={() =>
+										window.location.assign("/contact?form=Experience")
+									}
+								>
 									Experience Inquiry Form
 								</button>
 								<button className="p-4 min-w-[230px] rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer">

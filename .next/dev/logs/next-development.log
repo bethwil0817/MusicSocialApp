@@ -1,610 +1,69 @@
-{"timestamp":"00:00:01.279","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:00:01.369","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload due to a runtime error."}
-{"timestamp":"00:00:03.296","source":"Browser","level":"ERROR","message":"./src/app/about/page.tsx\nError:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.\n    ╭─[/Users/bethwillner/Downloads/MusicSocialApp/src/app/about/page.tsx:24:1]\n 21 │     );\n 22 │     \n 23 │     // 2. Dynamically import your components so they load safely on the client side\n 24 │ ╭─▶ const ClientAboutWrapper = dynamic(\n 25 │ │       async () => {\n 26 │ │           const App = (await import(\"../../components/App\")).default;\n 27 │ │           const About = (await import(\"../../components/About\")).default;\n 28 │ │   \n 29 │ │           // Return a combined wrapper component\n 30 │ │           return () => (\n 31 │ │               <App>\n 32 │ │                   <About />\n 33 │ │               </App>\n 34 │ │           );\n 35 │ │       },\n 36 │ │       {\n 37 │ │           ssr: false, // Disables server pre-rendering of components to prevent unstyled flashes\n 38 │ │           loading: () => <PageSkeleton />, // Next.js paints this dark background instantly!\n 39 │ │       },\n 40 │ ╰─▶ );\n 41 │     \n 42 │     export default function NextAboutPage() {\n 43 │         return <ClientAboutWrapper />;\n    ╰────\n\nImport trace for requested module:\n./src/app/about/page.tsx "}
-{"timestamp":"00:00:03.297","source":"Server","level":"ERROR","message":"[browser] \"./src/app/about/page.tsx\\nError:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.\\n    ╭─[/Users/bethwillner/Downloads/MusicSocialApp/src/app/about/page.tsx:24:1]\\n 21 │     );\\n 22 │     \\n 23 │     // 2. Dynamically import your components so they load safely on the client side\\n 24 │ ╭─▶ const ClientAboutWrapper = dynamic(\\n 25 │ │       async () => {\\n 26 │ │           const App = (await import(\\\"../../components/App\\\")).default;\\n 27 │ │           const About = (await import(\\\"../../components/About\\\")).default;\\n 28 │ │   \\n 29 │ │           // Return a combined wrapper component\\n 30 │ │           return () => (\\n 31 │ │               <App>\\n 32 │ │                   <About />\\n 33 │ │               </App>\\n 34 │ │           );\\n 35 │ │       },\\n 36 │ │       {\\n 37 │ │           ssr: false, // Disables server pre-rendering of components to prevent unstyled flashes\\n 38 │ │           loading: () => <PageSkeleton />, // Next.js paints this dark background instantly!\\n 39 │ │       },\\n 40 │ ╰─▶ );\\n 41 │     \\n 42 │     export default function NextAboutPage() {\\n 43 │         return <ClientAboutWrapper />;\\n    ╰────\\n\\nImport trace for requested module:\\n./src/app/about/page.tsx\" \"\""}
-{"timestamp":"00:00:04.348","source":"Server","level":"LOG","message":"○ Compiling /about ..."}
-{"timestamp":"00:00:04.359","source":"Server","level":"ERROR","message":"⨯ ./src/app/about/page.tsx\nError:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.\n    ╭─[/Users/bethwillner/Downloads/MusicSocialApp/src/app/about/page.tsx:24:1]\n 21 │     );\n 22 │     \n 23 │     // 2. Dynamically import your components so they load safely on the client side\n 24 │ ╭─▶ const ClientAboutWrapper = dynamic(\n 25 │ │       async () => {\n 26 │ │           const App = (await import(\"../../components/App\")).default;\n 27 │ │           const About = (await import(\"../../components/About\")).default;\n 28 │ │   \n 29 │ │           // Return a combined wrapper component\n 30 │ │           return () => (\n 31 │ │               <App>\n 32 │ │                   <About />\n 33 │ │               </App>\n 34 │ │           );\n 35 │ │       },\n 36 │ │       {\n 37 │ │           ssr: false, // Disables server pre-rendering of components to prevent unstyled flashes\n 38 │ │           loading: () => <PageSkeleton />, // Next.js paints this dark background instantly!\n 39 │ │       },\n 40 │ ╰─▶ );\n 41 │     \n 42 │     export default function NextAboutPage() {\n 43 │         return <ClientAboutWrapper />;\n    ╰────\n\nImport trace for requested module:\n./src/app/about/page.tsx"}
-{"timestamp":"00:00:04.512","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload due to a runtime error."}
-{"timestamp":"00:00:04.750","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload due to a runtime error."}
-{"timestamp":"00:00:05.013","source":"Browser","level":"ERROR","message":"./src/app/about/page.tsx\nError:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.\n    ╭─[/Users/bethwillner/Downloads/MusicSocialApp/src/app/about/page.tsx:24:1]\n 21 │     );\n 22 │     \n 23 │     // 2. Dynamically import your components so they load safely on the client side\n 24 │ ╭─▶ const ClientAboutWrapper = dynamic(\n 25 │ │       async () => {\n 26 │ │           const App = (await import(\"../../components/App\")).default;\n 27 │ │           const About = (await import(\"../../components/About\")).default;\n 28 │ │   \n 29 │ │           // Return a combined wrapper component\n 30 │ │           return () => (\n 31 │ │               <App>\n 32 │ │                   <About />\n 33 │ │               </App>\n 34 │ │           );\n 35 │ │       },\n 36 │ │       {\n 37 │ │           ssr: false, // Disables server pre-rendering of components to prevent unstyled flashes\n 38 │ │           loading: () => <PageSkeleton />, // Next.js paints this dark background instantly!\n 39 │ │       },\n 40 │ ╰─▶ );\n 41 │     \n 42 │     export default function NextAboutPage() {\n 43 │         return <ClientAboutWrapper />;\n    ╰────\n\nImport trace for requested module:\n./src/app/about/page.tsx "}
-{"timestamp":"00:00:05.013","source":"Server","level":"ERROR","message":"[browser] \"./src/app/about/page.tsx\\nError:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.\\n    ╭─[/Users/bethwillner/Downloads/MusicSocialApp/src/app/about/page.tsx:24:1]\\n 21 │     );\\n 22 │     \\n 23 │     // 2. Dynamically import your components so they load safely on the client side\\n 24 │ ╭─▶ const ClientAboutWrapper = dynamic(\\n 25 │ │       async () => {\\n 26 │ │           const App = (await import(\\\"../../components/App\\\")).default;\\n 27 │ │           const About = (await import(\\\"../../components/About\\\")).default;\\n 28 │ │   \\n 29 │ │           // Return a combined wrapper component\\n 30 │ │           return () => (\\n 31 │ │               <App>\\n 32 │ │                   <About />\\n 33 │ │               </App>\\n 34 │ │           );\\n 35 │ │       },\\n 36 │ │       {\\n 37 │ │           ssr: false, // Disables server pre-rendering of components to prevent unstyled flashes\\n 38 │ │           loading: () => <PageSkeleton />, // Next.js paints this dark background instantly!\\n 39 │ │       },\\n 40 │ ╰─▶ );\\n 41 │     \\n 42 │     export default function NextAboutPage() {\\n 43 │         return <ClientAboutWrapper />;\\n    ╰────\\n\\nImport trace for requested module:\\n./src/app/about/page.tsx\" \"\""}
-{"timestamp":"00:00:05.031","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload due to a runtime error."}
-{"timestamp":"00:00:05.059","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload due to a runtime error."}
-{"timestamp":"00:00:05.094","source":"Browser","level":"ERROR","message":"./src/app/about/page.tsx\nError:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.\n    ╭─[/Users/bethwillner/Downloads/MusicSocialApp/src/app/about/page.tsx:24:1]\n 21 │     );\n 22 │     \n 23 │     // 2. Dynamically import your components so they load safely on the client side\n 24 │ ╭─▶ const ClientAboutWrapper = dynamic(\n 25 │ │       async () => {\n 26 │ │           const App = (await import(\"../../components/App\")).default;\n 27 │ │           const About = (await import(\"../../components/About\")).default;\n 28 │ │   \n 29 │ │           // Return a combined wrapper component\n 30 │ │           return () => (\n 31 │ │               <App>\n 32 │ │                   <About />\n 33 │ │               </App>\n 34 │ │           );\n 35 │ │       },\n 36 │ │       {\n 37 │ │           ssr: false, // Disables server pre-rendering of components to prevent unstyled flashes\n 38 │ │           loading: () => <PageSkeleton />, // Next.js paints this dark background instantly!\n 39 │ │       },\n 40 │ ╰─▶ );\n 41 │     \n 42 │     export default function NextAboutPage() {\n 43 │         return <ClientAboutWrapper />;\n    ╰────\n\nImport trace for requested module:\n./src/app/about/page.tsx "}
-{"timestamp":"00:00:05.094","source":"Server","level":"ERROR","message":"[browser] \"./src/app/about/page.tsx\\nError:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.\\n    ╭─[/Users/bethwillner/Downloads/MusicSocialApp/src/app/about/page.tsx:24:1]\\n 21 │     );\\n 22 │     \\n 23 │     // 2. Dynamically import your components so they load safely on the client side\\n 24 │ ╭─▶ const ClientAboutWrapper = dynamic(\\n 25 │ │       async () => {\\n 26 │ │           const App = (await import(\\\"../../components/App\\\")).default;\\n 27 │ │           const About = (await import(\\\"../../components/About\\\")).default;\\n 28 │ │   \\n 29 │ │           // Return a combined wrapper component\\n 30 │ │           return () => (\\n 31 │ │               <App>\\n 32 │ │                   <About />\\n 33 │ │               </App>\\n 34 │ │           );\\n 35 │ │       },\\n 36 │ │       {\\n 37 │ │           ssr: false, // Disables server pre-rendering of components to prevent unstyled flashes\\n 38 │ │           loading: () => <PageSkeleton />, // Next.js paints this dark background instantly!\\n 39 │ │       },\\n 40 │ ╰─▶ );\\n 41 │     \\n 42 │     export default function NextAboutPage() {\\n 43 │         return <ClientAboutWrapper />;\\n    ╰────\\n\\nImport trace for requested module:\\n./src/app/about/page.tsx\" \"\""}
-{"timestamp":"00:00:05.108","source":"Server","level":"ERROR","message":"⨯ ./src/app/about/page.tsx\nError:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.\n    ╭─[/Users/bethwillner/Downloads/MusicSocialApp/src/app/about/page.tsx:24:1]\n 21 │     );\n 22 │     \n 23 │     // 2. Dynamically import your components so they load safely on the client side\n 24 │ ╭─▶ const ClientAboutWrapper = dynamic(\n 25 │ │       async () => {\n 26 │ │           const App = (await import(\"../../components/App\")).default;\n 27 │ │           const About = (await import(\"../../components/About\")).default;\n 28 │ │   \n 29 │ │           // Return a combined wrapper component\n 30 │ │           return () => (\n 31 │ │               <App>\n 32 │ │                   <About />\n 33 │ │               </App>\n 34 │ │           );\n 35 │ │       },\n 36 │ │       {\n 37 │ │           ssr: false, // Disables server pre-rendering of components to prevent unstyled flashes\n 38 │ │           loading: () => <PageSkeleton />, // Next.js paints this dark background instantly!\n 39 │ │       },\n 40 │ ╰─▶ );\n 41 │     \n 42 │     export default function NextAboutPage() {\n 43 │         return <ClientAboutWrapper />;\n    ╰────\n\nImport trace for requested module:\n./src/app/about/page.tsx"}
-{"timestamp":"00:00:13.953","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload due to a runtime error."}
-{"timestamp":"00:00:17.899","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload due to a runtime error."}
-{"timestamp":"00:00:18.192","source":"Browser","level":"ERROR","message":"./src/app/about/page.tsx\nError:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.\n    ╭─[/Users/bethwillner/Downloads/MusicSocialApp/src/app/about/page.tsx:24:1]\n 21 │     );\n 22 │     \n 23 │     // 2. Dynamically import your components so they load safely on the client side\n 24 │ ╭─▶ const ClientAboutWrapper = dynamic(\n 25 │ │       async () => {\n 26 │ │           const App = (await import(\"../../components/App\")).default;\n 27 │ │           const About = (await import(\"../../components/About\")).default;\n 28 │ │   \n 29 │ │           // Return a combined wrapper component\n 30 │ │           return () => (\n 31 │ │               <App>\n 32 │ │                   <About />\n 33 │ │               </App>\n 34 │ │           );\n 35 │ │       },\n 36 │ │       {\n 37 │ │           ssr: false, // Disables server pre-rendering of components to prevent unstyled flashes\n 38 │ │           loading: () => <PageSkeleton />, // Next.js paints this dark background instantly!\n 39 │ │       },\n 40 │ ╰─▶ );\n 41 │     \n 42 │     export default function NextAboutPage() {\n 43 │         return <ClientAboutWrapper />;\n    ╰────\n\nImport trace for requested module:\n./src/app/about/page.tsx "}
-{"timestamp":"00:00:18.192","source":"Server","level":"ERROR","message":"[browser] \"./src/app/about/page.tsx\\nError:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.\\n    ╭─[/Users/bethwillner/Downloads/MusicSocialApp/src/app/about/page.tsx:24:1]\\n 21 │     );\\n 22 │     \\n 23 │     // 2. Dynamically import your components so they load safely on the client side\\n 24 │ ╭─▶ const ClientAboutWrapper = dynamic(\\n 25 │ │       async () => {\\n 26 │ │           const App = (await import(\\\"../../components/App\\\")).default;\\n 27 │ │           const About = (await import(\\\"../../components/About\\\")).default;\\n 28 │ │   \\n 29 │ │           // Return a combined wrapper component\\n 30 │ │           return () => (\\n 31 │ │               <App>\\n 32 │ │                   <About />\\n 33 │ │               </App>\\n 34 │ │           );\\n 35 │ │       },\\n 36 │ │       {\\n 37 │ │           ssr: false, // Disables server pre-rendering of components to prevent unstyled flashes\\n 38 │ │           loading: () => <PageSkeleton />, // Next.js paints this dark background instantly!\\n 39 │ │       },\\n 40 │ ╰─▶ );\\n 41 │     \\n 42 │     export default function NextAboutPage() {\\n 43 │         return <ClientAboutWrapper />;\\n    ╰────\\n\\nImport trace for requested module:\\n./src/app/about/page.tsx\" \"\""}
-{"timestamp":"00:00:18.226","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload due to a runtime error."}
-{"timestamp":"00:00:18.352","source":"Browser","level":"ERROR","message":"./src/app/about/page.tsx\nError:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.\n    ╭─[/Users/bethwillner/Downloads/MusicSocialApp/src/app/about/page.tsx:24:1]\n 21 │     );\n 22 │     \n 23 │     // 2. Dynamically import your components so they load safely on the client side\n 24 │ ╭─▶ const ClientAboutWrapper = dynamic(\n 25 │ │       async () => {\n 26 │ │           const App = (await import(\"../../components/App\")).default;\n 27 │ │           const About = (await import(\"../../components/About\")).default;\n 28 │ │   \n 29 │ │           // Return a combined wrapper component\n 30 │ │           return () => (\n 31 │ │               <App>\n 32 │ │                   <About />\n 33 │ │               </App>\n 34 │ │           );\n 35 │ │       },\n 36 │ │       {\n 37 │ │           ssr: false, // Disables server pre-rendering of components to prevent unstyled flashes\n 38 │ │           loading: () => <PageSkeleton />, // Next.js paints this dark background instantly!\n 39 │ │       },\n 40 │ ╰─▶ );\n 41 │     \n 42 │     export default function NextAboutPage() {\n 43 │         return <ClientAboutWrapper />;\n    ╰────\n\nImport trace for requested module:\n./src/app/about/page.tsx "}
-{"timestamp":"00:00:18.352","source":"Server","level":"ERROR","message":"[browser] \"./src/app/about/page.tsx\\nError:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.\\n    ╭─[/Users/bethwillner/Downloads/MusicSocialApp/src/app/about/page.tsx:24:1]\\n 21 │     );\\n 22 │     \\n 23 │     // 2. Dynamically import your components so they load safely on the client side\\n 24 │ ╭─▶ const ClientAboutWrapper = dynamic(\\n 25 │ │       async () => {\\n 26 │ │           const App = (await import(\\\"../../components/App\\\")).default;\\n 27 │ │           const About = (await import(\\\"../../components/About\\\")).default;\\n 28 │ │   \\n 29 │ │           // Return a combined wrapper component\\n 30 │ │           return () => (\\n 31 │ │               <App>\\n 32 │ │                   <About />\\n 33 │ │               </App>\\n 34 │ │           );\\n 35 │ │       },\\n 36 │ │       {\\n 37 │ │           ssr: false, // Disables server pre-rendering of components to prevent unstyled flashes\\n 38 │ │           loading: () => <PageSkeleton />, // Next.js paints this dark background instantly!\\n 39 │ │       },\\n 40 │ ╰─▶ );\\n 41 │     \\n 42 │     export default function NextAboutPage() {\\n 43 │         return <ClientAboutWrapper />;\\n    ╰────\\n\\nImport trace for requested module:\\n./src/app/about/page.tsx\" \"\""}
-{"timestamp":"00:00:18.378","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload due to a runtime error."}
-{"timestamp":"00:00:18.408","source":"Server","level":"ERROR","message":"⨯ ./src/app/about/page.tsx\nError:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.\n    ╭─[/Users/bethwillner/Downloads/MusicSocialApp/src/app/about/page.tsx:24:1]\n 21 │     );\n 22 │     \n 23 │     // 2. Dynamically import your components so they load safely on the client side\n 24 │ ╭─▶ const ClientAboutWrapper = dynamic(\n 25 │ │       async () => {\n 26 │ │           const App = (await import(\"../../components/App\")).default;\n 27 │ │           const About = (await import(\"../../components/About\")).default;\n 28 │ │   \n 29 │ │           // Return a combined wrapper component\n 30 │ │           return () => (\n 31 │ │               <App>\n 32 │ │                   <About />\n 33 │ │               </App>\n 34 │ │           );\n 35 │ │       },\n 36 │ │       {\n 37 │ │           ssr: false, // Disables server pre-rendering of components to prevent unstyled flashes\n 38 │ │           loading: () => <PageSkeleton />, // Next.js paints this dark background instantly!\n 39 │ │       },\n 40 │ ╰─▶ );\n 41 │     \n 42 │     export default function NextAboutPage() {\n 43 │         return <ClientAboutWrapper />;\n    ╰────\n\nImport trace for requested module:\n./src/app/about/page.tsx"}
-{"timestamp":"00:00:18.697","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload due to a runtime error."}
-{"timestamp":"00:00:21.769","source":"Browser","level":"ERROR","message":"Uncaught ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):\nError:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.\n    ╭─[/Users/bethwillner/Downloads/MusicSocialApp/src/app/about/page.tsx:24:1]\n 21 │     );\n 22 │     \n 23 │     // 2. Dynamically import your components so they load safely on the client side\n 24 │ ╭─▶ const ClientAboutWrapper = dynamic(\n 25 │ │       async () => {\n 26 │ │           const App = (await import(\"../../components/App\")).default;\n 27 │ │           const About = (await import(\"../../components/About\")).default;\n 28 │ │   \n 29 │ │           // Return a combined wrapper component\n 30 │ │           return () => (\n 31 │ │               <App>\n 32 │ │                   <About />\n 33 │ │               </App>\n 34 │ │           );\n 35 │ │       },\n 36 │ │       {\n 37 │ │           ssr: false, // Disables server pre-rendering of components to prevent unstyled flashes\n 38 │ │           loading: () => <PageSkeleton />, // Next.js paints this dark background instantly!\n 39 │ │       },\n 40 │ ╰─▶ );\n 41 │     \n 42 │     export default function NextAboutPage() {\n 43 │         return <ClientAboutWrapper />;\n    ╰────\n"}
-{"timestamp":"00:00:21.769","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31mUncaught ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):\\nError:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.\\n    ╭─[/Users/bethwillner/Downloads/MusicSocialApp/src/app/about/page.tsx:24:1]\\n 21 │     );\\n 22 │     \\n 23 │     // 2. Dynamically import your components so they load safely on the client side\\n 24 │ ╭─▶ const ClientAboutWrapper = dynamic(\\n 25 │ │       async () => {\\n 26 │ │           const App = (await import(\\\"../../components/App\\\")).default;\\n 27 │ │           const About = (await import(\\\"../../components/About\\\")).default;\\n 28 │ │   \\n 29 │ │           // Return a combined wrapper component\\n 30 │ │           return () => (\\n 31 │ │               <App>\\n 32 │ │                   <About />\\n 33 │ │               </App>\\n 34 │ │           );\\n 35 │ │       },\\n 36 │ │       {\\n 37 │ │           ssr: false, // Disables server pre-rendering of components to prevent unstyled flashes\\n 38 │ │           loading: () => <PageSkeleton />, // Next.js paints this dark background instantly!\\n 39 │ │       },\\n 40 │ ╰─▶ );\\n 41 │     \\n 42 │     export default function NextAboutPage() {\\n 43 │         return <ClientAboutWrapper />;\\n    ╰────\\n\\u001b[39m\""}
-{"timestamp":"00:00:23.690","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:00:24.492","source":"Browser","level":"LOG","message":"false"}
-{"timestamp":"00:00:24.501","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:00:59.410","source":"Browser","level":"ERROR","message":"⨯ unhandledRejection: [object Event] \n"}
-{"timestamp":"00:00:59.418","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31m\\\"⨯ unhandledRejection:\\\"\\u001b[39m\" \"[object Event]\" \"\\n\\u001b[31m\\u001b[39m\""}
-{"timestamp":"00:00:59.670","source":"Browser","level":"LOG","message":"false"}
-{"timestamp":"00:00:59.694","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:00:59.714","source":"Browser","level":"LOG","message":"false"}
-{"timestamp":"00:00:59.729","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:01:02.454","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:01:04.399","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:01:49.053","source":"Browser","level":"LOG","message":"false"}
-{"timestamp":"00:01:49.054","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:01:49.111","source":"Browser","level":"ERROR","message":"⨯ unhandledRejection: [object Event] \n"}
-{"timestamp":"00:01:49.112","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31m\\\"⨯ unhandledRejection:\\\"\\u001b[39m\" \"[object Event]\" \"\\n\\u001b[31m\\u001b[39m\""}
-{"timestamp":"00:01:49.113","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:01:50.756","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:01:53.278","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:01:54.173","source":"Browser","level":"LOG","message":"false"}
-{"timestamp":"00:01:54.448","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:01:54.462","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:01:54.499","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:01:58.759","source":"Browser","level":"ERROR","message":"Uncaught Error: useLocation() may be used only in the context of a <Router> component.\n    at Contact (src/components/Contact.tsx:7:40)\n    at NextContactPage (src/app/contact/page.tsx:29:4)\n  \u001b[90m 5 |\u001b[0m\n  \u001b[90m 6 |\u001b[0m \u001b[36mexport\u001b[0m \u001b[36mdefault\u001b[0m \u001b[36mfunction\u001b[0m \u001b[33mContact\u001b[0m() {\n\u001b[31m\u001b[1m>\u001b[0m \u001b[90m 7 |\u001b[0m \t\u001b[36mconst\u001b[0m [searchParams] = useSearchParams();\n  \u001b[90m   |\u001b[0m                                       \u001b[31m\u001b[1m^\u001b[0m\n  \u001b[90m 8 |\u001b[0m \t\u001b[36mconst\u001b[0m formSearch = window.location.search || \u001b[36mnull\u001b[0m;\n  \u001b[90m 9 |\u001b[0m \t\u001b[90m// const formAuto = searchParams.get(\"form\") as\u001b[0m\n  \u001b[90m10 |\u001b[0m \t\u001b[90m// \t| \"Experience\"\u001b[0m"}
-{"timestamp":"00:01:58.761","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31mUncaught Error: useLocation() may be used only in the context of a <Router> component.\\u001b[39m\\n\\u001b[31m    at Contact (src/components/Contact.tsx:7:40)\\n    at NextContactPage (src/app/contact/page.tsx:29:4)\\u001b[39m\\n  \\u001b[90m 5 |\\u001b[0m\\n  \\u001b[90m 6 |\\u001b[0m \\u001b[36mexport\\u001b[0m \\u001b[36mdefault\\u001b[0m \\u001b[36mfunction\\u001b[0m \\u001b[33mContact\\u001b[0m() {\\n\\u001b[31m\\u001b[1m>\\u001b[0m \\u001b[90m 7 |\\u001b[0m \\t\\u001b[36mconst\\u001b[0m [searchParams] = useSearchParams();\\n  \\u001b[90m   |\\u001b[0m                                       \\u001b[31m\\u001b[1m^\\u001b[0m\\n  \\u001b[90m 8 |\\u001b[0m \\t\\u001b[36mconst\\u001b[0m formSearch = window.location.search || \\u001b[36mnull\\u001b[0m;\\n  \\u001b[90m 9 |\\u001b[0m \\t\\u001b[90m// const formAuto = searchParams.get(\\\"form\\\") as\\u001b[0m\\n  \\u001b[90m10 |\\u001b[0m \\t\\u001b[90m// \\t| \\\"Experience\\\"\\u001b[0m\""}
-{"timestamp":"00:02:30.827","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload due to a runtime error."}
-{"timestamp":"00:02:32.488","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:02:52.415","source":"Browser","level":"ERROR","message":"⨯ unhandledRejection: [object Event] \n"}
-{"timestamp":"00:02:52.417","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31m\\\"⨯ unhandledRejection:\\\"\\u001b[39m\" \"[object Event]\" \"\\n\\u001b[31m\\u001b[39m\""}
-{"timestamp":"00:02:55.044","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:02:59.588","source":"Browser","level":"LOG","message":"false"}
-{"timestamp":"00:03:00.213","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:03:00.262","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:03:07.249","source":"Browser","level":"LOG","message":"false"}
-{"timestamp":"00:03:07.278","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:03:07.311","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:03:07.512","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:03:07.611","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:03:07.744","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:03:07.794","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:03:12.784","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:03:13.649","source":"Browser","level":"LOG","message":"false"}
-{"timestamp":"00:03:13.813","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:03:13.845","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:03:13.962","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:03:14.312","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:03:16.270","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:03:18.804","source":"Browser","level":"LOG","message":"0 0"}
-{"timestamp":"00:03:18.815","source":"Browser","level":"LOG","message":"1 0"}
-{"timestamp":"00:03:18.816","source":"Browser","level":"LOG","message":"1 0"}
-{"timestamp":"00:03:18.832","source":"Browser","level":"LOG","message":"14 1"}
-{"timestamp":"00:03:18.832","source":"Browser","level":"LOG","message":"14 1"}
-{"timestamp":"00:03:18.848","source":"Browser","level":"LOG","message":"30 14"}
-{"timestamp":"00:03:18.848","source":"Browser","level":"LOG","message":"30 14"}
-{"timestamp":"00:03:18.864","source":"Browser","level":"LOG","message":"54 30"}
-{"timestamp":"00:03:18.864","source":"Browser","level":"LOG","message":"54 30"}
-{"timestamp":"00:03:18.881","source":"Browser","level":"LOG","message":"78 54"}
-{"timestamp":"00:03:18.882","source":"Browser","level":"LOG","message":"78 54"}
-{"timestamp":"00:03:18.898","source":"Browser","level":"LOG","message":"100 78"}
-{"timestamp":"00:03:18.898","source":"Browser","level":"LOG","message":"100 78"}
-{"timestamp":"00:03:18.914","source":"Browser","level":"LOG","message":"120 100"}
-{"timestamp":"00:03:18.914","source":"Browser","level":"LOG","message":"120 100"}
-{"timestamp":"00:03:18.931","source":"Browser","level":"LOG","message":"130 120"}
-{"timestamp":"00:03:18.931","source":"Browser","level":"LOG","message":"130 120"}
-{"timestamp":"00:03:18.947","source":"Browser","level":"LOG","message":"151 130"}
-{"timestamp":"00:03:18.947","source":"Browser","level":"LOG","message":"151 130"}
-{"timestamp":"00:03:18.965","source":"Browser","level":"LOG","message":"175 151"}
-{"timestamp":"00:03:18.965","source":"Browser","level":"LOG","message":"175 151"}
-{"timestamp":"00:03:18.980","source":"Browser","level":"LOG","message":"200 175"}
-{"timestamp":"00:03:18.980","source":"Browser","level":"LOG","message":"200 175"}
-{"timestamp":"00:03:18.998","source":"Browser","level":"LOG","message":"225 200"}
-{"timestamp":"00:03:18.998","source":"Browser","level":"LOG","message":"225 200"}
-{"timestamp":"00:03:19.014","source":"Browser","level":"LOG","message":"250 225"}
-{"timestamp":"00:03:19.014","source":"Browser","level":"LOG","message":"250 225"}
-{"timestamp":"00:03:19.032","source":"Browser","level":"LOG","message":"274 250"}
-{"timestamp":"00:03:19.033","source":"Browser","level":"LOG","message":"274 250"}
-{"timestamp":"00:03:19.047","source":"Browser","level":"LOG","message":"302 274"}
-{"timestamp":"00:03:19.047","source":"Browser","level":"LOG","message":"302 274"}
-{"timestamp":"00:03:19.063","source":"Browser","level":"LOG","message":"329 302"}
-{"timestamp":"00:03:19.063","source":"Browser","level":"LOG","message":"329 302"}
-{"timestamp":"00:03:19.080","source":"Browser","level":"LOG","message":"353 329"}
-{"timestamp":"00:03:19.081","source":"Browser","level":"LOG","message":"353 329"}
-{"timestamp":"00:03:19.097","source":"Browser","level":"LOG","message":"375 353"}
-{"timestamp":"00:03:19.097","source":"Browser","level":"LOG","message":"375 353"}
-{"timestamp":"00:03:19.114","source":"Browser","level":"LOG","message":"395 375"}
-{"timestamp":"00:03:19.114","source":"Browser","level":"LOG","message":"395 375"}
-{"timestamp":"00:03:19.131","source":"Browser","level":"LOG","message":"414 395"}
-{"timestamp":"00:03:19.131","source":"Browser","level":"LOG","message":"414 395"}
-{"timestamp":"00:03:19.197","source":"Browser","level":"LOG","message":"431 414"}
-{"timestamp":"00:03:19.197","source":"Browser","level":"LOG","message":"431 414"}
-{"timestamp":"00:03:19.214","source":"Browser","level":"LOG","message":"438 431"}
-{"timestamp":"00:03:19.214","source":"Browser","level":"LOG","message":"438 431"}
-{"timestamp":"00:03:19.231","source":"Browser","level":"LOG","message":"442 438"}
-{"timestamp":"00:03:19.231","source":"Browser","level":"LOG","message":"442 438"}
-{"timestamp":"00:03:19.247","source":"Browser","level":"LOG","message":"445 442"}
-{"timestamp":"00:03:19.247","source":"Browser","level":"LOG","message":"445 442"}
-{"timestamp":"00:03:19.263","source":"Browser","level":"LOG","message":"450 445"}
-{"timestamp":"00:03:19.263","source":"Browser","level":"LOG","message":"450 445"}
-{"timestamp":"00:03:19.280","source":"Browser","level":"LOG","message":"456 450"}
-{"timestamp":"00:03:19.280","source":"Browser","level":"LOG","message":"456 450"}
-{"timestamp":"00:03:19.296","source":"Browser","level":"LOG","message":"462 456"}
-{"timestamp":"00:03:19.296","source":"Browser","level":"LOG","message":"462 456"}
-{"timestamp":"00:03:19.329","source":"Browser","level":"LOG","message":"469 462"}
-{"timestamp":"00:03:19.329","source":"Browser","level":"LOG","message":"469 462"}
-{"timestamp":"00:03:19.345","source":"Browser","level":"LOG","message":"481 469"}
-{"timestamp":"00:03:19.345","source":"Browser","level":"LOG","message":"481 469"}
-{"timestamp":"00:03:19.375","source":"Browser","level":"LOG","message":"485 481"}
-{"timestamp":"00:03:19.381","source":"Browser","level":"LOG","message":"485 481"}
-{"timestamp":"00:03:19.394","source":"Browser","level":"LOG","message":"487 485"}
-{"timestamp":"00:03:19.394","source":"Browser","level":"LOG","message":"487 485"}
-{"timestamp":"00:03:19.407","source":"Browser","level":"LOG","message":"488 487"}
-{"timestamp":"00:03:19.407","source":"Browser","level":"LOG","message":"488 487"}
-{"timestamp":"00:03:19.466","source":"Browser","level":"LOG","message":"489 488"}
-{"timestamp":"00:03:19.466","source":"Browser","level":"LOG","message":"489 488"}
-{"timestamp":"00:03:19.489","source":"Browser","level":"LOG","message":"490 489"}
-{"timestamp":"00:03:19.489","source":"Browser","level":"LOG","message":"490 489"}
-{"timestamp":"00:03:20.081","source":"Browser","level":"LOG","message":"491 490"}
-{"timestamp":"00:03:20.081","source":"Browser","level":"LOG","message":"491 490"}
-{"timestamp":"00:03:20.097","source":"Browser","level":"LOG","message":"486 491"}
-{"timestamp":"00:03:20.115","source":"Browser","level":"LOG","message":"471 486"}
-{"timestamp":"00:03:20.130","source":"Browser","level":"LOG","message":"443 471"}
-{"timestamp":"00:03:20.147","source":"Browser","level":"LOG","message":"405 443"}
-{"timestamp":"00:03:20.163","source":"Browser","level":"LOG","message":"373 405"}
-{"timestamp":"00:03:20.179","source":"Browser","level":"LOG","message":"329 373"}
-{"timestamp":"00:03:20.197","source":"Browser","level":"LOG","message":"278 329"}
-{"timestamp":"00:03:20.214","source":"Browser","level":"LOG","message":"223 278"}
-{"timestamp":"00:03:20.230","source":"Browser","level":"LOG","message":"168 223"}
-{"timestamp":"00:03:20.246","source":"Browser","level":"LOG","message":"114 168"}
-{"timestamp":"00:03:20.263","source":"Browser","level":"LOG","message":"61 114"}
-{"timestamp":"00:03:20.281","source":"Browser","level":"LOG","message":"6 61"}
-{"timestamp":"00:03:22.764","source":"Browser","level":"LOG","message":"0 0"}
-{"timestamp":"00:03:22.780","source":"Browser","level":"LOG","message":"1 0"}
-{"timestamp":"00:03:22.780","source":"Browser","level":"LOG","message":"1 0"}
-{"timestamp":"00:03:22.797","source":"Browser","level":"LOG","message":"6 1"}
-{"timestamp":"00:03:22.797","source":"Browser","level":"LOG","message":"6 1"}
-{"timestamp":"00:03:22.831","source":"Browser","level":"LOG","message":"13 6"}
-{"timestamp":"00:03:22.831","source":"Browser","level":"LOG","message":"13 6"}
-{"timestamp":"00:03:22.847","source":"Browser","level":"LOG","message":"42 13"}
-{"timestamp":"00:03:22.847","source":"Browser","level":"LOG","message":"42 13"}
-{"timestamp":"00:03:22.863","source":"Browser","level":"LOG","message":"61 42"}
-{"timestamp":"00:03:22.863","source":"Browser","level":"LOG","message":"61 42"}
-{"timestamp":"00:03:22.880","source":"Browser","level":"LOG","message":"80 61"}
-{"timestamp":"00:03:22.880","source":"Browser","level":"LOG","message":"80 61"}
-{"timestamp":"00:03:22.896","source":"Browser","level":"LOG","message":"98 80"}
-{"timestamp":"00:03:22.896","source":"Browser","level":"LOG","message":"98 80"}
-{"timestamp":"00:03:22.914","source":"Browser","level":"LOG","message":"112 98"}
-{"timestamp":"00:03:22.914","source":"Browser","level":"LOG","message":"112 98"}
-{"timestamp":"00:03:22.932","source":"Browser","level":"LOG","message":"132 112"}
-{"timestamp":"00:03:22.932","source":"Browser","level":"LOG","message":"132 112"}
-{"timestamp":"00:03:22.947","source":"Browser","level":"LOG","message":"155 132"}
-{"timestamp":"00:03:22.947","source":"Browser","level":"LOG","message":"155 132"}
-{"timestamp":"00:03:22.963","source":"Browser","level":"LOG","message":"178 155"}
-{"timestamp":"00:03:22.963","source":"Browser","level":"LOG","message":"178 155"}
-{"timestamp":"00:03:22.980","source":"Browser","level":"LOG","message":"202 178"}
-{"timestamp":"00:03:22.980","source":"Browser","level":"LOG","message":"202 178"}
-{"timestamp":"00:03:22.997","source":"Browser","level":"LOG","message":"225 202"}
-{"timestamp":"00:03:22.997","source":"Browser","level":"LOG","message":"225 202"}
-{"timestamp":"00:03:23.013","source":"Browser","level":"LOG","message":"247 225"}
-{"timestamp":"00:03:23.013","source":"Browser","level":"LOG","message":"247 225"}
-{"timestamp":"00:03:23.031","source":"Browser","level":"LOG","message":"272 247"}
-{"timestamp":"00:03:23.031","source":"Browser","level":"LOG","message":"272 247"}
-{"timestamp":"00:03:23.047","source":"Browser","level":"LOG","message":"296 272"}
-{"timestamp":"00:03:23.047","source":"Browser","level":"LOG","message":"296 272"}
-{"timestamp":"00:03:23.064","source":"Browser","level":"LOG","message":"318 296"}
-{"timestamp":"00:03:23.064","source":"Browser","level":"LOG","message":"318 296"}
-{"timestamp":"00:03:23.080","source":"Browser","level":"LOG","message":"338 318"}
-{"timestamp":"00:03:23.080","source":"Browser","level":"LOG","message":"338 318"}
-{"timestamp":"00:03:23.097","source":"Browser","level":"LOG","message":"357 338"}
-{"timestamp":"00:03:23.097","source":"Browser","level":"LOG","message":"357 338"}
-{"timestamp":"00:03:23.114","source":"Browser","level":"LOG","message":"374 357"}
-{"timestamp":"00:03:23.114","source":"Browser","level":"LOG","message":"374 357"}
-{"timestamp":"00:03:23.130","source":"Browser","level":"LOG","message":"390 374"}
-{"timestamp":"00:03:23.130","source":"Browser","level":"LOG","message":"390 374"}
-{"timestamp":"00:03:23.147","source":"Browser","level":"LOG","message":"404 390"}
-{"timestamp":"00:03:23.147","source":"Browser","level":"LOG","message":"404 390"}
-{"timestamp":"00:03:23.163","source":"Browser","level":"LOG","message":"417 404"}
-{"timestamp":"00:03:23.163","source":"Browser","level":"LOG","message":"417 404"}
-{"timestamp":"00:03:23.180","source":"Browser","level":"LOG","message":"429 417"}
-{"timestamp":"00:03:23.180","source":"Browser","level":"LOG","message":"429 417"}
-{"timestamp":"00:03:23.197","source":"Browser","level":"LOG","message":"440 429"}
-{"timestamp":"00:03:23.197","source":"Browser","level":"LOG","message":"440 429"}
-{"timestamp":"00:03:23.214","source":"Browser","level":"LOG","message":"450 440"}
-{"timestamp":"00:03:23.214","source":"Browser","level":"LOG","message":"450 440"}
-{"timestamp":"00:03:23.231","source":"Browser","level":"LOG","message":"459 450"}
-{"timestamp":"00:03:23.231","source":"Browser","level":"LOG","message":"459 450"}
-{"timestamp":"00:03:23.265","source":"Browser","level":"LOG","message":"467 459"}
-{"timestamp":"00:03:23.265","source":"Browser","level":"LOG","message":"467 459"}
-{"timestamp":"00:03:23.280","source":"Browser","level":"LOG","message":"482 467"}
-{"timestamp":"00:03:23.280","source":"Browser","level":"LOG","message":"482 467"}
-{"timestamp":"00:03:23.296","source":"Browser","level":"LOG","message":"489 482"}
-{"timestamp":"00:03:23.296","source":"Browser","level":"LOG","message":"489 482"}
-{"timestamp":"00:03:23.312","source":"Browser","level":"LOG","message":"495 489"}
-{"timestamp":"00:03:23.312","source":"Browser","level":"LOG","message":"495 489"}
-{"timestamp":"00:03:23.329","source":"Browser","level":"LOG","message":"500 495"}
-{"timestamp":"00:03:23.329","source":"Browser","level":"LOG","message":"500 495"}
-{"timestamp":"00:03:23.345","source":"Browser","level":"LOG","message":"505 500"}
-{"timestamp":"00:03:23.345","source":"Browser","level":"LOG","message":"505 500"}
-{"timestamp":"00:03:23.362","source":"Browser","level":"LOG","message":"510 505"}
-{"timestamp":"00:03:23.362","source":"Browser","level":"LOG","message":"510 505"}
-{"timestamp":"00:03:23.379","source":"Browser","level":"LOG","message":"515 510"}
-{"timestamp":"00:03:23.379","source":"Browser","level":"LOG","message":"515 510"}
-{"timestamp":"00:03:23.397","source":"Browser","level":"LOG","message":"519 515"}
-{"timestamp":"00:03:23.397","source":"Browser","level":"LOG","message":"519 515"}
-{"timestamp":"00:03:23.414","source":"Browser","level":"LOG","message":"523 519"}
-{"timestamp":"00:03:23.414","source":"Browser","level":"LOG","message":"523 519"}
-{"timestamp":"00:03:23.429","source":"Browser","level":"LOG","message":"527 523"}
-{"timestamp":"00:03:23.429","source":"Browser","level":"LOG","message":"527 523"}
-{"timestamp":"00:03:23.446","source":"Browser","level":"LOG","message":"530 527"}
-{"timestamp":"00:03:23.446","source":"Browser","level":"LOG","message":"530 527"}
-{"timestamp":"00:03:23.465","source":"Browser","level":"LOG","message":"533 530"}
-{"timestamp":"00:03:23.465","source":"Browser","level":"LOG","message":"533 530"}
-{"timestamp":"00:03:23.481","source":"Browser","level":"LOG","message":"536 533"}
-{"timestamp":"00:03:23.481","source":"Browser","level":"LOG","message":"536 533"}
-{"timestamp":"00:03:23.497","source":"Browser","level":"LOG","message":"538 536"}
-{"timestamp":"00:03:23.497","source":"Browser","level":"LOG","message":"538 536"}
-{"timestamp":"00:03:23.514","source":"Browser","level":"LOG","message":"540 538"}
-{"timestamp":"00:03:23.514","source":"Browser","level":"LOG","message":"540 538"}
-{"timestamp":"00:03:23.531","source":"Browser","level":"LOG","message":"542 540"}
-{"timestamp":"00:03:23.531","source":"Browser","level":"LOG","message":"542 540"}
-{"timestamp":"00:03:23.581","source":"Browser","level":"LOG","message":"544 542"}
-{"timestamp":"00:03:23.581","source":"Browser","level":"LOG","message":"544 542"}
-{"timestamp":"00:03:23.600","source":"Browser","level":"LOG","message":"545 544"}
-{"timestamp":"00:03:23.600","source":"Browser","level":"LOG","message":"545 544"}
-{"timestamp":"00:03:23.614","source":"Browser","level":"LOG","message":"549 545"}
-{"timestamp":"00:03:23.614","source":"Browser","level":"LOG","message":"549 545"}
-{"timestamp":"00:03:23.630","source":"Browser","level":"LOG","message":"554 549"}
-{"timestamp":"00:03:23.631","source":"Browser","level":"LOG","message":"554 549"}
-{"timestamp":"00:03:23.647","source":"Browser","level":"LOG","message":"560 554"}
-{"timestamp":"00:03:23.647","source":"Browser","level":"LOG","message":"560 554"}
-{"timestamp":"00:03:23.664","source":"Browser","level":"LOG","message":"569 560"}
-{"timestamp":"00:03:23.664","source":"Browser","level":"LOG","message":"569 560"}
-{"timestamp":"00:03:23.697","source":"Browser","level":"LOG","message":"581 569"}
-{"timestamp":"00:03:23.698","source":"Browser","level":"LOG","message":"581 569"}
-{"timestamp":"00:03:23.714","source":"Browser","level":"LOG","message":"609 581"}
-{"timestamp":"00:03:23.714","source":"Browser","level":"LOG","message":"609 581"}
-{"timestamp":"00:03:23.730","source":"Browser","level":"LOG","message":"624 609"}
-{"timestamp":"00:03:23.730","source":"Browser","level":"LOG","message":"624 609"}
-{"timestamp":"00:03:23.747","source":"Browser","level":"LOG","message":"634 624"}
-{"timestamp":"00:03:23.747","source":"Browser","level":"LOG","message":"634 624"}
-{"timestamp":"00:03:23.763","source":"Browser","level":"LOG","message":"644 634"}
-{"timestamp":"00:03:23.764","source":"Browser","level":"LOG","message":"644 634"}
-{"timestamp":"00:03:23.796","source":"Browser","level":"LOG","message":"657 644"}
-{"timestamp":"00:03:23.796","source":"Browser","level":"LOG","message":"657 644"}
-{"timestamp":"00:03:23.814","source":"Browser","level":"LOG","message":"686 657"}
-{"timestamp":"00:03:23.814","source":"Browser","level":"LOG","message":"686 657"}
-{"timestamp":"00:03:23.830","source":"Browser","level":"LOG","message":"701 686"}
-{"timestamp":"00:03:23.830","source":"Browser","level":"LOG","message":"701 686"}
-{"timestamp":"00:03:23.847","source":"Browser","level":"LOG","message":"716 701"}
-{"timestamp":"00:03:23.847","source":"Browser","level":"LOG","message":"716 701"}
-{"timestamp":"00:03:23.881","source":"Browser","level":"LOG","message":"730 716"}
-{"timestamp":"00:03:23.881","source":"Browser","level":"LOG","message":"730 716"}
-{"timestamp":"00:03:23.897","source":"Browser","level":"LOG","message":"762 730"}
-{"timestamp":"00:03:23.897","source":"Browser","level":"LOG","message":"762 730"}
-{"timestamp":"00:03:23.914","source":"Browser","level":"LOG","message":"776 762"}
-{"timestamp":"00:03:23.914","source":"Browser","level":"LOG","message":"776 762"}
-{"timestamp":"00:03:23.931","source":"Browser","level":"LOG","message":"789 776"}
-{"timestamp":"00:03:23.931","source":"Browser","level":"LOG","message":"789 776"}
-{"timestamp":"00:03:23.948","source":"Browser","level":"LOG","message":"801 789"}
-{"timestamp":"00:03:23.948","source":"Browser","level":"LOG","message":"801 789"}
-{"timestamp":"00:03:23.981","source":"Browser","level":"LOG","message":"812 801"}
-{"timestamp":"00:03:23.981","source":"Browser","level":"LOG","message":"812 801"}
-{"timestamp":"00:03:23.997","source":"Browser","level":"LOG","message":"831 812"}
-{"timestamp":"00:03:23.997","source":"Browser","level":"LOG","message":"831 812"}
-{"timestamp":"00:03:24.015","source":"Browser","level":"LOG","message":"839 831"}
-{"timestamp":"00:03:24.015","source":"Browser","level":"LOG","message":"839 831"}
-{"timestamp":"00:03:24.030","source":"Browser","level":"LOG","message":"847 839"}
-{"timestamp":"00:03:24.030","source":"Browser","level":"LOG","message":"847 839"}
-{"timestamp":"00:03:24.046","source":"Browser","level":"LOG","message":"854 847"}
-{"timestamp":"00:03:24.047","source":"Browser","level":"LOG","message":"854 847"}
-{"timestamp":"00:03:24.081","source":"Browser","level":"LOG","message":"860 854"}
-{"timestamp":"00:03:24.081","source":"Browser","level":"LOG","message":"860 854"}
-{"timestamp":"00:03:24.097","source":"Browser","level":"LOG","message":"871 860"}
-{"timestamp":"00:03:24.097","source":"Browser","level":"LOG","message":"871 860"}
-{"timestamp":"00:03:24.114","source":"Browser","level":"LOG","message":"876 871"}
-{"timestamp":"00:03:24.114","source":"Browser","level":"LOG","message":"876 871"}
-{"timestamp":"00:03:24.130","source":"Browser","level":"LOG","message":"881 876"}
-{"timestamp":"00:03:24.130","source":"Browser","level":"LOG","message":"881 876"}
-{"timestamp":"00:03:24.148","source":"Browser","level":"LOG","message":"885 881"}
-{"timestamp":"00:03:24.148","source":"Browser","level":"LOG","message":"885 881"}
-{"timestamp":"00:03:24.164","source":"Browser","level":"LOG","message":"889 885"}
-{"timestamp":"00:03:24.164","source":"Browser","level":"LOG","message":"889 885"}
-{"timestamp":"00:03:24.181","source":"Browser","level":"LOG","message":"893 889"}
-{"timestamp":"00:03:24.181","source":"Browser","level":"LOG","message":"893 889"}
-{"timestamp":"00:03:24.197","source":"Browser","level":"LOG","message":"896 893"}
-{"timestamp":"00:03:24.197","source":"Browser","level":"LOG","message":"896 893"}
-{"timestamp":"00:03:24.214","source":"Browser","level":"LOG","message":"899 896"}
-{"timestamp":"00:03:24.214","source":"Browser","level":"LOG","message":"899 896"}
-{"timestamp":"00:03:24.230","source":"Browser","level":"LOG","message":"902 899"}
-{"timestamp":"00:03:24.230","source":"Browser","level":"LOG","message":"902 899"}
-{"timestamp":"00:03:24.281","source":"Browser","level":"LOG","message":"905 902"}
-{"timestamp":"00:03:24.281","source":"Browser","level":"LOG","message":"905 902"}
-{"timestamp":"00:03:24.308","source":"Browser","level":"LOG","message":"906 905"}
-{"timestamp":"00:03:24.308","source":"Browser","level":"LOG","message":"906 905"}
-{"timestamp":"00:03:24.331","source":"Browser","level":"LOG","message":"908 906"}
-{"timestamp":"00:03:24.331","source":"Browser","level":"LOG","message":"908 906"}
-{"timestamp":"00:03:24.347","source":"Browser","level":"LOG","message":"917 908"}
-{"timestamp":"00:03:24.347","source":"Browser","level":"LOG","message":"917 908"}
-{"timestamp":"00:03:24.363","source":"Browser","level":"LOG","message":"924 917"}
-{"timestamp":"00:03:24.363","source":"Browser","level":"LOG","message":"924 917"}
-{"timestamp":"00:03:24.380","source":"Browser","level":"LOG","message":"932 924"}
-{"timestamp":"00:03:24.380","source":"Browser","level":"LOG","message":"932 924"}
-{"timestamp":"00:03:24.398","source":"Browser","level":"LOG","message":"941 932"}
-{"timestamp":"00:03:24.398","source":"Browser","level":"LOG","message":"941 932"}
-{"timestamp":"00:03:24.414","source":"Browser","level":"LOG","message":"951 941"}
-{"timestamp":"00:03:24.414","source":"Browser","level":"LOG","message":"951 941"}
-{"timestamp":"00:03:24.430","source":"Browser","level":"LOG","message":"961 951"}
-{"timestamp":"00:03:24.430","source":"Browser","level":"LOG","message":"961 951"}
-{"timestamp":"00:03:24.447","source":"Browser","level":"LOG","message":"972 961"}
-{"timestamp":"00:03:24.447","source":"Browser","level":"LOG","message":"972 961"}
-{"timestamp":"00:03:24.464","source":"Browser","level":"LOG","message":"982 972"}
-{"timestamp":"00:03:24.465","source":"Browser","level":"LOG","message":"982 972"}
-{"timestamp":"00:03:24.480","source":"Browser","level":"LOG","message":"992 982"}
-{"timestamp":"00:03:24.480","source":"Browser","level":"LOG","message":"992 982"}
-{"timestamp":"00:03:24.498","source":"Browser","level":"LOG","message":"1001 992"}
-{"timestamp":"00:03:24.498","source":"Browser","level":"LOG","message":"1001 992"}
-{"timestamp":"00:03:24.513","source":"Browser","level":"LOG","message":"1007 1001"}
-{"timestamp":"00:03:24.513","source":"Browser","level":"LOG","message":"1007 1001"}
-{"timestamp":"00:03:24.530","source":"Browser","level":"LOG","message":"1018 1007"}
-{"timestamp":"00:03:24.530","source":"Browser","level":"LOG","message":"1018 1007"}
-{"timestamp":"00:03:24.547","source":"Browser","level":"LOG","message":"1030 1018"}
-{"timestamp":"00:03:24.547","source":"Browser","level":"LOG","message":"1030 1018"}
-{"timestamp":"00:03:24.564","source":"Browser","level":"LOG","message":"1042 1030"}
-{"timestamp":"00:03:24.564","source":"Browser","level":"LOG","message":"1042 1030"}
-{"timestamp":"00:03:24.580","source":"Browser","level":"LOG","message":"1054 1042"}
-{"timestamp":"00:03:24.580","source":"Browser","level":"LOG","message":"1054 1042"}
-{"timestamp":"00:03:24.596","source":"Browser","level":"LOG","message":"1066 1054"}
-{"timestamp":"00:03:24.596","source":"Browser","level":"LOG","message":"1066 1054"}
-{"timestamp":"00:03:24.612","source":"Browser","level":"LOG","message":"1077 1066"}
-{"timestamp":"00:03:24.612","source":"Browser","level":"LOG","message":"1077 1066"}
-{"timestamp":"00:03:24.629","source":"Browser","level":"LOG","message":"1089 1077"}
-{"timestamp":"00:03:24.629","source":"Browser","level":"LOG","message":"1089 1077"}
-{"timestamp":"00:03:24.645","source":"Browser","level":"LOG","message":"1101 1089"}
-{"timestamp":"00:03:24.645","source":"Browser","level":"LOG","message":"1101 1089"}
-{"timestamp":"00:03:24.662","source":"Browser","level":"LOG","message":"1112 1101"}
-{"timestamp":"00:03:24.662","source":"Browser","level":"LOG","message":"1112 1101"}
-{"timestamp":"00:03:24.678","source":"Browser","level":"LOG","message":"1122 1112"}
-{"timestamp":"00:03:24.678","source":"Browser","level":"LOG","message":"1122 1112"}
-{"timestamp":"00:03:24.695","source":"Browser","level":"LOG","message":"1131 1122"}
-{"timestamp":"00:03:24.695","source":"Browser","level":"LOG","message":"1131 1122"}
-{"timestamp":"00:03:24.712","source":"Browser","level":"LOG","message":"1139 1131"}
-{"timestamp":"00:03:24.712","source":"Browser","level":"LOG","message":"1139 1131"}
-{"timestamp":"00:03:24.729","source":"Browser","level":"LOG","message":"1147 1139"}
-{"timestamp":"00:03:24.729","source":"Browser","level":"LOG","message":"1147 1139"}
-{"timestamp":"00:03:24.746","source":"Browser","level":"LOG","message":"1154 1147"}
-{"timestamp":"00:03:24.746","source":"Browser","level":"LOG","message":"1154 1147"}
-{"timestamp":"00:03:24.762","source":"Browser","level":"LOG","message":"1160 1154"}
-{"timestamp":"00:03:24.763","source":"Browser","level":"LOG","message":"1160 1154"}
-{"timestamp":"00:03:24.779","source":"Browser","level":"LOG","message":"1166 1160"}
-{"timestamp":"00:03:24.780","source":"Browser","level":"LOG","message":"1166 1160"}
-{"timestamp":"00:03:24.796","source":"Browser","level":"LOG","message":"1171 1166"}
-{"timestamp":"00:03:24.796","source":"Browser","level":"LOG","message":"1171 1166"}
-{"timestamp":"00:03:24.812","source":"Browser","level":"LOG","message":"1176 1171"}
-{"timestamp":"00:03:24.813","source":"Browser","level":"LOG","message":"1176 1171"}
-{"timestamp":"00:03:24.829","source":"Browser","level":"LOG","message":"1181 1176"}
-{"timestamp":"00:03:24.829","source":"Browser","level":"LOG","message":"1181 1176"}
-{"timestamp":"00:03:24.846","source":"Browser","level":"LOG","message":"1185 1181"}
-{"timestamp":"00:03:24.846","source":"Browser","level":"LOG","message":"1185 1181"}
-{"timestamp":"00:03:24.863","source":"Browser","level":"LOG","message":"1189 1185"}
-{"timestamp":"00:03:24.863","source":"Browser","level":"LOG","message":"1189 1185"}
-{"timestamp":"00:03:24.880","source":"Browser","level":"LOG","message":"1193 1189"}
-{"timestamp":"00:03:24.880","source":"Browser","level":"LOG","message":"1193 1189"}
-{"timestamp":"00:03:24.896","source":"Browser","level":"LOG","message":"1196 1193"}
-{"timestamp":"00:03:24.896","source":"Browser","level":"LOG","message":"1196 1193"}
-{"timestamp":"00:03:24.913","source":"Browser","level":"LOG","message":"1199 1196"}
-{"timestamp":"00:03:24.913","source":"Browser","level":"LOG","message":"1199 1196"}
-{"timestamp":"00:03:24.930","source":"Browser","level":"LOG","message":"1202 1199"}
-{"timestamp":"00:03:24.930","source":"Browser","level":"LOG","message":"1202 1199"}
-{"timestamp":"00:03:24.947","source":"Browser","level":"LOG","message":"1205 1202"}
-{"timestamp":"00:03:24.947","source":"Browser","level":"LOG","message":"1205 1202"}
-{"timestamp":"00:03:24.963","source":"Browser","level":"LOG","message":"1207 1205"}
-{"timestamp":"00:03:24.964","source":"Browser","level":"LOG","message":"1207 1205"}
-{"timestamp":"00:03:24.980","source":"Browser","level":"LOG","message":"1209 1207"}
-{"timestamp":"00:03:24.980","source":"Browser","level":"LOG","message":"1209 1207"}
-{"timestamp":"00:03:24.998","source":"Browser","level":"LOG","message":"1211 1209"}
-{"timestamp":"00:03:24.998","source":"Browser","level":"LOG","message":"1211 1209"}
-{"timestamp":"00:03:25.097","source":"Browser","level":"LOG","message":"1213 1211"}
-{"timestamp":"00:03:25.097","source":"Browser","level":"LOG","message":"1213 1211"}
-{"timestamp":"00:03:25.131","source":"Browser","level":"LOG","message":"1215 1213"}
-{"timestamp":"00:03:25.131","source":"Browser","level":"LOG","message":"1215 1213"}
-{"timestamp":"00:03:25.149","source":"Browser","level":"LOG","message":"1221 1215"}
-{"timestamp":"00:03:25.149","source":"Browser","level":"LOG","message":"1221 1215"}
-{"timestamp":"00:03:25.165","source":"Browser","level":"LOG","message":"1224 1221"}
-{"timestamp":"00:03:25.165","source":"Browser","level":"LOG","message":"1224 1221"}
-{"timestamp":"00:03:25.181","source":"Browser","level":"LOG","message":"1226 1224"}
-{"timestamp":"00:03:25.181","source":"Browser","level":"LOG","message":"1226 1224"}
-{"timestamp":"00:03:25.197","source":"Browser","level":"LOG","message":"1228 1226"}
-{"timestamp":"00:03:25.197","source":"Browser","level":"LOG","message":"1228 1226"}
-{"timestamp":"00:03:25.214","source":"Browser","level":"LOG","message":"1230 1228"}
-{"timestamp":"00:03:25.214","source":"Browser","level":"LOG","message":"1230 1228"}
-{"timestamp":"00:03:25.231","source":"Browser","level":"LOG","message":"1232 1230"}
-{"timestamp":"00:03:25.231","source":"Browser","level":"LOG","message":"1232 1230"}
-{"timestamp":"00:03:25.248","source":"Browser","level":"LOG","message":"1235 1232"}
-{"timestamp":"00:03:25.248","source":"Browser","level":"LOG","message":"1235 1232"}
-{"timestamp":"00:03:25.264","source":"Browser","level":"LOG","message":"1239 1235"}
-{"timestamp":"00:03:25.264","source":"Browser","level":"LOG","message":"1239 1235"}
-{"timestamp":"00:03:25.280","source":"Browser","level":"LOG","message":"1243 1239"}
-{"timestamp":"00:03:25.280","source":"Browser","level":"LOG","message":"1243 1239"}
-{"timestamp":"00:03:25.297","source":"Browser","level":"LOG","message":"1247 1243"}
-{"timestamp":"00:03:25.297","source":"Browser","level":"LOG","message":"1247 1243"}
-{"timestamp":"00:03:25.313","source":"Browser","level":"LOG","message":"1251 1247"}
-{"timestamp":"00:03:25.314","source":"Browser","level":"LOG","message":"1251 1247"}
-{"timestamp":"00:03:25.331","source":"Browser","level":"LOG","message":"1254 1251"}
-{"timestamp":"00:03:25.331","source":"Browser","level":"LOG","message":"1254 1251"}
-{"timestamp":"00:03:25.348","source":"Browser","level":"LOG","message":"1257 1254"}
-{"timestamp":"00:03:25.348","source":"Browser","level":"LOG","message":"1257 1254"}
-{"timestamp":"00:03:25.364","source":"Browser","level":"LOG","message":"1260 1257"}
-{"timestamp":"00:03:25.364","source":"Browser","level":"LOG","message":"1260 1257"}
-{"timestamp":"00:03:25.380","source":"Browser","level":"LOG","message":"1263 1260"}
-{"timestamp":"00:03:25.380","source":"Browser","level":"LOG","message":"1263 1260"}
-{"timestamp":"00:03:25.397","source":"Browser","level":"LOG","message":"1266 1263"}
-{"timestamp":"00:03:25.397","source":"Browser","level":"LOG","message":"1266 1263"}
-{"timestamp":"00:03:25.414","source":"Browser","level":"LOG","message":"1270 1266"}
-{"timestamp":"00:03:25.414","source":"Browser","level":"LOG","message":"1270 1266"}
-{"timestamp":"00:03:25.430","source":"Browser","level":"LOG","message":"1274 1270"}
-{"timestamp":"00:03:25.431","source":"Browser","level":"LOG","message":"1274 1270"}
-{"timestamp":"00:03:25.447","source":"Browser","level":"LOG","message":"1279 1274"}
-{"timestamp":"00:03:25.447","source":"Browser","level":"LOG","message":"1279 1274"}
-{"timestamp":"00:03:25.464","source":"Browser","level":"LOG","message":"1289 1279"}
-{"timestamp":"00:03:25.464","source":"Browser","level":"LOG","message":"1289 1279"}
-{"timestamp":"00:03:25.480","source":"Browser","level":"LOG","message":"1308 1289"}
-{"timestamp":"00:03:25.480","source":"Browser","level":"LOG","message":"1308 1289"}
-{"timestamp":"00:03:25.497","source":"Browser","level":"LOG","message":"1336 1308"}
-{"timestamp":"00:03:25.497","source":"Browser","level":"LOG","message":"1336 1308"}
-{"timestamp":"00:03:25.516","source":"Browser","level":"LOG","message":"1376 1336"}
-{"timestamp":"00:03:25.516","source":"Browser","level":"LOG","message":"1376 1336"}
-{"timestamp":"00:03:25.530","source":"Browser","level":"LOG","message":"1395 1376"}
-{"timestamp":"00:03:25.530","source":"Browser","level":"LOG","message":"1395 1376"}
-{"timestamp":"00:03:25.548","source":"Browser","level":"LOG","message":"1424 1395"}
-{"timestamp":"00:03:25.548","source":"Browser","level":"LOG","message":"1424 1395"}
-{"timestamp":"00:03:25.563","source":"Browser","level":"LOG","message":"1456 1424"}
-{"timestamp":"00:03:25.563","source":"Browser","level":"LOG","message":"1456 1424"}
-{"timestamp":"00:03:25.580","source":"Browser","level":"LOG","message":"1490 1456"}
-{"timestamp":"00:03:25.580","source":"Browser","level":"LOG","message":"1490 1456"}
-{"timestamp":"00:03:25.596","source":"Browser","level":"LOG","message":"1524 1490"}
-{"timestamp":"00:03:25.596","source":"Browser","level":"LOG","message":"1524 1490"}
-{"timestamp":"00:03:25.613","source":"Browser","level":"LOG","message":"1558 1524"}
-{"timestamp":"00:03:25.613","source":"Browser","level":"LOG","message":"1558 1524"}
-{"timestamp":"00:03:25.630","source":"Browser","level":"LOG","message":"1590 1558"}
-{"timestamp":"00:03:25.630","source":"Browser","level":"LOG","message":"1590 1558"}
-{"timestamp":"00:03:25.646","source":"Browser","level":"LOG","message":"1626 1590"}
-{"timestamp":"00:03:25.646","source":"Browser","level":"LOG","message":"1626 1590"}
-{"timestamp":"00:03:25.663","source":"Browser","level":"LOG","message":"1661 1626"}
-{"timestamp":"00:03:25.663","source":"Browser","level":"LOG","message":"1661 1626"}
-{"timestamp":"00:03:25.680","source":"Browser","level":"LOG","message":"1693 1661"}
-{"timestamp":"00:03:25.680","source":"Browser","level":"LOG","message":"1693 1661"}
-{"timestamp":"00:03:25.697","source":"Browser","level":"LOG","message":"1722 1693"}
-{"timestamp":"00:03:25.697","source":"Browser","level":"LOG","message":"1722 1693"}
-{"timestamp":"00:03:25.713","source":"Browser","level":"LOG","message":"1748 1722"}
-{"timestamp":"00:03:25.713","source":"Browser","level":"LOG","message":"1748 1722"}
-{"timestamp":"00:03:25.729","source":"Browser","level":"LOG","message":"1772 1748"}
-{"timestamp":"00:03:25.730","source":"Browser","level":"LOG","message":"1772 1748"}
-{"timestamp":"00:03:25.746","source":"Browser","level":"LOG","message":"1794 1772"}
-{"timestamp":"00:03:25.746","source":"Browser","level":"LOG","message":"1794 1772"}
-{"timestamp":"00:03:25.763","source":"Browser","level":"LOG","message":"1814 1794"}
-{"timestamp":"00:03:25.763","source":"Browser","level":"LOG","message":"1814 1794"}
-{"timestamp":"00:03:25.780","source":"Browser","level":"LOG","message":"1833 1814"}
-{"timestamp":"00:03:25.780","source":"Browser","level":"LOG","message":"1833 1814"}
-{"timestamp":"00:03:25.797","source":"Browser","level":"LOG","message":"1850 1833"}
-{"timestamp":"00:03:25.797","source":"Browser","level":"LOG","message":"1850 1833"}
-{"timestamp":"00:03:25.813","source":"Browser","level":"LOG","message":"1866 1850"}
-{"timestamp":"00:03:25.813","source":"Browser","level":"LOG","message":"1866 1850"}
-{"timestamp":"00:03:25.830","source":"Browser","level":"LOG","message":"1880 1866"}
-{"timestamp":"00:03:25.830","source":"Browser","level":"LOG","message":"1880 1866"}
-{"timestamp":"00:03:25.847","source":"Browser","level":"LOG","message":"1893 1880"}
-{"timestamp":"00:03:25.847","source":"Browser","level":"LOG","message":"1893 1880"}
-{"timestamp":"00:03:25.863","source":"Browser","level":"LOG","message":"1905 1893"}
-{"timestamp":"00:03:25.863","source":"Browser","level":"LOG","message":"1905 1893"}
-{"timestamp":"00:03:25.879","source":"Browser","level":"LOG","message":"1916 1905"}
-{"timestamp":"00:03:25.880","source":"Browser","level":"LOG","message":"1916 1905"}
-{"timestamp":"00:03:25.897","source":"Browser","level":"LOG","message":"1926 1916"}
-{"timestamp":"00:03:25.897","source":"Browser","level":"LOG","message":"1926 1916"}
-{"timestamp":"00:03:25.966","source":"Browser","level":"LOG","message":"1935 1926"}
-{"timestamp":"00:03:25.966","source":"Browser","level":"LOG","message":"1935 1926"}
-{"timestamp":"00:03:25.979","source":"Browser","level":"LOG","message":"1936 1935"}
-{"timestamp":"00:03:25.979","source":"Browser","level":"LOG","message":"1936 1935"}
-{"timestamp":"00:03:25.996","source":"Browser","level":"LOG","message":"1940 1936"}
-{"timestamp":"00:03:25.996","source":"Browser","level":"LOG","message":"1940 1936"}
-{"timestamp":"00:03:26.013","source":"Browser","level":"LOG","message":"1943 1940"}
-{"timestamp":"00:03:26.013","source":"Browser","level":"LOG","message":"1943 1940"}
-{"timestamp":"00:03:26.030","source":"Browser","level":"LOG","message":"1948 1943"}
-{"timestamp":"00:03:26.030","source":"Browser","level":"LOG","message":"1948 1943"}
-{"timestamp":"00:03:26.047","source":"Browser","level":"LOG","message":"1954 1948"}
-{"timestamp":"00:03:26.047","source":"Browser","level":"LOG","message":"1954 1948"}
-{"timestamp":"00:03:26.064","source":"Browser","level":"LOG","message":"1961 1954"}
-{"timestamp":"00:03:26.064","source":"Browser","level":"LOG","message":"1961 1954"}
-{"timestamp":"00:03:26.080","source":"Browser","level":"LOG","message":"1969 1961"}
-{"timestamp":"00:03:26.080","source":"Browser","level":"LOG","message":"1969 1961"}
-{"timestamp":"00:03:26.097","source":"Browser","level":"LOG","message":"1978 1969"}
-{"timestamp":"00:03:26.097","source":"Browser","level":"LOG","message":"1978 1969"}
-{"timestamp":"00:03:26.115","source":"Browser","level":"LOG","message":"1991 1978"}
-{"timestamp":"00:03:26.115","source":"Browser","level":"LOG","message":"1991 1978"}
-{"timestamp":"00:03:26.131","source":"Browser","level":"LOG","message":"2004 1991"}
-{"timestamp":"00:03:26.131","source":"Browser","level":"LOG","message":"2004 1991"}
-{"timestamp":"00:03:26.165","source":"Browser","level":"LOG","message":"2017 2004"}
-{"timestamp":"00:03:26.165","source":"Browser","level":"LOG","message":"2017 2004"}
-{"timestamp":"00:03:26.182","source":"Browser","level":"LOG","message":"2051 2017"}
-{"timestamp":"00:03:26.182","source":"Browser","level":"LOG","message":"2051 2017"}
-{"timestamp":"00:03:26.199","source":"Browser","level":"LOG","message":"2066 2051"}
-{"timestamp":"00:03:26.199","source":"Browser","level":"LOG","message":"2066 2051"}
-{"timestamp":"00:03:26.215","source":"Browser","level":"LOG","message":"2080 2066"}
-{"timestamp":"00:03:26.215","source":"Browser","level":"LOG","message":"2080 2066"}
-{"timestamp":"00:03:26.231","source":"Browser","level":"LOG","message":"2090 2080"}
-{"timestamp":"00:03:26.231","source":"Browser","level":"LOG","message":"2090 2080"}
-{"timestamp":"00:03:26.247","source":"Browser","level":"LOG","message":"2097 2090"}
-{"timestamp":"00:03:26.247","source":"Browser","level":"LOG","message":"2097 2090"}
-{"timestamp":"00:03:26.265","source":"Browser","level":"LOG","message":"2102 2097"}
-{"timestamp":"00:03:26.265","source":"Browser","level":"LOG","message":"2102 2097"}
-{"timestamp":"00:03:26.280","source":"Browser","level":"LOG","message":"2112 2102"}
-{"timestamp":"00:03:26.280","source":"Browser","level":"LOG","message":"2112 2102"}
-{"timestamp":"00:03:26.298","source":"Browser","level":"LOG","message":"2123 2112"}
-{"timestamp":"00:03:26.298","source":"Browser","level":"LOG","message":"2123 2112"}
-{"timestamp":"00:03:26.314","source":"Browser","level":"LOG","message":"2135 2123"}
-{"timestamp":"00:03:26.314","source":"Browser","level":"LOG","message":"2135 2123"}
-{"timestamp":"00:03:26.331","source":"Browser","level":"LOG","message":"2147 2135"}
-{"timestamp":"00:03:26.331","source":"Browser","level":"LOG","message":"2147 2135"}
-{"timestamp":"00:03:26.347","source":"Browser","level":"LOG","message":"2159 2147"}
-{"timestamp":"00:03:26.347","source":"Browser","level":"LOG","message":"2159 2147"}
-{"timestamp":"00:03:26.365","source":"Browser","level":"LOG","message":"2170 2159"}
-{"timestamp":"00:03:26.365","source":"Browser","level":"LOG","message":"2170 2159"}
-{"timestamp":"00:03:26.380","source":"Browser","level":"LOG","message":"2182 2170"}
-{"timestamp":"00:03:26.380","source":"Browser","level":"LOG","message":"2182 2170"}
-{"timestamp":"00:03:26.397","source":"Browser","level":"LOG","message":"2194 2182"}
-{"timestamp":"00:03:26.397","source":"Browser","level":"LOG","message":"2194 2182"}
-{"timestamp":"00:03:26.414","source":"Browser","level":"LOG","message":"2205 2194"}
-{"timestamp":"00:03:26.414","source":"Browser","level":"LOG","message":"2205 2194"}
-{"timestamp":"00:03:26.430","source":"Browser","level":"LOG","message":"2215 2205"}
-{"timestamp":"00:03:26.430","source":"Browser","level":"LOG","message":"2215 2205"}
-{"timestamp":"00:03:26.447","source":"Browser","level":"LOG","message":"2224 2215"}
-{"timestamp":"00:03:26.447","source":"Browser","level":"LOG","message":"2224 2215"}
-{"timestamp":"00:03:26.464","source":"Browser","level":"LOG","message":"2232 2224"}
-{"timestamp":"00:03:26.464","source":"Browser","level":"LOG","message":"2232 2224"}
-{"timestamp":"00:03:27.915","source":"Browser","level":"LOG","message":"2240 2232"}
-{"timestamp":"00:03:27.915","source":"Browser","level":"LOG","message":"2240 2232"}
-{"timestamp":"00:03:27.967","source":"Browser","level":"LOG","message":"0 0"}
-{"timestamp":"00:03:27.978","source":"Browser","level":"LOG","message":"1 0"}
-{"timestamp":"00:03:27.978","source":"Browser","level":"LOG","message":"1 0"}
-{"timestamp":"00:03:27.995","source":"Browser","level":"LOG","message":"5.5 1"}
-{"timestamp":"00:03:27.995","source":"Browser","level":"LOG","message":"5.5 1"}
-{"timestamp":"00:03:28.012","source":"Browser","level":"LOG","message":"14 5.5"}
-{"timestamp":"00:03:28.012","source":"Browser","level":"LOG","message":"14 5.5"}
-{"timestamp":"00:03:28.028","source":"Browser","level":"LOG","message":"29.5 14"}
-{"timestamp":"00:03:28.028","source":"Browser","level":"LOG","message":"29.5 14"}
-{"timestamp":"00:03:28.045","source":"Browser","level":"LOG","message":"58 29.5"}
-{"timestamp":"00:03:28.045","source":"Browser","level":"LOG","message":"58 29.5"}
-{"timestamp":"00:03:28.062","source":"Browser","level":"LOG","message":"105.5 58"}
-{"timestamp":"00:03:28.062","source":"Browser","level":"LOG","message":"105.5 58"}
-{"timestamp":"00:03:28.078","source":"Browser","level":"LOG","message":"162 105.5"}
-{"timestamp":"00:03:28.078","source":"Browser","level":"LOG","message":"162 105.5"}
-{"timestamp":"00:03:28.097","source":"Browser","level":"LOG","message":"205.5 162"}
-{"timestamp":"00:03:28.098","source":"Browser","level":"LOG","message":"205.5 162"}
-{"timestamp":"00:03:28.112","source":"Browser","level":"LOG","message":"237.5 205.5"}
-{"timestamp":"00:03:28.112","source":"Browser","level":"LOG","message":"237.5 205.5"}
-{"timestamp":"00:03:28.129","source":"Browser","level":"LOG","message":"261.5 237.5"}
-{"timestamp":"00:03:28.129","source":"Browser","level":"LOG","message":"261.5 237.5"}
-{"timestamp":"00:03:28.145","source":"Browser","level":"LOG","message":"280.5 261.5"}
-{"timestamp":"00:03:28.145","source":"Browser","level":"LOG","message":"280.5 261.5"}
-{"timestamp":"00:03:28.162","source":"Browser","level":"LOG","message":"296 280.5"}
-{"timestamp":"00:03:28.162","source":"Browser","level":"LOG","message":"296 280.5"}
-{"timestamp":"00:03:28.178","source":"Browser","level":"LOG","message":"308.5 296"}
-{"timestamp":"00:03:28.179","source":"Browser","level":"LOG","message":"308.5 296"}
-{"timestamp":"00:03:28.195","source":"Browser","level":"LOG","message":"318.5 308.5"}
-{"timestamp":"00:03:28.195","source":"Browser","level":"LOG","message":"318.5 308.5"}
-{"timestamp":"00:03:28.212","source":"Browser","level":"LOG","message":"327.5 318.5"}
-{"timestamp":"00:03:28.212","source":"Browser","level":"LOG","message":"327.5 318.5"}
-{"timestamp":"00:03:28.230","source":"Browser","level":"LOG","message":"334.5 327.5"}
-{"timestamp":"00:03:28.230","source":"Browser","level":"LOG","message":"334.5 327.5"}
-{"timestamp":"00:03:28.246","source":"Browser","level":"LOG","message":"341 334.5"}
-{"timestamp":"00:03:28.246","source":"Browser","level":"LOG","message":"341 334.5"}
-{"timestamp":"00:03:28.263","source":"Browser","level":"LOG","message":"346 341"}
-{"timestamp":"00:03:28.263","source":"Browser","level":"LOG","message":"346 341"}
-{"timestamp":"00:03:28.279","source":"Browser","level":"LOG","message":"350.5 346"}
-{"timestamp":"00:03:28.279","source":"Browser","level":"LOG","message":"350.5 346"}
-{"timestamp":"00:03:28.296","source":"Browser","level":"LOG","message":"354 350.5"}
-{"timestamp":"00:03:28.296","source":"Browser","level":"LOG","message":"354 350.5"}
-{"timestamp":"00:03:28.312","source":"Browser","level":"LOG","message":"357 354"}
-{"timestamp":"00:03:28.312","source":"Browser","level":"LOG","message":"357 354"}
-{"timestamp":"00:03:28.329","source":"Browser","level":"LOG","message":"359 357"}
-{"timestamp":"00:03:28.329","source":"Browser","level":"LOG","message":"359 357"}
-{"timestamp":"00:03:28.346","source":"Browser","level":"LOG","message":"361 359"}
-{"timestamp":"00:03:28.346","source":"Browser","level":"LOG","message":"361 359"}
-{"timestamp":"00:03:28.363","source":"Browser","level":"LOG","message":"362.5 361"}
-{"timestamp":"00:03:28.363","source":"Browser","level":"LOG","message":"362.5 361"}
-{"timestamp":"00:03:28.380","source":"Browser","level":"LOG","message":"363.5 362.5"}
-{"timestamp":"00:03:28.380","source":"Browser","level":"LOG","message":"363.5 362.5"}
+{"timestamp":"00:00:01.528","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:08.622","source":"Server","level":"LOG","message":"○ Compiling /contact ..."}
+{"timestamp":"00:00:10.815","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:00:11.088","source":"Browser","level":"LOG","message":"0 0"}
+{"timestamp":"00:00:11.088","source":"Browser","level":"LOG","message":"0 0"}
+{"timestamp":"00:00:11.088","source":"Browser","level":"LOG","message":"58 0"}
+{"timestamp":"00:00:11.088","source":"Browser","level":"LOG","message":"58 0"}
+{"timestamp":"00:00:11.091","source":"Browser","level":"LOG","message":"158.5 0"}
+{"timestamp":"00:00:11.091","source":"Browser","level":"LOG","message":"158.5 0"}
+{"timestamp":"00:00:11.091","source":"Browser","level":"LOG","message":"203.5 158.5"}
+{"timestamp":"00:00:11.091","source":"Browser","level":"LOG","message":"203.5 158.5"}
+{"timestamp":"00:00:11.091","source":"Browser","level":"LOG","message":"237.5 203.5"}
+{"timestamp":"00:00:11.091","source":"Browser","level":"LOG","message":"237.5 203.5"}
+{"timestamp":"00:00:11.092","source":"Browser","level":"LOG","message":"261 237.5"}
+{"timestamp":"00:00:11.092","source":"Browser","level":"LOG","message":"261 237.5"}
+{"timestamp":"00:00:11.106","source":"Browser","level":"LOG","message":"280.5 261"}
+{"timestamp":"00:00:11.107","source":"Browser","level":"LOG","message":"280.5 261"}
+{"timestamp":"00:00:11.123","source":"Browser","level":"LOG","message":"296 280.5"}
+{"timestamp":"00:00:11.123","source":"Browser","level":"LOG","message":"296 280.5"}
+{"timestamp":"00:00:11.135","source":"Browser","level":"LOG","message":"308.5 296"}
+{"timestamp":"00:00:11.135","source":"Browser","level":"LOG","message":"308.5 296"}
+{"timestamp":"00:00:11.149","source":"Browser","level":"LOG","message":"318.5 308.5"}
+{"timestamp":"00:00:11.149","source":"Browser","level":"LOG","message":"318.5 308.5"}
+{"timestamp":"00:00:11.166","source":"Browser","level":"LOG","message":"327 318.5"}
+{"timestamp":"00:00:11.167","source":"Browser","level":"LOG","message":"327 318.5"}
+{"timestamp":"00:00:11.183","source":"Browser","level":"LOG","message":"334.5 327"}
+{"timestamp":"00:00:11.183","source":"Browser","level":"LOG","message":"334.5 327"}
+{"timestamp":"00:00:11.200","source":"Browser","level":"LOG","message":"340.5 334.5"}
+{"timestamp":"00:00:11.200","source":"Browser","level":"LOG","message":"340.5 334.5"}
+{"timestamp":"00:00:11.218","source":"Browser","level":"LOG","message":"346 340.5"}
+{"timestamp":"00:00:11.218","source":"Browser","level":"LOG","message":"346 340.5"}
+{"timestamp":"00:00:11.233","source":"Browser","level":"LOG","message":"350 346"}
+{"timestamp":"00:00:11.233","source":"Browser","level":"LOG","message":"350 346"}
+{"timestamp":"00:00:11.250","source":"Browser","level":"LOG","message":"353.5 350"}
+{"timestamp":"00:00:11.250","source":"Browser","level":"LOG","message":"353.5 350"}
+{"timestamp":"00:00:11.265","source":"Browser","level":"LOG","message":"356.5 353.5"}
+{"timestamp":"00:00:11.265","source":"Browser","level":"LOG","message":"356.5 353.5"}
+{"timestamp":"00:00:11.282","source":"Browser","level":"LOG","message":"359 356.5"}
+{"timestamp":"00:00:11.282","source":"Browser","level":"LOG","message":"359 356.5"}
+{"timestamp":"00:00:11.299","source":"Browser","level":"LOG","message":"361 359"}
+{"timestamp":"00:00:11.299","source":"Browser","level":"LOG","message":"361 359"}
+{"timestamp":"00:00:11.317","source":"Browser","level":"LOG","message":"362.5 361"}
+{"timestamp":"00:00:11.317","source":"Browser","level":"LOG","message":"362.5 361"}
+{"timestamp":"00:00:11.334","source":"Browser","level":"LOG","message":"363.5 362.5"}
+{"timestamp":"00:00:11.334","source":"Browser","level":"LOG","message":"363.5 362.5"}
+{"timestamp":"00:00:13.838","source":"Browser","level":"LOG","message":"364 363.5"}
+{"timestamp":"00:00:13.838","source":"Browser","level":"LOG","message":"364 363.5"}
+{"timestamp":"00:00:13.852","source":"Browser","level":"LOG","message":"361 364"}
+{"timestamp":"00:00:13.868","source":"Browser","level":"LOG","message":"348 361"}
+{"timestamp":"00:00:13.885","source":"Browser","level":"LOG","message":"319 348"}
+{"timestamp":"00:00:13.901","source":"Browser","level":"LOG","message":"268 319"}
+{"timestamp":"00:00:13.918","source":"Browser","level":"LOG","message":"202 268"}
+{"timestamp":"00:00:13.935","source":"Browser","level":"LOG","message":"153 202"}
+{"timestamp":"00:00:13.950","source":"Browser","level":"LOG","message":"71 153"}
+{"timestamp":"00:00:15.525","source":"Browser","level":"ERROR","message":"⨯ unhandledRejection: [object Event] \n"}
+{"timestamp":"00:00:15.527","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31m\\\"⨯ unhandledRejection:\\\"\\u001b[39m\" \"[object Event]\" \"\\n\\u001b[31m\\u001b[39m\""}
+{"timestamp":"00:00:16.805","source":"Browser","level":"LOG","message":"false"}
+{"timestamp":"00:00:17.568","source":"Browser","level":"LOG","message":"true"}
+{"timestamp":"00:00:17.634","source":"Browser","level":"LOG","message":"true"}
+{"timestamp":"00:07:33.522","source":"Browser","level":"ERROR","message":"⨯ unhandledRejection: [object Event] \n"}
+{"timestamp":"00:07:33.543","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31m\\\"⨯ unhandledRejection:\\\"\\u001b[39m\" \"[object Event]\" \"\\n\\u001b[31m\\u001b[39m\""}
+{"timestamp":"00:07:36.166","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:07:36.301","source":"Browser","level":"LOG","message":"false"}
+{"timestamp":"00:07:36.905","source":"Browser","level":"LOG","message":"true"}
+{"timestamp":"00:07:36.969","source":"Browser","level":"LOG","message":"true"}
+{"timestamp":"00:07:37.085","source":"Browser","level":"LOG","message":"true"}
+{"timestamp":"00:07:37.107","source":"Browser","level":"LOG","message":"true"}
+{"timestamp":"00:07:42.908","source":"Browser","level":"LOG","message":"false"}
+{"timestamp":"00:07:42.920","source":"Browser","level":"LOG","message":"true"}

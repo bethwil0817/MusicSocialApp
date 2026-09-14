@@ -1,6 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+	turbopack: {
+		rules: {
+			"*.mp4": { type: "asset" },
+			"*.webm": { type: "asset" },
+			"*.mp3": { type: "asset" },
+			"*.wav": { type: "asset" },
+		},
+	},
+
 	// Keeps your media asset loaders active so your .mp4 files compile smoothly
 	webpack(config) {
 		config.module.rules.push({

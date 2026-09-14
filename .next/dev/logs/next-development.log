@@ -1,69 +1,7 @@
-{"timestamp":"00:00:01.528","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:00:08.622","source":"Server","level":"LOG","message":"○ Compiling /contact ..."}
-{"timestamp":"00:00:10.815","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:00:11.088","source":"Browser","level":"LOG","message":"0 0"}
-{"timestamp":"00:00:11.088","source":"Browser","level":"LOG","message":"0 0"}
-{"timestamp":"00:00:11.088","source":"Browser","level":"LOG","message":"58 0"}
-{"timestamp":"00:00:11.088","source":"Browser","level":"LOG","message":"58 0"}
-{"timestamp":"00:00:11.091","source":"Browser","level":"LOG","message":"158.5 0"}
-{"timestamp":"00:00:11.091","source":"Browser","level":"LOG","message":"158.5 0"}
-{"timestamp":"00:00:11.091","source":"Browser","level":"LOG","message":"203.5 158.5"}
-{"timestamp":"00:00:11.091","source":"Browser","level":"LOG","message":"203.5 158.5"}
-{"timestamp":"00:00:11.091","source":"Browser","level":"LOG","message":"237.5 203.5"}
-{"timestamp":"00:00:11.091","source":"Browser","level":"LOG","message":"237.5 203.5"}
-{"timestamp":"00:00:11.092","source":"Browser","level":"LOG","message":"261 237.5"}
-{"timestamp":"00:00:11.092","source":"Browser","level":"LOG","message":"261 237.5"}
-{"timestamp":"00:00:11.106","source":"Browser","level":"LOG","message":"280.5 261"}
-{"timestamp":"00:00:11.107","source":"Browser","level":"LOG","message":"280.5 261"}
-{"timestamp":"00:00:11.123","source":"Browser","level":"LOG","message":"296 280.5"}
-{"timestamp":"00:00:11.123","source":"Browser","level":"LOG","message":"296 280.5"}
-{"timestamp":"00:00:11.135","source":"Browser","level":"LOG","message":"308.5 296"}
-{"timestamp":"00:00:11.135","source":"Browser","level":"LOG","message":"308.5 296"}
-{"timestamp":"00:00:11.149","source":"Browser","level":"LOG","message":"318.5 308.5"}
-{"timestamp":"00:00:11.149","source":"Browser","level":"LOG","message":"318.5 308.5"}
-{"timestamp":"00:00:11.166","source":"Browser","level":"LOG","message":"327 318.5"}
-{"timestamp":"00:00:11.167","source":"Browser","level":"LOG","message":"327 318.5"}
-{"timestamp":"00:00:11.183","source":"Browser","level":"LOG","message":"334.5 327"}
-{"timestamp":"00:00:11.183","source":"Browser","level":"LOG","message":"334.5 327"}
-{"timestamp":"00:00:11.200","source":"Browser","level":"LOG","message":"340.5 334.5"}
-{"timestamp":"00:00:11.200","source":"Browser","level":"LOG","message":"340.5 334.5"}
-{"timestamp":"00:00:11.218","source":"Browser","level":"LOG","message":"346 340.5"}
-{"timestamp":"00:00:11.218","source":"Browser","level":"LOG","message":"346 340.5"}
-{"timestamp":"00:00:11.233","source":"Browser","level":"LOG","message":"350 346"}
-{"timestamp":"00:00:11.233","source":"Browser","level":"LOG","message":"350 346"}
-{"timestamp":"00:00:11.250","source":"Browser","level":"LOG","message":"353.5 350"}
-{"timestamp":"00:00:11.250","source":"Browser","level":"LOG","message":"353.5 350"}
-{"timestamp":"00:00:11.265","source":"Browser","level":"LOG","message":"356.5 353.5"}
-{"timestamp":"00:00:11.265","source":"Browser","level":"LOG","message":"356.5 353.5"}
-{"timestamp":"00:00:11.282","source":"Browser","level":"LOG","message":"359 356.5"}
-{"timestamp":"00:00:11.282","source":"Browser","level":"LOG","message":"359 356.5"}
-{"timestamp":"00:00:11.299","source":"Browser","level":"LOG","message":"361 359"}
-{"timestamp":"00:00:11.299","source":"Browser","level":"LOG","message":"361 359"}
-{"timestamp":"00:00:11.317","source":"Browser","level":"LOG","message":"362.5 361"}
-{"timestamp":"00:00:11.317","source":"Browser","level":"LOG","message":"362.5 361"}
-{"timestamp":"00:00:11.334","source":"Browser","level":"LOG","message":"363.5 362.5"}
-{"timestamp":"00:00:11.334","source":"Browser","level":"LOG","message":"363.5 362.5"}
-{"timestamp":"00:00:13.838","source":"Browser","level":"LOG","message":"364 363.5"}
-{"timestamp":"00:00:13.838","source":"Browser","level":"LOG","message":"364 363.5"}
-{"timestamp":"00:00:13.852","source":"Browser","level":"LOG","message":"361 364"}
-{"timestamp":"00:00:13.868","source":"Browser","level":"LOG","message":"348 361"}
-{"timestamp":"00:00:13.885","source":"Browser","level":"LOG","message":"319 348"}
-{"timestamp":"00:00:13.901","source":"Browser","level":"LOG","message":"268 319"}
-{"timestamp":"00:00:13.918","source":"Browser","level":"LOG","message":"202 268"}
-{"timestamp":"00:00:13.935","source":"Browser","level":"LOG","message":"153 202"}
-{"timestamp":"00:00:13.950","source":"Browser","level":"LOG","message":"71 153"}
-{"timestamp":"00:00:15.525","source":"Browser","level":"ERROR","message":"⨯ unhandledRejection: [object Event] \n"}
-{"timestamp":"00:00:15.527","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31m\\\"⨯ unhandledRejection:\\\"\\u001b[39m\" \"[object Event]\" \"\\n\\u001b[31m\\u001b[39m\""}
-{"timestamp":"00:00:16.805","source":"Browser","level":"LOG","message":"false"}
-{"timestamp":"00:00:17.568","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:00:17.634","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:07:33.522","source":"Browser","level":"ERROR","message":"⨯ unhandledRejection: [object Event] \n"}
-{"timestamp":"00:07:33.543","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31m\\\"⨯ unhandledRejection:\\\"\\u001b[39m\" \"[object Event]\" \"\\n\\u001b[31m\\u001b[39m\""}
-{"timestamp":"00:07:36.166","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:07:36.301","source":"Browser","level":"LOG","message":"false"}
-{"timestamp":"00:07:36.905","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:07:36.969","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:07:37.085","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:07:37.107","source":"Browser","level":"LOG","message":"true"}
-{"timestamp":"00:07:42.908","source":"Browser","level":"LOG","message":"false"}
-{"timestamp":"00:07:42.920","source":"Browser","level":"LOG","message":"true"}
+{"timestamp":"00:00:01.367","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:03.742","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:00:06.693","source":"Browser","level":"ERROR","message":"⨯ unhandledRejection: [object Event] \n"}
+{"timestamp":"00:00:06.696","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31m\\\"⨯ unhandledRejection:\\\"\\u001b[39m\" \"[object Event]\" \"\\n\\u001b[31m\\u001b[39m\""}
+{"timestamp":"00:00:08.826","source":"Browser","level":"LOG","message":"false"}
+{"timestamp":"00:00:09.108","source":"Browser","level":"LOG","message":"true"}
+{"timestamp":"00:00:09.157","source":"Browser","level":"LOG","message":"true"}

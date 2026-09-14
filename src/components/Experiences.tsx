@@ -2,7 +2,7 @@ import { Nav } from "./Nav";
 import guatmount from "../images/guatmount.jpg";
 import { Reveal } from "./Reveal";
 import Footer from "./Footer";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export default function Experiences() {
 	const planningPricingData: {
@@ -103,7 +103,7 @@ export default function Experiences() {
 			}}
 		>
 			<img
-				src={guatmount}
+				src={guatmount.src}
 				loading="lazy"
 				className="hidden invisible"
 			/>
@@ -111,7 +111,7 @@ export default function Experiences() {
 				<div
 					className="px-2 md:px-6 pt-20 pb-10"
 					style={{
-						backgroundImage: `linear-gradient(to bottom, rgba(10,25,15,.7), rgba(10,25,15,.7) 100%), url(${guatmount})`,
+						backgroundImage: `linear-gradient(to bottom, rgba(10,25,15,.7), rgba(10,25,15,.7) 100%), url(${guatmount.src})`,
 						backgroundRepeat: "no-repeat",
 						backgroundSize: "cover",
 						backgroundAttachment: "fixed",
@@ -166,8 +166,7 @@ export default function Experiences() {
 							<div className="text-center mt-10 flex flex-col md:flex-row gap-6 justify-center items-center">
 								<Link
 									className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
-									to="/contact?form=Experience"
-									reloadDocument={true}
+									href="/contact?form=Experience"
 								>
 									Experience Inquiry Form
 								</Link>

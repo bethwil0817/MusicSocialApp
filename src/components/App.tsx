@@ -1,6 +1,6 @@
-import "../styles/App.module.css";
-import { Link, Outlet } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+"use client";
+import Link from "next/link";
+import { Outlet } from "react-router-dom";
 import bannerVideo from "../images/revolutiobannercompress.mp4";
 import bannerVideoMobile from "../images/mobilebannercompress.mp4";
 import leftMountain from "../images/leftmountain.png";
@@ -30,7 +30,6 @@ import { useState, useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
 import { Nav } from "./Nav";
 import Footer from "./Footer";
-import { useFetch } from "../hooks/useFetch";
 
 export function Home() {
 	useEffect(() => {
@@ -210,7 +209,7 @@ export function Home() {
 								<>
 									<img
 										className="w-40 h-full max-h-20 object-contain mx-auto"
-										src={leftMountain}
+										src={leftMountain.src}
 									/>
 									<div className="my-6 text-4xl md:text-5xl hidden lg:flex flex-col gap-y-2 items-center justify-center tracking-wide sm:tracking-[0.35em] text-[#b6c7c0] text-center uppercase">
 										Global Culture Club
@@ -243,22 +242,19 @@ export function Home() {
 									<div className="flex flex-col lg:flex-row gap-6 items-center justify-center">
 										<Link
 											className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
-											to="/experiences"
-											reloadDocument={true}
+											href="/experiences"
 										>
 											Plan My Experience
 										</Link>
 										<Link
 											className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
-											to="/residencies"
-											reloadDocument={true}
+											href="/residencies"
 										>
 											Explore Residencies
 										</Link>
 										<Link
 											className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
-											to=""
-											reloadDocument={true}
+											href=""
 										>
 											Join the Culture Club
 										</Link>
@@ -310,7 +306,7 @@ export function Home() {
 									return (
 										<img
 											className="image object-cover h-[300px] md:h-[500px] basic-[300px] md:basic-[500px]"
-											src={image}
+											src={image.src}
 											key={key}
 											style={{
 												width: "100%",
@@ -329,7 +325,7 @@ export function Home() {
 									return (
 										<img
 											className="image object-cover h-[300px] md:h-[500px] basic-[300px] md:basic-[500px]"
-											src={image}
+											src={image.src}
 											key={key}
 											style={{
 												width: "100%",
@@ -346,7 +342,7 @@ export function Home() {
 					<div
 						className="p-6 pb-20"
 						style={{
-							backgroundImage: `linear-gradient(to bottom, rgba(253,240,214), rgba(253,240,214,0) 100%), url(${sandy})`,
+							backgroundImage: `linear-gradient(to bottom, rgba(253,240,214), rgba(253,240,214,0) 100%), url(${sandy.src})`,
 							backgroundRepeat: "no-repeat",
 							backgroundSize: "cover",
 						}}
@@ -358,7 +354,7 @@ export function Home() {
 							>
 								<img
 									className="w-full h-auto hidden lg:block max-w-[400px] max-h-[100px] xl:max-h-[150px]"
-									src={arrowRight}
+									src={arrowRight.src}
 								/>
 							</Reveal>
 							<Reveal>
@@ -371,7 +367,7 @@ export function Home() {
 								xVal={200}
 							>
 								<img
-									src={arrowLeft}
+									src={arrowLeft.src}
 									className="w-full h-auto hidden lg:block max-w-[400px] max-h-[100px] xl:max-h-[150px]"
 								/>
 							</Reveal>
@@ -414,7 +410,7 @@ export function Home() {
 										>
 											<img
 												className="mx-auto"
-												src={artist}
+												src={artist.src}
 												style={{ height: "200px", width: "200px" }}
 											/>
 											<div className="text-xl mb-4 text-center">
@@ -424,8 +420,7 @@ export function Home() {
 											</div>
 											<Link
 												className="p-2 z-200 pointer-events-auto mx-auto hover:cursor-pointer bg-[#e7cdb6] hover:bg-white text-[#a86933] rounded-lg w-max"
-												to="/contact?form=Residency"
-												reloadDocument={true}
+												href="/contact?form=Residency"
 											>
 												Apply for a Residency
 											</Link>
@@ -435,7 +430,7 @@ export function Home() {
 										>
 											<img
 												className="mx-auto"
-												src={culture}
+												src={culture.src}
 												style={{ height: "200px", width: "200px" }}
 											/>
 											<div className="text-xl mb-4 text-center">
@@ -445,8 +440,7 @@ export function Home() {
 											</div>
 											<Link
 												className="p-2 z-200 pointer-events-auto mx-auto hover:cursor-pointer bg-[#e7cdb6] hover:bg-white text-[#a86933] rounded-lg w-max"
-												to="/contact?path=Membership"
-												reloadDocument={true}
+												href="/contact?path=Membership"
 											>
 												Join the Culture Club
 											</Link>
@@ -456,7 +450,7 @@ export function Home() {
 										>
 											<img
 												className="mx-auto"
-												src={partner}
+												src={partner.src}
 												style={{ height: "200px", width: "200px" }}
 											/>
 											<div className="text-xl mb-4 text-center">
@@ -467,8 +461,7 @@ export function Home() {
 											</div>
 											<Link
 												className="p-2 z-200 pointer-events-auto mx-auto hover:cursor-pointer bg-[#e7cdb6] hover:bg-white text-[#a86933] rounded-lg w-max"
-												to="/contact?form=Partner"
-												reloadDocument={true}
+												href="/contact?form=Partner"
 											>
 												Work With Revolūtiō
 											</Link>
@@ -492,7 +485,7 @@ export function Home() {
 							<div
 								className="w-full overflow-auto left-0 p-2 pb-4 md:p-6 rounded-lg max-w-[80%] h-auto min-h-[600px] sm:min-h-[500px] flex flex-col justify-center items-center mx-auto transition-all ease-in-out duration-100"
 								style={{
-									backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${getBg()})`,
+									backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${getBg().src})`,
 									backgroundSize: "cover",
 									backgroundRepeat: "no-repeat",
 									backgroundPosition: "bottom",
@@ -503,7 +496,7 @@ export function Home() {
 										className={`absolute inset-0 justify-center flex flex-col m-auto items-center text-center gap-6 transition-all ease-in-out duration-700 pointer-events-none ${world === "beach" ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95"}`}
 									>
 										<img
-											src={location}
+											src={location.src}
 											style={{ height: "70px", width: "auto", opacity: "0.7" }}
 											loading="lazy"
 										/>
@@ -522,7 +515,7 @@ export function Home() {
 										className={`absolute inset-0 flex justify-center flex-col m-auto items-center text-center gap-6 transition-all ease-in-out duration-700 pointer-events-none ${world === "wisco" ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95"}`}
 									>
 										<img
-											src={location}
+											src={location.src}
 											style={{ height: "70px", width: "auto", opacity: "0.7" }}
 											loading="lazy"
 										/>
@@ -542,7 +535,7 @@ export function Home() {
 										className={`absolute inset-0 flex flex-col justify-center m-auto items-center text-center gap-6 transition-all ease-in-out duration-700 pointer-events-none ${world === "mountains" ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95"}`}
 									>
 										<img
-											src={location}
+											src={location.src}
 											style={{ height: "70px", width: "auto", opacity: "0.7" }}
 											loading="lazy"
 										/>
@@ -562,7 +555,7 @@ export function Home() {
 										className={`absolute inset-0 flex flex-col justify-center m-auto items-center text-center gap-6 transition-all ease-in-out duration-700 pointer-events-none ${world === "dessert" ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95"}`}
 									>
 										<img
-											src={location}
+											src={location.src}
 											style={{ height: "70px", width: "auto", opacity: "0.7" }}
 											loading="lazy"
 										/>
@@ -753,22 +746,22 @@ export function Home() {
 								<div className="lg:pt-20 w-full relative flex flex-col p-6 md:p-10 gap-10 bg-[#a47f5e90] lg:bg-linear-to-b lg:from-[#a8693355] lg:to-[#a47f5e55]">
 									<img
 										className="image image1 sticky z-[30] shadow-2xl shadow-[#0000006d] top-16 min-h-[150px] md:min-h-[200px] rounded-lg w-full h-auto"
-										src={painter}
+										src={painter.src}
 										loading="lazy"
 									/>
 									<img
 										className="image image2 sticky z-[31] top-24 shadow-2xl shadow-[#0000006d] min-h-[150px] md:min-h-[200px] rounded-lg w-full h-auto ml-auto"
-										src={lake}
+										src={lake.src}
 										loading="lazy"
 									/>
 									<img
 										className="image image3 sticky z-[32] top-36 shadow-2xl shadow-[#0000006d] min-h-[150px] md:min-h-[200px] rounded-lg w-full h-auto"
-										src={artistGuitar}
+										src={artistGuitar.src}
 										loading="lazy"
 									/>
 									<img
 										className="image image4 sticky z-[33] top-48 shadow-2xl shadow-[#0000006d] min-h-[150px] md:min-h-[200px] rounded-lg w-full h-auto ml-auto"
-										src={beachView}
+										src={beachView.src}
 										loading="lazy"
 									/>
 								</div>
@@ -778,7 +771,7 @@ export function Home() {
 									className="py-10 bg-cover bg-fixed bg-linear-to-b to-[#3d5e47] from-[#18281d] bg-no-repeat min-h-screen h-full"
 									style={{
 										backgroundColor: "#18281d",
-										backgroundImage: `linear-gradient(rgba(10,25,15,0.6), rgba(10,25,15,0.6)), url(${event})`,
+										backgroundImage: `linear-gradient(rgba(10,25,15,0.6), rgba(10,25,15,0.6)), url(${event.src})`,
 									}}
 								>
 									<Reveal>
@@ -925,10 +918,7 @@ export function Home() {
 										</Reveal>
 										<Reveal>
 											<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-max text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-												<Link
-													to="/contact?form=Consulting"
-													reloadDocument={true}
-												>
+												<Link href="/contact?form=Consulting">
 													Inquire For Consulting
 												</Link>
 											</button>
@@ -958,7 +948,7 @@ export function Home() {
 													</div>
 													<div className="mt-2 xl:mt-6 text-base md:text-xl flex flex-col text-[rgb(211,198,178)] text-center justify-center items-center">
 														<img
-															src={location}
+															src={location.src}
 															style={{
 																height: "30px",
 																width: "auto",
@@ -1005,7 +995,7 @@ export function Home() {
 													<img
 														className="w-[80%] lg:w-[450px] xl:w-[500px] h-auto rounded-lg"
 														loading="lazy"
-														src={bioPic1}
+														src={bioPic1.src}
 													/>
 												</div>
 											</div>
@@ -1081,20 +1071,12 @@ export function Home() {
 										<div className="md:border-r border-[#a86933] px-2 md:px-6 md:py-10">
 											<Reveal xVal={-200}>
 												<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-													<Link
-														to="/experiences"
-														reloadDocument={true}
-													>
-														Plan My Experience
-													</Link>
+													<Link href="/experiences">Plan My Experience</Link>
 												</button>
 											</Reveal>
 											<Reveal xVal={-200}>
 												<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-													<Link
-														to="/contact?path=Residency"
-														reloadDocument={true}
-													>
+													<Link href="/contact?path=Residency">
 														Apply as an Artist
 													</Link>
 												</button>
@@ -1103,20 +1085,14 @@ export function Home() {
 										<div className="md:px-6 py-4 md:py-10">
 											<Reveal xVal={200}>
 												<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-													<Link
-														to="/contact?path=Membership"
-														reloadDocument={true}
-													>
+													<Link href="/contact?path=Membership">
 														Join the Culture Club
 													</Link>
 												</button>
 											</Reveal>
 											<Reveal xVal={200}>
 												<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-													<Link
-														to="/contact?path=Partner"
-														reloadDocument={true}
-													>
+													<Link href="/contact?path=Partner">
 														Partner With Us
 													</Link>
 												</button>
@@ -1133,11 +1109,18 @@ export function Home() {
 	);
 }
 
-export default function App() {
+export interface AppProps {
+	children: React.ReactNode;
+}
+
+export default function App({ children }: AppProps) {
 	return (
-		<div style={{ fontFamily: "'Montserrat', sans-serif" }}>
+		<div
+			className="font-montserrat"
+			style={{ fontFamily: "Montserrat, sans-serif" }}
+		>
 			<Nav />
-			<Outlet />
+			<main>{children}</main>
 			<Footer />
 		</div>
 	);

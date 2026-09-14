@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export default function Footer() {
 	return (
@@ -22,15 +22,13 @@ export default function Footer() {
 					<div className="grid text-center grid-cols-1 text-[rgb(255,226,190)]">
 						<Link
 							className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]"
-							to="/"
-							reloadDocument={true}
+							href="/"
 						>
 							Home
 						</Link>
 						<Link
 							className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]"
-							to="/experiences"
-							reloadDocument={true}
+							href="/experiences"
 						>
 							Experiences
 						</Link>
@@ -39,8 +37,7 @@ export default function Footer() {
 						</button> */}
 						<Link
 							className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]"
-							to="/destinations"
-							reloadDocument={true}
+							href="/destinations"
 						>
 							Destinations
 						</Link>
@@ -58,15 +55,13 @@ export default function Footer() {
 						</button> */}
 						<Link
 							className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]"
-							to="/about"
-							reloadDocument={true}
+							href="/about"
 						>
 							About
 						</Link>
 						<Link
 							className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)]"
-							to="/contact"
-							reloadDocument={true}
+							href="/contact"
 						>
 							Contact
 						</Link>

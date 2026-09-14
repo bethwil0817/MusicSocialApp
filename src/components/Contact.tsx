@@ -1,22 +1,9 @@
+"use client";
 import { useEffect, useRef, useState } from "react";
-import { Nav } from "./Nav";
 import { Reveal } from "./Reveal";
-import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
-import { hasTransform } from "framer-motion";
-import Footer from "./Footer";
-import { useFetch } from "../hooks/useFetch";
 
 export default function Contact() {
-	const data = useFetch("/api/contact");
-	const [searchParams] = useSearchParams();
 	const formSearch = window.location.search || null;
-	// const formAuto = searchParams.get("form") as
-	// 	| "Experience"
-	// 	| "Residency"
-	// 	| "Membership"
-	// 	| "Partner"
-	// 	| "Consulting"
-	// 	| null;
 	const [formState, setFormState] = useState<
 		"Experience" | "Residency" | "Membership" | "Partner" | "Consulting" | null
 	>(null);

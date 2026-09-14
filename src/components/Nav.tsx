@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+"use client";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export function Nav() {
@@ -60,9 +61,9 @@ export function Nav() {
 							stroke="currentColor"
 						>
 							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth="2"
 								d="M4 6h16M4 12h16M4 18h16"
 							/>
 						</svg>
@@ -73,7 +74,7 @@ export function Nav() {
 						<Link
 							className="hover:text-[#ffffff] cursor-pointer"
 							id="montFont"
-							to="/"
+							href="/"
 						>
 							HOME
 						</Link>
@@ -89,7 +90,7 @@ export function Nav() {
 										RESIDENCIES
 									</a> */}
 						<Link
-							to="/experiences"
+							href="/experiences"
 							className="hover:text-[#ffffff] cursor-pointer"
 						>
 							EXPERIENCES
@@ -104,13 +105,13 @@ export function Nav() {
 									</a> */}
 						{/* <a className="hover:text-[#ffffff] cursor-pointer">ARTISTS</a> */}
 						<Link
-							to="/contact"
+							href="/contact"
 							className="hover:text-[#ffffff] cursor-pointer"
 						>
 							CONTACT/APPLY
 						</Link>
 						<Link
-							to="/about"
+							href="/about"
 							className="hover:text-[#ffffff] cursor-pointer"
 						>
 							ABOUT
@@ -124,7 +125,7 @@ export function Nav() {
 				<div className="text-[#88572c] text-2xl">
 					<Link
 						className="hover:cursor-pointer montserrat"
-						to="/"
+						href="/"
 					>
 						HOME
 					</Link>
@@ -157,7 +158,7 @@ export function Nav() {
 										RESIDENCIES
 									</a> */}
 						<Link
-							to="/experiences"
+							href="/experiences"
 							className="hover:text-[#8c6e56] cursor-pointer"
 						>
 							EXPERIENCES
@@ -182,13 +183,13 @@ export function Nav() {
 									</a>
 									<a className="hover:text-[#8c6e56] cursor-pointer">ARTISTS</a> */}
 						<Link
-							to="/contact"
+							href="/contact"
 							className="hover:text-[#8c6e56] cursor-pointer"
 						>
 							CONTACT/APPLY
 						</Link>
 						<Link
-							to="/about"
+							href="/about"
 							className="hover:text-[#8c6e56] cursor-pointer"
 						>
 							ABOUT

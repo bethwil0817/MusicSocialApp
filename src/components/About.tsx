@@ -12,14 +12,14 @@ export default function About() {
 				className="mx-auto pb-20"
 				style={{
 					fontFamily: "'Montserrat', sans-serif",
-					backgroundImage: `linear-gradient(to bottom, rgb(255,246,234,.9), rgba(255,209,149,.7) 100%), url(${footprints})`,
+					backgroundImage: `linear-gradient(to bottom, rgb(255,246,234,.9), rgba(255,209,149,.7) 100%), url(${footprints.src})`,
 					backgroundRepeat: "no-repeat",
 					backgroundSize: "cover",
 				}}
 			>
 				<Reveal>
 					<img
-						src={revlogo}
+						src={revlogo.src}
 						className="w-[800px] h-auto pt-20 justify-center items-center mx-auto"
 					/>
 				</Reveal>
@@ -84,7 +84,7 @@ export default function About() {
 						<div
 							className="flex flex-col sm:grid sm:grid-cols-2 h-full shadow-2xl"
 							style={{
-								backgroundImage: `url(${bridge})`,
+								backgroundImage: `url(${bridge.src})`,
 								backgroundRepeat: "no-repeat",
 								backgroundSize: "80%",
 								backgroundPosition: "center",

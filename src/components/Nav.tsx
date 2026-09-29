@@ -18,7 +18,6 @@ export function Nav() {
 
 			if (scrollUp > originalScroll) {
 				setShowNav(false);
-				console.log(scrollUp, originalScroll);
 			} else {
 				setShowNav(true);
 			}
@@ -26,7 +25,6 @@ export function Nav() {
 			timeoutRef = setTimeout(() => {
 				setOriginalScroll(scrollUp);
 			}, 0.5);
-			console.log(scrollUp, originalScroll);
 		};
 
 		window.addEventListener("scroll", handleScrollUp, { passive: true });
@@ -134,11 +132,9 @@ export function Nav() {
 					className="text-2xl montserrat"
 					onMouseOver={() => {
 						setShowExperienceNav(true);
-						console.log(showExperienceNav);
 					}}
 					onMouseLeave={() => {
 						setShowExperienceNav(false);
-						console.log(showExperienceNav);
 					}}
 				>
 					<div className="text-[#88572c] hover:cursor-pointer">EXPERIENCES</div>

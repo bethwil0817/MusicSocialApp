@@ -1217,8 +1217,14 @@
   .text-\[rgb\(31\,73\,45\)\] {
     color: rgb(31,73,45);
   }
+  .text-\[rgb\(52\,73\,60\)\] {
+    color: rgb(52,73,60);
+  }
   .text-\[rgb\(61\,105\,75\)\] {
     color: rgb(61,105,75);
+  }
+  .text-\[rgb\(74\,96\,81\)\] {
+    color: rgb(74,96,81);
   }
   .text-\[rgb\(86\,109\,94\)\] {
     color: rgb(86,109,94);
@@ -1282,6 +1288,9 @@
   }
   .text-\[rgb\(253\,191\,133\)\] {
     color: rgb(253,191,133);
+  }
+  .text-\[rgb\(253\,240\,214\)\] {
+    color: rgb(253,240,214);
   }
   .text-\[rgb\(255\,226\,190\)\] {
     color: rgb(255,226,190);
@@ -1409,6 +1418,9 @@
     .hover\:border-\[rgb\(224\,198\,167\)\]:hover {
       border-color: rgb(224,198,167);
     }
+    .hover\:border-\[rgb\(253\,240\,214\)\]:hover {
+      border-color: rgb(253,240,214);
+    }
     .hover\:border-transparent:hover {
       border-color: transparent;
     }
@@ -1447,6 +1459,9 @@
     }
     .hover\:text-\[rgb\(224\,198\,167\)\]:hover {
       color: rgb(224,198,167);
+    }
+    .hover\:text-\[rgb\(253\,240\,214\)\]:hover {
+      color: rgb(253,240,214);
     }
     .hover\:underline:hover {
       text-decoration-line: underline;

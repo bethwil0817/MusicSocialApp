@@ -3,8 +3,11 @@ import guatmount from "../images/guatmount.jpg";
 import { Reveal } from "./Reveal";
 import Footer from "./Footer";
 import Link from "next/link";
+import { useRef } from "react";
 
 export default function Experiences() {
+	const pricingRef = useRef<HTMLDivElement>(null);
+
 	const planningPricingData: {
 		price: string;
 		time?: string;
@@ -170,13 +173,25 @@ export default function Experiences() {
 								>
 									Experience Inquiry Form
 								</Link>
-								<button className="p-4 min-w-[230px] rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer">
-									View Pricing
+								<button
+									className="p-4 min-w-[230px] rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
+									onClick={() => {
+										if (pricingRef.current) {
+											pricingRef.current?.scrollIntoView({
+												behavior: "smooth",
+											});
+										}
+									}}
+								>
+									View Pricing Packages
 								</button>
 							</div>
 						</div>
 					</Reveal>
-					<div className="mt-30 border-t pt-20 border-t-[rgb(132,161,159)]">
+					<div
+						className="mt-30 border-t pt-20 border-t-[rgb(132,161,159)]"
+						ref={pricingRef}
+					>
 						<Reveal>
 							<div className="rounded-[20%] text-center mb-0 sm:mb-10 tracking-[0.35em] text-4xl sm:text-5xl items-center justify-center uppercase gap-4 text-[rgb(181,206,203)]">
 								Experience Pricing
@@ -211,14 +226,14 @@ export default function Experiences() {
 													</div>
 												</div>
 												<div className="pt-5 flex gap-4 text-center justify-center">
-													<div className="font-bold tracking-wide text-xl sm:text-2xl text-[rgb(202,229,228)]">
+													{/* <div className="font-bold tracking-wide text-xl sm:text-2xl text-[rgb(202,229,228)]">
 														{price.price}
-													</div>
-													{price.time && (
+													</div> */}
+													{/* {price.time && (
 														<div className=" tracking-wide text-xl sm:text-2xl text-[rgb(180,205,203)]">
 															|
 														</div>
-													)}
+													)} */}
 													{price.time && (
 														<div className="font-bold  tracking-wide text-xl sm:text-2xl text-[rgb(159,182,180)]">
 															{price.time}
@@ -268,11 +283,11 @@ export default function Experiences() {
 														{price.title}
 													</div>
 												</div>
-												<div className="pt-5 flex gap-4 text-center justify-center">
+												{/* <div className="pt-5 flex gap-4 text-center justify-center">
 													<div className="font-bold tracking-wide text-xl sm:text-2xl text-[rgb(202,229,228)]">
 														{price.price}
 													</div>
-												</div>
+												</div> */}
 												<div>
 													<div className="mt-6 mb-2 font-bold text-base sm:text-lg text-[rgb(180,205,203)]">
 														<div>{price.desc}</div>

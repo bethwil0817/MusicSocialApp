@@ -122,18 +122,18 @@ export default function Experiences() {
 				>
 					<div className="mx-4">
 						<Reveal>
-							<div className="text-[48px] mb-6 md:mb-20 pt-20 xl:text-6xl flex tracking-[0.35em] text-[rgb(209,216,211)] whitespace-break-spaces text-center justify-center items-center uppercase">
+							<div className="text-[28px] sm:text-[48px] mb-6 md:mb-20 pt-10 md:pt-20 xl:text-6xl flex tracking-[0.35em] text-[rgb(209,216,211)] whitespace-break-spaces text-center justify-center items-center uppercase">
 								Travel Experiences
 							</div>
 						</Reveal>
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 md:mb-25">
 							<Reveal delayVal={1}>
-								<div className="p-6 border-b border-dashed border-b-[rgb(237,242,239)] md:border-b-0 md:border-r md:border-r-[rgb(237,242,239)] pt-10 text-2xl md:text-4xl flex tracking-[0.35em] text-[rgb(201,211,205)] leading-15 text-center justify-center items-center uppercase">
+								<div className="p-6 border-b border-dashed border-b-[rgb(237,242,239)] md:border-b-0 md:border-r md:border-r-[rgb(237,242,239)] pt-10 text-xl sm:text-4xl flex tracking-[0.35em] text-[rgb(201,211,205)] leading-15 text-center justify-center items-center uppercase">
 									Curated and meaningful experiences for all
 								</div>
 							</Reveal>
 							<Reveal delayVal={1}>
-								<div className="p-6 text-center text-xl leading-10 justify-center flex items-center text-[rgb(210,221,214)]">
+								<div className="p-6 text-center text-base sm:text-xl leading-10 justify-center flex items-center text-[rgb(210,221,214)]">
 									We aim to personally curate your travel experience to you. To
 									create a meaninful experience we seek personally designed
 									trips and stays for individuals, couples, families, groups,
@@ -148,7 +148,7 @@ export default function Experiences() {
 
 				<div className="bg-linear-to-b py-20 px-6 flex flex-col w-full justify-center text-center items-center mx-auto from-[rgb(48,77,67)] to-[#161e19]">
 					<Reveal>
-						<div className="bg-linear-to-b mx-auto from-[#1c3639] to-[#424d44] rounded-[20%] w-full max-w-[1200px] py-10 border border-[rgb(71,102,100)] p-4 sm:p-10">
+						<div className="bg-linear-to-b mx-auto from-[#1c3639] to-[#424d44] rounded-lg sm:rounded-[20%] w-full max-w-[1200px] py-10 border border-[rgb(71,102,100)] p-4 sm:p-10">
 							<div className="m-6 rounded-[20%] text-center mb-6 tracking-[0.35em] text-2xl sm:text-3xl items-center justify-center uppercase gap-4 text-[rgb(159,182,180)]">
 								Experiences can include:
 							</div>
@@ -168,13 +168,13 @@ export default function Experiences() {
 							</div>
 							<div className="text-center mt-10 flex flex-col md:flex-row gap-6 justify-center items-center">
 								<Link
-									className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
+									className="p-2 sm:p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
 									href="/contact?form=Experience"
 								>
 									Experience Inquiry Form
 								</Link>
 								<button
-									className="p-4 min-w-[230px] rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
+									className="p-2 sm:p-4 md:min-w-[230px] rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
 									onClick={() => {
 										if (pricingRef.current) {
 											pricingRef.current?.scrollIntoView({
@@ -193,7 +193,7 @@ export default function Experiences() {
 						ref={pricingRef}
 					>
 						<Reveal>
-							<div className="rounded-[20%] text-center mb-0 sm:mb-10 tracking-[0.35em] text-4xl sm:text-5xl items-center justify-center uppercase gap-4 text-[rgb(181,206,203)]">
+							<div className="rounded-[20%] text-center mb-0 sm:mb-10 tracking-[0.35em] text-3xl sm:text-5xl items-center justify-center uppercase gap-4 text-[rgb(181,206,203)]">
 								Experience Pricing
 							</div>
 						</Reveal>

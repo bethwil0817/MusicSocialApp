@@ -36,13 +36,13 @@ export default function Contact() {
 				className="bg-[rgb(59,33,2)] pb-20 w-full h-full  min-h-screen"
 				style={{ fontFamily: "'Montserrat', sans-serif" }}
 			>
-				<div className="p-6">
-					<Reveal delayVal={0}>
+				<div className="p-4 md:p-6">
+					<Reveal>
 						<h1 className="pt-30 text-[48px] xl:text-6xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(195,112,10)] text-center justify-center items-center uppercase">
 							Contact or Apply
 						</h1>
 					</Reveal>
-					<Reveal delayVal={0.6}>
+					<Reveal>
 						<div className="max-w-[1200px] mx-auto p-6 text-xl text-center text-[rgb(255,229,197)]">
 							Whether you are an artist looking for residencies or interested in
 							partnering, you decide your path with Revolūtiō. Please complete
@@ -51,7 +51,7 @@ export default function Contact() {
 						</div>
 					</Reveal>
 					<div>
-						<Reveal delayVal={0.7}>
+						<Reveal>
 							<div className="mt-2 xl:mt-6 text-2xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(195,112,10)] text-center justify-center items-center uppercase">
 								Select the form that aligns with your path:
 							</div>
@@ -61,10 +61,7 @@ export default function Contact() {
 							ref={autoRef}
 							className="flex flex-col whitespace-nowrap pt-6 md:flex-row text-[rgb(255,229,197)] md:flex-wrap justify-center text-center mx-auto text-lg max-w-[1000px] gap-6"
 						>
-							<Reveal
-								className="w-auto!"
-								delayVal={1}
-							>
+							<Reveal className="w-auto!">
 								<button
 									className={`p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)] ${formState === "Experience" ? "bg-[rgb(255,226,190)] text-[rgb(10,25,15)]" : ""}`}
 									onClick={() => {
@@ -75,10 +72,7 @@ export default function Contact() {
 									Plan My Experience Form
 								</button>
 							</Reveal>
-							<Reveal
-								className="w-auto!"
-								delayVal={1.3}
-							>
+							<Reveal className="w-auto!">
 								<button
 									className={`p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)] ${formState === "Residency" ? "bg-[rgb(255,226,190)] text-[rgb(10,25,15)]" : ""}`}
 									onClick={() => {
@@ -89,10 +83,7 @@ export default function Contact() {
 									Artist Residency Application
 								</button>
 							</Reveal>
-							<Reveal
-								className="w-auto!"
-								delayVal={1.5}
-							>
+							<Reveal className="w-auto!">
 								<button
 									className={`p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)] ${formState === "Membership" ? "bg-[rgb(255,226,190)] text-[rgb(10,25,15)]" : ""}`}
 									onClick={() => {
@@ -103,10 +94,7 @@ export default function Contact() {
 									Membership Inquiry Form
 								</button>
 							</Reveal>
-							<Reveal
-								className="w-auto!"
-								delayVal={1.7}
-							>
+							<Reveal className="w-auto!">
 								<button
 									className={`p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)] ${formState === "Partner" ? "bg-[rgb(255,226,190)] text-[rgb(10,25,15)]" : ""}`}
 									onClick={() => {
@@ -117,10 +105,7 @@ export default function Contact() {
 									Partner Inquiry Form
 								</button>
 							</Reveal>
-							<Reveal
-								className="w-auto!"
-								delayVal={1.9}
-							>
+							<Reveal className="w-auto!">
 								<button
 									className={`p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)] ${formState === "Consulting" ? "bg-[rgb(255,226,190)] text-[rgb(10,25,15)]" : ""}`}
 									onClick={() => {
@@ -135,11 +120,11 @@ export default function Contact() {
 						<div className={`${formState === null ? "h-100 invisible" : ""}`}>
 							{formState === "Experience" && (
 								<Reveal delayVal={0}>
-									<div className="mt-10 bg-linear-210 to-[rgba(195,112,10,0.8)] from-[rgba(255,207,148,0.5)] max-w-[1000px] mx-auto p-6 rounded-lg">
+									<div className="mt-10 bg-linear-210 to-[rgba(195,112,10,0.8)] from-[rgba(255,207,148,0.5)] max-w-[1000px] mx-auto p-2 rounded-lg">
 										<div className="text-2xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(255,229,197)] text-center justify-center items-center uppercase">
 											Plan My Experience Form
 										</div>
-										<div className="flex flex-col text-lg p-8 text-[rgb(255,229,197)]">
+										<div className="flex flex-col text-lg p-4 md:p-8 text-[rgb(255,229,197)]">
 											<input
 												type="hidden"
 												name="_captcha"
@@ -253,11 +238,11 @@ export default function Contact() {
 							)}
 							{formState === "Residency" && (
 								<Reveal delayVal={0}>
-									<div className="mt-10 bg-linear-210 to-[rgba(255,207,148,0.5)] from-[rgba(195,112,10,0.8)] max-w-[1000px] mx-auto p-6 rounded-lg">
+									<div className="mt-10 bg-linear-210 to-[rgba(255,207,148,0.5)] from-[rgba(195,112,10,0.8)] max-w-[1000px] mx-auto p-2 rounded-lg">
 										<div className="text-2xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(255,229,197)] text-center justify-center items-center uppercase">
 											Artist Residency Application
 										</div>
-										<div className="flex flex-col text-lg p-8 text-[rgb(255,229,197)]">
+										<div className="flex flex-col text-lg p-4 md:p-8 text-[rgb(255,229,197)]">
 											<input
 												type="hidden"
 												name="_captcha"
@@ -389,11 +374,11 @@ export default function Contact() {
 							)}
 							{formState === "Membership" && (
 								<Reveal delayVal={0}>
-									<div className="mt-10 bg-linear-210 to-[rgba(195,112,10,0.8)] from-[rgba(255,207,148,0.5)] max-w-[1000px] mx-auto p-6 rounded-lg">
+									<div className="mt-10 bg-linear-210 to-[rgba(195,112,10,0.8)] from-[rgba(255,207,148,0.5)] max-w-[1000px] mx-auto p-2 rounded-lg">
 										<div className="text-2xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(255,229,197)] text-center justify-center items-center uppercase">
 											Membership Inquiry
 										</div>
-										<div className="flex flex-col text-lg p-8 text-[rgb(255,229,197)]">
+										<div className="flex flex-col text-lg p-4 md:p-8 text-[rgb(255,229,197)]">
 											<input
 												type="hidden"
 												name="_captcha"
@@ -459,11 +444,11 @@ export default function Contact() {
 							{formState === "Partner" && (
 								<Reveal delayVal={0}>
 									<div>
-										<div className="mt-10 bg-linear-210 to-[rgba(255,207,148,0.5)] from-[rgba(195,112,10,0.8)] max-w-[1000px] mx-auto p-6 rounded-lg">
+										<div className="mt-10 bg-linear-210 to-[rgba(255,207,148,0.5)] from-[rgba(195,112,10,0.8)] max-w-[1000px] mx-auto p-2 rounded-lg">
 											<div className="text-2xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(255,229,197)] text-center justify-center items-center uppercase">
 												Partner Inquiry
 											</div>
-											<div className="flex flex-col text-lg p-8 text-[rgb(255,229,197)]">
+											<div className="flex flex-col text-lg p-4 md:p-8 text-[rgb(255,229,197)]">
 												<input
 													type="hidden"
 													name="_captcha"
@@ -525,11 +510,11 @@ export default function Contact() {
 							{formState === "Consulting" && (
 								<Reveal delayVal={0}>
 									<div>
-										<div className="mt-10 bg-linear-210 to-[rgba(195,112,10,0.8)] from-[rgba(255,207,148,0.5)] max-w-[1000px] mx-auto p-6 rounded-lg">
+										<div className="mt-10 bg-linear-210 to-[rgba(195,112,10,0.8)] from-[rgba(255,207,148,0.5)] max-w-[1000px] mx-auto p-2 rounded-lg">
 											<div className="text-2xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(255,229,197)] text-center justify-center items-center uppercase">
 												Consulting Inquiry
 											</div>
-											<div className="flex flex-col text-lg p-8 text-[rgb(255,229,197)]">
+											<div className="flex flex-col text-lg p-4 md:p-8 text-[rgb(255,229,197)]">
 												<input
 													type="hidden"
 													name="_captcha"

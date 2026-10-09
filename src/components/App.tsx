@@ -235,26 +235,26 @@ export function Home() {
 											experiences, events, and creative partnerships across the
 											sea, woods, desert, and mountains.
 										</div>
-										<div className="mb-8 text-base md:text-xl text-[#d4e4da] mx-auto max-w-200 text-center">
+										<div className="mb-8 text-base sm:text-xl text-[#d4e4da] mx-auto max-w-200 text-center">
 											We personally curate local, cultural, all-inclusive
 											experiences rooted in story, music, food, art, nature, and
 											community.
 										</div>
 										<div className="flex flex-col lg:flex-row gap-6 items-center justify-center">
 											<Link
-												className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
+												className="p-2 sm:p-4 text-xl rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
 												href="/experiences"
 											>
 												Plan My Experience
 											</Link>
 											<Link
-												className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
+												className="p-2 sm:p-4 text-xl rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
 												href="/residencies"
 											>
 												Explore Residencies
 											</Link>
 											<Link
-												className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
+												className="p-2 sm:p-4 text-xl rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
 												href=""
 											>
 												Join the Culture Club
@@ -267,10 +267,10 @@ export function Home() {
 							<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 								<Reveal xVal={-200}>
 									<div className="flex flex-col items-center justify-center">
-										<div className="my-6 text-5xl xl:text-6xl flex items-center justify-center tracking-wide sm:tracking-[0.35em] text-[rgb(31,73,45)] text-center uppercase">
+										<div className="my-6 text-[40px] sm:text-5xl xl:text-6xl flex items-center justify-center tracking-wide sm:tracking-[0.35em] text-[rgb(31,73,45)] text-center uppercase">
 											What is Revolūtiō?
 										</div>
-										<div className="text-[rgb(23,57,35)] text-xl">
+										<div className="text-[rgb(23,57,35)] text-lg sm:text-xl">
 											A More Personal Way to <strong>Travel</strong>,{" "}
 											<strong>Create</strong>, and <strong>Connect</strong>
 										</div>
@@ -278,19 +278,19 @@ export function Home() {
 								</Reveal>
 								<Reveal xVal={200}>
 									<div>
-										<div className="border-b border-b-[rgb(31,73,45)] p-6 text-center text-xl text-[rgb(20,48,29)]">
+										<div className="border-b border-b-[rgb(31,73,45)] p-6 text-center text-lg sm:text-xl text-[rgb(20,48,29)]">
 											Revolūtiō is a <strong>global</strong> culture club for
 											people who want travel to feel more <strong>human</strong>
 											, more <strong>local</strong>, and more{" "}
 											<strong>meaningful</strong>.
 										</div>
-										<div className="border-b border-b-[rgb(31,73,45)] p-6 text-center text-xl text-[rgb(20,48,29)]">
+										<div className="border-b border-b-[rgb(31,73,45)] p-6 text-center text-lg sm:text-xl text-[rgb(20,48,29)]">
 											We create curated <strong>experiences</strong> that{" "}
 											<strong>connect</strong> guests with artists, hosts,
 											chefs, musicians, guides, cultural workers, and
 											communities.
 										</div>
-										<div className="border-b border-b-[rgb(31,73,45)] p-6 text-center text-xl text-[rgb(20,48,29)]">
+										<div className="border-b border-b-[rgb(31,73,45)] p-6 text-center text-lg sm:text-xl text-[rgb(20,48,29)]">
 											Whether you are planning a restorative retreat, an artist
 											residency, a private celebration, a creative journey, or a
 											deeper cultural experience, <strong>Revolūtiō</strong>{" "}
@@ -379,7 +379,7 @@ export function Home() {
 									<div className="flex flex-col items-center justify-center mx-auto max-w-[680px] w-full">
 										<div className="flex flex-nowrap items-stretch justify-center">
 											<button
-												className={`p-4 rounded-tl-lg transition-all border-r border-r-white ease-in-out cursor-pointer text-white duration-200
+												className={`p-2 sm:p-4 rounded-tl-lg transition-all border-r border-r-white ease-in-out cursor-pointer text-white duration-200
                                         ${selectedPath === "artist" ? "bg-[#a86933]!" : "bg-[#a47f5e]! opacity-70"}`}
 												onClick={() => {
 													setSelectedPath("artist");
@@ -388,7 +388,7 @@ export function Home() {
 												I Am an Artist
 											</button>
 											<button
-												className={`p-4 transition-all ease-in-out border-r border-r-white cursor-pointer text-white duration-200
+												className={`p-2 sm:p-4 transition-all ease-in-out border-r border-r-white cursor-pointer text-white duration-200
                                         ${selectedPath === "join" ? "bg-[#a86933]!" : "bg-[#a47f5e]! opacity-70"}`}
 												onClick={() => {
 													setSelectedPath("join");
@@ -397,7 +397,7 @@ export function Home() {
 												I Want to Join the Culture Club
 											</button>
 											<button
-												className={`p-4 rounded-tr-lg transition-all border-r border-r-white ease-in-out cursor-pointer text-white duration-200
+												className={`p-2 sm:p-4 rounded-tr-lg transition-all border-r border-r-white ease-in-out cursor-pointer text-white duration-200
                                         ${selectedPath === "partner" ? "bg-[#a86933]!" : "bg-[#a47f5e]! opacity-70"}`}
 												onClick={() => {
 													setSelectedPath("partner");
@@ -406,9 +406,9 @@ export function Home() {
 												I Want to Partner or Consult
 											</button>
 										</div>
-										<div className="relative w-full p-6 rounded-b-lg bg-[#a86933]! text-white flex-col flex-grow flex items-center justify-center min-h-[600px] sm:min-h-[450px]">
+										<div className="relative w-full p-3 sm:p-6 rounded-b-lg bg-[#a86933]! text-white flex-col flex-grow flex items-center justify-center min-h-[600px] sm:min-h-[450px]">
 											<div
-												className={`absolute inset-0 justify-center flex flex-col p-6 py-4 m-auto items-center text-center gap-6 transition-all ease-in-out duration-700 pointer-events-none ${selectedPath === "artist" ? "z-100 opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95"}`}
+												className={`absolute inset-0 justify-center flex flex-col p-6 py-0 sm:py-4 m-auto items-center text-center gap-6 transition-all ease-in-out duration-700 pointer-events-none ${selectedPath === "artist" ? "z-100 opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95"}`}
 											>
 												<img
 													className="mx-auto"
@@ -506,15 +506,15 @@ export function Home() {
 												}}
 												loading="lazy"
 											/>
-											<div className="text-3xl text-white font-bold">
+											<div className="text-2xl sm:text-3xl text-white font-bold">
 												Yucatán, Mexico
 											</div>
-											<div className="text-xl md:text-2xl text-white font-medium">
+											<div className="text-lg sm:text-xl md:text-2xl text-white font-medium">
 												Creative residencies, coastal retreats, cultural
 												exchange, food, music, wellness, nature, and beachside
 												experiences.
 											</div>
-											<div className="text-2xl text-white font-medium">
+											<div className="text-xl sm:text-2xl text-white font-medium">
 												Status: Year One Booking Focus
 											</div>
 										</div>
@@ -530,15 +530,15 @@ export function Home() {
 												}}
 												loading="lazy"
 											/>
-											<div className="text-3xl text-white font-bold">
+											<div className="text-2xl sm:text-3xl text-white font-bold">
 												Phelps, Land O’ Lakes, Watersmeet, and the UP
 											</div>
-											<div className="text-xl md:text-2xl text-white font-medium">
+											<div className="text-lg sm:text-xl md:text-2xl text-white font-medium">
 												Recording retreats, rural creative economy,
 												storytelling, seasonal events, forest gatherings, music,
 												and community-rooted programming.
 											</div>
-											<div className="text-2xl text-white font-medium">
+											<div className="text-xl sm:text-2xl text-white font-medium">
 												Status: Year One Booking Focus
 											</div>
 										</div>
@@ -554,15 +554,15 @@ export function Home() {
 												}}
 												loading="lazy"
 											/>
-											<div className="text-3xl text-white font-bold">
+											<div className="text-2xl sm:text-3xl text-white font-bold">
 												Guatemala
 											</div>
-											<div className="text-xl md:text-2xl text-white font-medium">
+											<div className="text-lg sm:text-xl  md:text-2xl text-white font-medium">
 												Future creative retreats, cultural exchange, textiles,
 												ecology, music, food, and artist residencies rooted in
 												local partnership.
 											</div>
-											<div className="text-2xl text-white font-medium">
+											<div className="text-xl sm:text-2xl text-white font-medium">
 												Status: Year Two / In Development
 											</div>
 										</div>
@@ -578,15 +578,15 @@ export function Home() {
 												}}
 												loading="lazy"
 											/>
-											<div className="text-3xl text-white font-bold">
+											<div className="text-2xl sm:text-3xl text-white font-bold">
 												Northern Arizona, Navajo and Hopi Land
 											</div>
-											<div className="text-2xl text-white font-medium">
+											<div className="text-lg sm:text-xl md:text-2xl text-white font-medium">
 												Locally led cultural experiences, entrepreneurship,
 												storytelling, artist exchange, and creative economy
 												partnerships.
 											</div>
-											<div className="text-2xl text-white font-medium">
+											<div className="text-xl sm:text-2xl text-white font-medium">
 												Status: Year Two / In Development
 											</div>
 										</div>
@@ -652,7 +652,7 @@ export function Home() {
 											type="video/mp4"
 										/>
 									</video>
-									<div className="relative bg-[rgba(253,240,214,0.4)] p-7 z-20 flex h-full bg- items-center flex-col justify-between">
+									<div className="relative p-7 z-20 flex h-full bg- items-center flex-col justify-between">
 										<Reveal>
 											<div className="my-2 md:my-6 sm:text-xl lg:text-2xl flex items-center justify-center tracking-wide sm:tracking-[0.35em] text-[rgb(61,105,75)] text-center uppercase">
 												Your Personal Entertainment & Experience Concierge
@@ -700,69 +700,71 @@ export function Home() {
 											"repeating-radial-gradient( circle at 0 0, transparent 0, #a47f5e 7px ), repeating-linear-gradient(#4c3a2b55, #4c3a2b)",
 									}}
 								>
-									<div className="p-6 pt-20 w-full sticky top-0 h-screen flex flex-col justify-center items-center">
-										<div className="flex gap-12 items-center justify-center p-6 pb-4 sm:pb-1">
-											<Reveal xVal={-200}>
-												<div className="whitespace-normal sm:whitespace-nowrap lg:whitespace-normal xl:whitespace-nowrap text-2xl text-[rgb(255,228,203)]">
-													<strong>Create</strong> With Purpose.
-												</div>
-											</Reveal>
-											<Reveal xVal={200}>
-												<div className="whitespace-normal sm:whitespace-nowrap lg:whitespace-normal xl:whitespace-nowrap text-2xl text-[rgb(255,228,203)]">
-													<strong>Connect</strong> With Place.
-												</div>
-											</Reveal>
-										</div>
-										<div>
-											<Reveal delayVal={1}>
-												<div className="mt-2 xl:mt-6 text-[30px] sm:text-[40px] md:text-[48px] xl:text-6xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(253,191,133)] uppercase">
-													Artist Residencies
-												</div>
-											</Reveal>
-											<Reveal delayVal={1.1}>
-												<div className="text-[rgb(255,228,203)] mt-1 m-10 items-center flex">
-													Revolūtiō residencies give artists time, space,
-													support, and community connection.
-												</div>
-											</Reveal>
-											<div className="text-[rgb(251,206,165)] flex flex-col items-center">
-												<Reveal delayVal={1.2}>
-													<div className="text-xl sm:text-2xl mb-2 uppercase">
-														Residencies may include:
+									<div className="bg-[#a47f5e90]">
+										<div className="p-6 pt-20 w-full sticky top-0 h-screen flex flex-col justify-center items-center">
+											<div className="flex gap-12 items-center justify-center p-6 pb-4 sm:pb-1">
+												<Reveal xVal={-200}>
+													<div className="whitespace-normal sm:whitespace-nowrap lg:whitespace-normal xl:whitespace-nowrap text-2xl text-[rgb(255,228,203)]">
+														<strong>Create</strong> With Purpose.
 													</div>
 												</Reveal>
-												<Reveal delayVal={1.3}>
-													<div className="mt-1 m-10 text-sm sm:text-base xl:text-lg items-center flex text-[rgb(255,228,203)]">
-														Lodging coordination | Creative check-ins | Local
-														experiences | Performance opportunities |Workshops |
-														Documentation Cultural exchange
+												<Reveal xVal={200}>
+													<div className="whitespace-normal sm:whitespace-nowrap lg:whitespace-normal xl:whitespace-nowrap text-2xl text-[rgb(255,228,203)]">
+														<strong>Connect</strong> With Place.
 													</div>
 												</Reveal>
 											</div>
-											<hr className="mt-8 m-6" />
-											<div className="flex flex-col">
-												<Reveal delayVal={1.5}>
-													<div className="text-[rgb(251,206,165)] uppercase mb-4 text-xl sm:text-2xl">
-														Primary Year One residency locations:
+											<div>
+												<Reveal delayVal={1}>
+													<div className="mt-2 xl:mt-6 text-[35px] sm:text-[40px] md:text-[48px] xl:text-6xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(253,191,133)] uppercase">
+														Artist Residencies
 													</div>
 												</Reveal>
-												<Reveal delayVal={1.6}>
-													<div className="mt-1 m-10 text-[rgb(255,228,203)] text-sm sm:text-base xl:text-lg">
-														<ul>
-															<li>
-																<strong>The Sea:</strong> Yucatán
-															</li>
-															<li>
-																<strong>The Woods:</strong> Northern Wisconsin /
-																Upper Peninsula region
-															</li>
-														</ul>
+												<Reveal delayVal={1.1}>
+													<div className="text-[rgb(255,228,203)] mt-1 m-10 items-center flex">
+														Revolūtiō residencies give artists time, space,
+														support, and community connection.
 													</div>
 												</Reveal>
+												<div className="text-[rgb(251,206,165)] flex flex-col items-center">
+													<Reveal delayVal={1.2}>
+														<div className="text-xl sm:text-2xl mb-2 uppercase">
+															Residencies may include:
+														</div>
+													</Reveal>
+													<Reveal delayVal={1.3}>
+														<div className="mt-1 m-10 text-sm sm:text-base xl:text-lg items-center flex text-[rgb(255,228,203)]">
+															Lodging coordination | Creative check-ins | Local
+															experiences | Performance opportunities |Workshops
+															| Documentation Cultural exchange
+														</div>
+													</Reveal>
+												</div>
+												<hr className="mt-8 m-6" />
+												<div className="flex flex-col">
+													<Reveal delayVal={1.5}>
+														<div className="text-[rgb(251,206,165)] uppercase mb-4 text-xl sm:text-2xl">
+															Primary Year One residency locations:
+														</div>
+													</Reveal>
+													<Reveal delayVal={1.6}>
+														<div className="mt-1 m-10 text-[rgb(255,228,203)] text-sm sm:text-base xl:text-lg">
+															<ul>
+																<li>
+																	<strong>The Sea:</strong> Yucatán
+																</li>
+																<li>
+																	<strong>The Woods:</strong> Northern Wisconsin
+																	/ Upper Peninsula region
+																</li>
+															</ul>
+														</div>
+													</Reveal>
+												</div>
 											</div>
 										</div>
 									</div>
-									<div className="lg:pt-20 w-full relative flex flex-col p-6 md:p-10 gap-10 bg-[#a47f5e90] lg:bg-linear-to-b lg:from-[#a8693355] lg:to-[#a47f5e55]">
+									<div className="lg:pt-20 w-full relative hidden sm:flex flex-col p-6 md:p-10 gap-10 bg-[#a47f5e90] lg:bg-linear-to-b lg:from-[#a8693355] lg:to-[#a47f5e55]">
 										<img
 											className="image image1 sticky z-[30] shadow-2xl shadow-[#0000006d] top-16 min-h-[150px] md:min-h-[200px] rounded-lg w-full h-auto"
 											src={painter.src}
@@ -825,10 +827,13 @@ export function Home() {
 											</Reveal>
 											<Reveal>
 												<div className="flex flex-col justify-center gap-8 m-auto items-center text-center">
-													<button className="bg-[rgb(224,198,167)] p-6 w-max text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[rgb(224,198,167)] hover:border-[rgb(224,198,167)]">
+													<button className="bg-[rgb(224,198,167)] p-2 sm:p-4 w-max text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[rgb(224,198,167)] hover:border-[rgb(224,198,167)]">
 														See Upcoming Events
 													</button>
-													<button className="bg-[rgb(224,198,167)] p-6 w-max text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[rgb(224,198,167)] hover:border-[rgb(224,198,167)]">
+													<button className="block sm:hidden bg-[rgb(224,198,167)] p-2 sm:p-4 w-max text-xl rounded-lg hover:cursor-pointer border border-transparent whitespace-break-spaces transition-all ease-in-out hover:bg-transparent hover:text-[rgb(224,198,167)] hover:border-[rgb(224,198,167)]">
+														Host an Event
+													</button>
+													<button className="hidden sm:block bg-[rgb(224,198,167)] p-2 sm:p-4 w-max text-xl rounded-lg hover:cursor-pointer border border-transparent whitespace-break-spaces transition-all ease-in-out hover:bg-transparent hover:text-[rgb(224,198,167)] hover:border-[rgb(224,198,167)]">
 														Host an Event With Revolūtiō
 													</button>
 												</div>
@@ -927,7 +932,7 @@ export function Home() {
 												</div>
 											</Reveal>
 											<Reveal>
-												<div className="m-4 md:m-auto max-w-[1000px] xl:mt-6 text-[20px] flex text-[rgb(20,48,29)] text-center justify-center items-center">
+												<div className="m-4 md:m-auto max-w-[1000px] xl:mt-6 text-base sm:text-[20px] flex text-[rgb(20,48,29)] text-center justify-center items-center">
 													Revolūtiō also works with artists, venues, businesses,
 													nonprofits, museums, municipalities, and cultural
 													spaces to develop programming, events, funding
@@ -936,7 +941,7 @@ export function Home() {
 												</div>
 											</Reveal>
 											<Reveal>
-												<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-max text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
+												<button className="bg-[#a86933] mt-4 p-2 sm:p-4 w-max text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
 													<Link href="/contact?form=Consulting">
 														Inquire For Consulting
 													</Link>
@@ -944,7 +949,7 @@ export function Home() {
 											</Reveal>
 										</div>
 									</div>
-									<div className="mt-40 flex flex-col justify-center items-center text-center">
+									<div className="mt-40 p-2 flex flex-col justify-center items-center text-center">
 										<Reveal>
 											<div className="mt-2 xl:mt-6 text-[40px] md:text-[48px] xl:text-6xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(255,226,190)] text-center justify-center items-center uppercase">
 												Featured Artists
@@ -1040,7 +1045,7 @@ export function Home() {
 									</video>
 									<div className="relative p-7 z-20 flex h-full bg-[rgba(30,47,37,0.7)] items-center flex-col justify-between">
 										<div className="mt-2 xl:mt-6 text-[40px] md:text-[48px] xl:text-6xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(255,226,190)] text-center justify-center items-center uppercase">
-											<div className="mb-8 mt-2 xl:mt-6 grid gap-6 text-[40px] tracking-wide sm:tracking-[0.35em] text-[rgb(255,226,190)] text-center m-auto uppercase">
+											<div className="mb-8 mt-2 xl:mt-6 grid gap-6 text-[30px] sm:text-[40px] tracking-wide sm:tracking-[0.35em] text-[rgb(255,226,190)] text-center m-auto uppercase">
 												<Reveal
 													xVal={-200}
 													delayVal={0.2}
@@ -1076,10 +1081,10 @@ export function Home() {
 											</div>
 										</div>
 										<Reveal>
-											<div className="mt-2 xl:mt-6 mb-6 font-bold grid gap-6 text-2xl text-[rgb(255,226,190)] text-center m-auto">
+											<div className="mt-2 xl:mt-6 mb-6 font-bold grid gap-6 text-xl sm:text-2xl text-[rgb(255,226,190)] text-center m-auto">
 												However you enter the Revolūtiō ecosystem, the
 												invitation is the same:
-												<ul className="text-xl font-normal flex flex-col gap-6">
+												<ul className="text-base sm:text-xl font-normal flex flex-col gap-6">
 													<li>Travel with intention</li>
 													<li>Create with purpose</li>
 													<li>Connect with people</li>
@@ -1090,12 +1095,12 @@ export function Home() {
 										<div className="mt-6 grid grid-cols-1 md:grid-cols-2">
 											<div className="md:border-r border-[#a86933] px-2 md:px-6 md:py-10">
 												<Reveal xVal={-200}>
-													<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
+													<button className="bg-[#a86933] mt-4 p-2 sm:p-4 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
 														<Link href="/experiences">Plan My Experience</Link>
 													</button>
 												</Reveal>
 												<Reveal xVal={-200}>
-													<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
+													<button className="bg-[#a86933] mt-4 p-2 sm:p-4 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
 														<Link href="/contact?path=Residency">
 															Apply as an Artist
 														</Link>
@@ -1104,14 +1109,14 @@ export function Home() {
 											</div>
 											<div className="md:px-6 py-4 md:py-10">
 												<Reveal xVal={200}>
-													<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
+													<button className="bg-[#a86933] mt-4 p-2 sm:p-4 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
 														<Link href="/contact?path=Membership">
 															Join the Culture Club
 														</Link>
 													</button>
 												</Reveal>
 												<Reveal xVal={200}>
-													<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
+													<button className="bg-[#a86933] mt-4 p-2 sm:p-4 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
 														<Link href="/contact?path=Partner">
 															Partner With Us
 														</Link>
@@ -1284,19 +1289,19 @@ export function Home() {
 										</div>
 										<div className="flex flex-col lg:flex-row gap-6 items-center justify-center">
 											<Link
-												className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
+												className="p-2 sm:p-4 text-xl rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
 												href="/experiences"
 											>
 												Plan My Experience
 											</Link>
 											<Link
-												className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
+												className="p-2 sm:p-4 text-xl rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
 												href="/residencies"
 											>
 												Explore Residencies
 											</Link>
 											<Link
-												className="p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
+												className="p-2 sm:p-4 text-xl rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
 												href=""
 											>
 												Join the Culture Club
@@ -1421,7 +1426,7 @@ export function Home() {
 									<div className="flex flex-col items-center justify-center mx-auto max-w-[680px] w-full">
 										<div className="flex flex-nowrap items-stretch justify-center">
 											<button
-												className={`p-4 rounded-tl-lg transition-all border-r border-r-white ease-in-out cursor-pointer text-white duration-200
+												className={`p-2 sm:p-4 rounded-tl-lg transition-all border-r border-r-white ease-in-out cursor-pointer text-white duration-200
                                         ${selectedPath === "artist" ? "bg-[#a86933]!" : "bg-[#a47f5e]! opacity-70"}`}
 												onClick={() => {
 													setSelectedPath("artist");
@@ -1430,7 +1435,7 @@ export function Home() {
 												I Am an Artist
 											</button>
 											<button
-												className={`p-4 transition-all ease-in-out border-r border-r-white cursor-pointer text-white duration-200
+												className={`p-2 sm:p-4 transition-all ease-in-out border-r border-r-white cursor-pointer text-white duration-200
                                         ${selectedPath === "join" ? "bg-[#a86933]!" : "bg-[#a47f5e]! opacity-70"}`}
 												onClick={() => {
 													setSelectedPath("join");
@@ -1439,7 +1444,7 @@ export function Home() {
 												I Want to Join the Culture Club
 											</button>
 											<button
-												className={`p-4 rounded-tr-lg transition-all border-r border-r-white ease-in-out cursor-pointer text-white duration-200
+												className={`p-2 sm:p-4 rounded-tr-lg transition-all border-r border-r-white ease-in-out cursor-pointer text-white duration-200
                                         ${selectedPath === "partner" ? "bg-[#a86933]!" : "bg-[#a47f5e]! opacity-70"}`}
 												onClick={() => {
 													setSelectedPath("partner");
@@ -1457,13 +1462,13 @@ export function Home() {
 													src={artist.src}
 													style={{ height: "200px", width: "200px" }}
 												/>
-												<div className="text-xl mb-4 text-center">
+												<div className="text-base sm:text-xl mb-4 text-center">
 													For musicians, writers, filmmakers, photographers,
 													visual artists, performers, and creative entrepreneurs
 													seeking space to create, connect, and share work.
 												</div>
 												<Link
-													className="p-2 z-200 pointer-events-auto mx-auto hover:cursor-pointer bg-[#e7cdb6] hover:bg-white text-[#a86933] rounded-lg w-max"
+													className="p-2 z-200 text-xl pointer-events-auto mx-auto hover:cursor-pointer bg-[#e7cdb6] hover:bg-white text-[#a86933] rounded-lg w-max"
 													href="/contact?form=Residency"
 												>
 													Explore Residencies
@@ -1477,7 +1482,7 @@ export function Home() {
 													src={culture.src}
 													style={{ height: "200px", width: "200px" }}
 												/>
-												<div className="text-xl mb-4 text-center">
+												<div className="text-base sm:text-xl mb-4 text-center">
 													For members who want ongoing access to curated
 													experiences, entertainment, travel planning, events,
 													artist showcases, and cultural opportunities.
@@ -1497,7 +1502,7 @@ export function Home() {
 													src={partner.src}
 													style={{ height: "200px", width: "200px" }}
 												/>
-												<div className="text-xl mb-4 text-center">
+												<div className="text-base sm:text-xl mb-4 text-center">
 													For property owners, venues, nonprofits,
 													municipalities, artists, organizations, and businesses
 													seeking programming, events, funding strategy,
@@ -1548,15 +1553,15 @@ export function Home() {
 												}}
 												loading="lazy"
 											/>
-											<div className="text-3xl text-white font-bold">
+											<div className="text-2xl sm:text-3xl text-white font-bold">
 												Yucatán, Mexico
 											</div>
-											<div className="text-xl md:text-2xl text-white font-medium">
+											<div className="text-lg sm:text-xl md:text-2xl text-white font-medium">
 												Creative residencies, coastal retreats, cultural
 												exchange, food, music, wellness, nature, and beachside
 												experiences.
 											</div>
-											<div className="text-2xl text-white font-medium">
+											<div className="text-xl sm:text-2xl text-white font-medium">
 												Status: Year One Booking Focus
 											</div>
 										</div>
@@ -1572,15 +1577,15 @@ export function Home() {
 												}}
 												loading="lazy"
 											/>
-											<div className="text-3xl text-white font-bold">
+											<div className="text-2xl sm:text-3xl text-white font-bold">
 												Phelps, Land O’ Lakes, Watersmeet, and the UP
 											</div>
-											<div className="text-xl md:text-2xl text-white font-medium">
+											<div className="text-lg sm:text-xl md:text-2xl text-white font-medium">
 												Recording retreats, rural creative economy,
 												storytelling, seasonal events, forest gatherings, music,
 												and community-rooted programming.
 											</div>
-											<div className="text-2xl text-white font-medium">
+											<div className="text-xl sm:text-2xl text-white font-medium">
 												Status: Year One Booking Focus
 											</div>
 										</div>
@@ -1596,15 +1601,15 @@ export function Home() {
 												}}
 												loading="lazy"
 											/>
-											<div className="text-3xl text-white font-bold">
+											<div className="text-2xl sm:text-3xl text-white font-bold">
 												Guatemala
 											</div>
-											<div className="text-xl md:text-2xl text-white font-medium">
+											<div className="text-lg sm:text-xl md:text-2xl text-white font-medium">
 												Future creative retreats, cultural exchange, textiles,
 												ecology, music, food, and artist residencies rooted in
 												local partnership.
 											</div>
-											<div className="text-2xl text-white font-medium">
+											<div className="text-xl sm:text-2xl text-white font-medium">
 												Status: Year Two / In Development
 											</div>
 										</div>
@@ -1620,15 +1625,15 @@ export function Home() {
 												}}
 												loading="lazy"
 											/>
-											<div className="text-3xl text-white font-bold">
+											<div className="text-2xl sm:text-3xl text-white font-bold">
 												Northern Arizona, Navajo and Hopi Land
 											</div>
-											<div className="text-2xl text-white font-medium">
+											<div className="text-lg sm:text-xl md:text-2xl text-white font-medium">
 												Locally led cultural experiences, entrepreneurship,
 												storytelling, artist exchange, and creative economy
 												partnerships.
 											</div>
-											<div className="text-2xl text-white font-medium">
+											<div className="text-lg sm:text-2xl text-white font-medium">
 												Status: Year Two / In Development
 											</div>
 										</div>
@@ -1938,7 +1943,7 @@ export function Home() {
 									<div className="relative">
 										<div className="py-10 min-h-screen h-full">
 											<Reveal>
-												<div className="mt-2 xl:mt-6 text-[30px] sm:text-[40px] md:text-[48px] xl:text-6xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(74,96,81)] text-center justify-center items-center uppercase">
+												<div className="mt-2 xl:mt-6 text-5xl xl:text-6xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(74,96,81)] text-center justify-center items-center uppercase">
 													Events
 												</div>
 											</Reveal>
@@ -1981,7 +1986,7 @@ export function Home() {
                                                         See Upcoming Events
                                                     </button> */}
 														<Link
-															className="bg-[rgb(253,240,214)] p-6 w-max text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[rgb(253,240,214)] hover:border-[rgb(253,240,214)]"
+															className="bg-[rgb(253,240,214)] p-2 sm:p-4 w-max text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[rgb(253,240,214)] hover:border-[rgb(253,240,214)]"
 															href="/contact?form=Partner"
 														>
 															Host an Event With Revolūtiō
@@ -2137,12 +2142,12 @@ export function Home() {
 										<div className="mt-6 grid grid-cols-1 md:grid-cols-2">
 											<div className="md:border-r border-[#a86933] px-2 md:px-6 md:py-10">
 												<Reveal xVal={-200}>
-													<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
+													<button className="bg-[#a86933] mt-4 p-2 sm:p-4 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
 														<Link href="/experiences">Plan My Experience</Link>
 													</button>
 												</Reveal>
 												<Reveal xVal={-200}>
-													<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
+													<button className="bg-[#a86933] mt-4 p-2 sm:p-4 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
 														<Link href="/contact?path=Residency">
 															Apply as an Artist
 														</Link>
@@ -2151,14 +2156,14 @@ export function Home() {
 											</div>
 											<div className="md:px-6 py-4 md:py-10">
 												<Reveal xVal={200}>
-													<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
+													<button className="bg-[#a86933] mt-4 p-2 sm:p-4 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
 														<Link href="/contact?path=Membership">
 															Join the Culture Club
 														</Link>
 													</button>
 												</Reveal>
 												<Reveal xVal={200}>
-													<button className="bg-[#a86933] mt-4 p-2 md:p-6 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
+													<button className="bg-[#a86933] mt-4 p-2 sm:p-4 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
 														<Link href="/contact?path=Partner">
 															Partner With Us
 														</Link>

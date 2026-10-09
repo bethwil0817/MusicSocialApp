@@ -40,7 +40,7 @@ export function Nav() {
 	return (
 		<div>
 			<div
-				className={`flex flex-col transition-all ease-in-out duration-200 md:hidden bg-[rgba(255,255,255,0.6)] justify-end h-15 w-full fixed top-0 right-0 z-40 pl-6 ${showNav ? "opacity-100 visible" : "pointer-events-none opacity-0 invisible"}`}
+				className={`flex flex-col transition-all ease-in-out duration-200 md:hidden bg-[rgba(255,255,255,0.8)] justify-end h-15 w-full fixed top-0 right-0 z-40 pl-6 ${showNav ? "opacity-100 visible" : "pointer-events-none opacity-0 invisible"}`}
 			>
 				<div>
 					<button

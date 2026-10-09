@@ -1,6 +1,0 @@
-{"timestamp":"00:00:01.085","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:00:07.731","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:00:09.569","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:00:29.844","source":"Browser","level":"ERROR","message":"⨯ unhandledRejection: [object Event] \n"}
-{"timestamp":"00:00:29.847","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31m\\\"⨯ unhandledRejection:\\\"\\u001b[39m\" \"[object Event]\" \"\\n\\u001b[31m\\u001b[39m\""}
-{"timestamp":"01:00:46.821","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}

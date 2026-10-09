@@ -242,19 +242,19 @@ export function Home() {
 										</div>
 										<div className="flex flex-col lg:flex-row gap-6 items-center justify-center">
 											<Link
-												className="p-2 sm:p-4 text-xl rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
+												className="p-2 sm:p-4 text-xl rounded-lg bg-[#a86933] hover:bg-[#a57245] text-[rgb(255,228,203)] cursor-pointer"
 												href="/experiences"
 											>
 												Plan My Experience
 											</Link>
 											<Link
-												className="p-2 sm:p-4 text-xl rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
+												className="p-2 sm:p-4 text-xl rounded-lg bg-[#a86933] hover:bg-[#a57245] text-[rgb(255,228,203)] cursor-pointer"
 												href="/residencies"
 											>
 												Explore Residencies
 											</Link>
 											<Link
-												className="p-2 sm:p-4 text-xl rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
+												className="p-2 sm:p-4 text-xl rounded-lg bg-[#a86933] hover:bg-[#a57245] text-[rgb(255,228,203)] cursor-pointer"
 												href=""
 											>
 												Join the Culture Club
@@ -475,10 +475,10 @@ export function Home() {
 						</div>
 						<div
 							id="container"
-							className="px-1 z-30 relative py-16 bg-radial from-[rgb(10,25,15)] via-[rgb(10,25,15)] to-[rgb(86,109,94)]"
+							className="px-1 z-30 relative py-16 bg-radial from-[rgb(10,25,15)] via-[rgb(10,25,15)] to-[rgb(31,73,45)]"
 						>
 							<Reveal delayVal={0.5}>
-								<div className="my-6 text-5xl md:text-6xl flex items-center justify-center tracking-wide sm:tracking-[0.35em] text-[rgb(187,227,200)] text-center uppercase">
+								<div className="my-6 text-5xl md:text-6xl flex items-center justify-center tracking-wide sm:tracking-[0.35em] text-[rgb(255,228,203)] text-center uppercase">
 									The Four Worlds
 								</div>
 							</Reveal>
@@ -661,7 +661,7 @@ export function Home() {
 										<Reveal>
 											<div
 												id="paratitle"
-												className="my-2 md:my-6 text-3xl sm:text-5xl lg:text-6xl flex items-center justify-center tracking-wide sm:tracking-[0.35em] text-[rgb(136,174,149)] text-center uppercase"
+												className="my-2 md:my-6 text-3xl sm:text-5xl lg:text-6xl flex items-center justify-center tracking-wide sm:tracking-[0.35em] text-[rgb(31,73,45)] text-center uppercase"
 											>
 												Global Culture Club Membership
 											</div>
@@ -697,10 +697,10 @@ export function Home() {
 									style={{
 										backgroundColor: "#a86933",
 										backgroundImage:
-											"repeating-radial-gradient( circle at 0 0, transparent 0, #a47f5e 7px ), repeating-linear-gradient(#4c3a2b55, #4c3a2b)",
+											"repeating-radial-gradient( circle at 0 0, transparent 0, #a86933 7px ), repeating-linear-gradient(#4c3a2b55, #4c3a2b)",
 									}}
 								>
-									<div className="bg-[#a47f5e90]">
+									<div className="bg-[#a8693390]">
 										<div className="p-6 pt-20 w-full sticky top-0 h-screen flex flex-col justify-center items-center">
 											<div className="flex gap-12 items-center justify-center p-6 pb-4 sm:pb-1">
 												<Reveal xVal={-200}>
@@ -720,19 +720,19 @@ export function Home() {
 														Artist Residencies
 													</div>
 												</Reveal>
-												<Reveal delayVal={1.1}>
+												<Reveal delayVal={1}>
 													<div className="text-[rgb(255,228,203)] mt-1 m-10 items-center flex">
 														Revolūtiō residencies give artists time, space,
 														support, and community connection.
 													</div>
 												</Reveal>
 												<div className="text-[rgb(251,206,165)] flex flex-col items-center">
-													<Reveal delayVal={1.2}>
+													<Reveal delayVal={1.1}>
 														<div className="text-xl sm:text-2xl mb-2 uppercase">
 															Residencies may include:
 														</div>
 													</Reveal>
-													<Reveal delayVal={1.3}>
+													<Reveal delayVal={1.1}>
 														<div className="mt-1 m-10 text-sm sm:text-base xl:text-lg items-center flex text-[rgb(255,228,203)]">
 															Lodging coordination | Creative check-ins | Local
 															experiences | Performance opportunities |Workshops
@@ -742,12 +742,12 @@ export function Home() {
 												</div>
 												<hr className="mt-8 m-6" />
 												<div className="flex flex-col">
-													<Reveal delayVal={1.5}>
+													<Reveal delayVal={1.2}>
 														<div className="text-[rgb(251,206,165)] uppercase mb-4 text-xl sm:text-2xl">
 															Primary Year One residency locations:
 														</div>
 													</Reveal>
-													<Reveal delayVal={1.6}>
+													<Reveal delayVal={1.2}>
 														<div className="mt-1 m-10 text-[rgb(255,228,203)] text-sm sm:text-base xl:text-lg">
 															<ul>
 																<li>
@@ -764,7 +764,7 @@ export function Home() {
 											</div>
 										</div>
 									</div>
-									<div className="lg:pt-20 w-full relative hidden sm:flex flex-col p-6 md:p-10 gap-10 bg-[#a47f5e90] lg:bg-linear-to-b lg:from-[#a8693355] lg:to-[#a47f5e55]">
+									<div className="lg:pt-20 w-full relative hidden sm:flex flex-col p-6 md:p-10 gap-10">
 										<img
 											className="image image1 sticky z-[30] shadow-2xl shadow-[#0000006d] top-16 min-h-[150px] md:min-h-[200px] rounded-lg w-full h-auto"
 											src={painter.src}
@@ -807,7 +807,7 @@ export function Home() {
 										</Reveal>
 										<div className="grid md:grid-cols-2 p-6 gap-6 bg-[rgba(35,49,38,0.56)] border-b border-b-white">
 											<Reveal>
-												<div className="xl:mt-6 p-3 flex flex-col text-[rgb(245,227,205)] text-center justify-center items-center">
+												<div className="xl:mt-6 p-3 flex flex-col text-[rgb(253,240,214)] text-center justify-center items-center">
 													<div className="text-xl uppercase md:text-2xl pb-6 flex tracking-wide sm:tracking-[0.35em]">
 														Event types:
 													</div>
@@ -827,13 +827,13 @@ export function Home() {
 											</Reveal>
 											<Reveal>
 												<div className="flex flex-col justify-center gap-8 m-auto items-center text-center">
-													<button className="bg-[rgb(224,198,167)] p-2 sm:p-4 w-max text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[rgb(224,198,167)] hover:border-[rgb(224,198,167)]">
+													<button className="bg-[rgb(253,240,214)] p-2 sm:p-4 w-max text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[rgb(253,240,214)] hover:border-[rgb(253,240,214)]">
 														See Upcoming Events
 													</button>
-													<button className="block sm:hidden bg-[rgb(224,198,167)] p-2 sm:p-4 w-max text-xl rounded-lg hover:cursor-pointer border border-transparent whitespace-break-spaces transition-all ease-in-out hover:bg-transparent hover:text-[rgb(224,198,167)] hover:border-[rgb(224,198,167)]">
+													<button className="block sm:hidden bg-[rgb(253,240,214)] p-2 sm:p-4 w-max text-xl rounded-lg hover:cursor-pointer border border-transparent whitespace-break-spaces transition-all ease-in-out hover:bg-transparent hover:text-[rgb(253,240,214)] hover:border-[rgb(253,240,214)]">
 														Host an Event
 													</button>
-													<button className="hidden sm:block bg-[rgb(224,198,167)] p-2 sm:p-4 w-max text-xl rounded-lg hover:cursor-pointer border border-transparent whitespace-break-spaces transition-all ease-in-out hover:bg-transparent hover:text-[rgb(224,198,167)] hover:border-[rgb(224,198,167)]">
+													<button className="hidden sm:block bg-[rgb(253,240,214)] p-2 sm:p-4 w-max text-xl rounded-lg hover:cursor-pointer border border-transparent whitespace-break-spaces transition-all ease-in-out hover:bg-transparent hover:text-[rgb(253,240,214)] hover:border-[rgb(253,240,214)]">
 														Host an Event With Revolūtiō
 													</button>
 												</div>
@@ -844,7 +844,7 @@ export function Home() {
 								<div className="bg-gradient-to-b to-[rgb(10,25,15)] from-[rgb(253,240,214)] py-10">
 									<div className="my-20">
 										<div className="carousel flex overflow-x-hidden pointer-none">
-											<div className="group text-[rgb(20,48,29)] min-w-full text-2xl whitespace-nowrap flex shrink-0 items-center justify-center">
+											<div className="group text-[rgb(10,25,15)] min-w-full text-2xl whitespace-nowrap flex shrink-0 items-center justify-center">
 												<div
 													className="border-r border-r-[rgb(189,123,43)] px-36"
 													style={{
@@ -927,7 +927,7 @@ export function Home() {
 										</div>
 										<div className="mt-20 flex flex-col justify-center items-center text-center">
 											<Reveal>
-												<div className="mt-2 xl:mt-6 text-[30px] sm:text-[40px] md:text-[48px] xl:text-6xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(20,48,29)] text-center justify-center items-center uppercase">
+												<div className="mt-2 xl:mt-6 text-[30px] sm:text-[40px] md:text-[48px] xl:text-6xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(31,73,45)] text-center justify-center items-center uppercase">
 													Consulting
 												</div>
 											</Reveal>
@@ -941,7 +941,7 @@ export function Home() {
 												</div>
 											</Reveal>
 											<Reveal>
-												<button className="bg-[#a86933] mt-4 p-2 sm:p-4 w-max text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
+												<button className="bg-[#a86933] mt-4 p-2 sm:p-4 text-white w-max text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
 													<Link href="/contact?form=Consulting">
 														Inquire For Consulting
 													</Link>
@@ -997,7 +997,7 @@ export function Home() {
 														</div>
 														<div className="mt-4 md:mt-6 flex flex-col gap-6">
 															<button
-																className="bg-[#a86933] p-2 w-max rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]"
+																className="bg-[#a86933] text-[rgb(255,228,203)] p-2 w-max rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]"
 																onClick={() => {
 																	window.open(
 																		"https://linktr.ee/thomasdijkstramusic",
@@ -1044,8 +1044,8 @@ export function Home() {
 										/>
 									</video>
 									<div className="relative p-7 z-20 flex h-full bg-[rgba(30,47,37,0.7)] items-center flex-col justify-between">
-										<div className="mt-2 xl:mt-6 text-[40px] md:text-[48px] xl:text-6xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(255,226,190)] text-center justify-center items-center uppercase">
-											<div className="mb-8 mt-2 xl:mt-6 grid gap-6 text-[30px] sm:text-[40px] tracking-wide sm:tracking-[0.35em] text-[rgb(255,226,190)] text-center m-auto uppercase">
+										<div className="mt-2 xl:mt-6 text-[40px] md:text-[48px] xl:text-6xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(255,228,203)] text-center justify-center items-center uppercase">
+											<div className="mb-8 mt-2 xl:mt-6 grid gap-6 text-[30px] sm:text-[40px] tracking-wide sm:tracking-[0.35em] text-[rgb(255,228,203)] text-center m-auto uppercase">
 												<Reveal
 													xVal={-200}
 													delayVal={0.2}
@@ -1081,7 +1081,7 @@ export function Home() {
 											</div>
 										</div>
 										<Reveal>
-											<div className="mt-2 xl:mt-6 mb-6 font-bold grid gap-6 text-xl sm:text-2xl text-[rgb(255,226,190)] text-center m-auto">
+											<div className="mt-2 xl:mt-6 mb-6 font-bold grid gap-6 text-xl sm:text-2xl text-[rgb(255,228,203)] text-center m-auto">
 												However you enter the Revolūtiō ecosystem, the
 												invitation is the same:
 												<ul className="text-base sm:text-xl font-normal flex flex-col gap-6">
@@ -1095,12 +1095,12 @@ export function Home() {
 										<div className="mt-6 grid grid-cols-1 md:grid-cols-2">
 											<div className="md:border-r border-[#a86933] px-2 md:px-6 md:py-10">
 												<Reveal xVal={-200}>
-													<button className="bg-[#a86933] mt-4 p-2 sm:p-4 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
+													<button className="bg-[#a86933] text-[rgb(255,228,203)] mt-4 p-2 sm:p-4 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
 														<Link href="/experiences">Plan My Experience</Link>
 													</button>
 												</Reveal>
 												<Reveal xVal={-200}>
-													<button className="bg-[#a86933] mt-4 p-2 sm:p-4 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
+													<button className="bg-[#a86933] text-[rgb(255,228,203)] mt-4 p-2 sm:p-4 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
 														<Link href="/contact?path=Residency">
 															Apply as an Artist
 														</Link>
@@ -1109,14 +1109,14 @@ export function Home() {
 											</div>
 											<div className="md:px-6 py-4 md:py-10">
 												<Reveal xVal={200}>
-													<button className="bg-[#a86933] mt-4 p-2 sm:p-4 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
+													<button className="bg-[#a86933] text-[rgb(255,228,203)] mt-4 p-2 sm:p-4 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
 														<Link href="/contact?path=Membership">
 															Join the Culture Club
 														</Link>
 													</button>
 												</Reveal>
 												<Reveal xVal={200}>
-													<button className="bg-[#a86933] mt-4 p-2 sm:p-4 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
+													<button className="bg-[#a86933] text-[rgb(255,228,203)] mt-4 p-2 sm:p-4 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
 														<Link href="/contact?path=Partner">
 															Partner With Us
 														</Link>

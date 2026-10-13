@@ -1,0 +1,38 @@
+[
+	{
+		"name": "Thomas Dijkstra",
+		"type": "Musician and Songwriter",
+		"location": "Fox Valley, WI",
+		"paras": [
+			"Thomas Dijkstra has been involved in the music scene since he could ride my bike to the local music store. Since then he's been fully immersed in music from working at Island Music for 5 year's, running sound, working at open mics, playing lead guitar, singing for various bands, pursuinga  solo artist career and always playing as much as he possibly can. He feels incredibly lucky to play all over Wisconsin and is exapnding his music scene to be international!",
+			"Folk and outlaw county have always been him main focus and what you can expect if you see him me out playing! He sings a variety of covers and original music and is a releasing artist on Spotify. You can find his sound similar to Matt Mason and Colter Wall with his own unique artistic style. He is currently working on his first album and is excited to share it with the world!"
+		],
+		"status": "Available for Booking, Residency, and Collaboration",
+		"link": "https://linktr.ee/thomasdijkstramusic",
+		"src": "/images/biopic.jpg"
+	},
+	{
+		"name": "Caroline Calvano",
+		"type": "Mixed Media Sculpture Artist",
+		"location": "Milwaukee, WI",
+		"paras": [
+			"Caroline Calvano is a mixed media sculpture artist based in Milwaukee, WI. She completed her Bachelors in Fine Arts at Milwaukee Institute of Art and Design in 2024. Her practice engages with the themes of beauty, adornment, value and function. Calvano explores the feminine urge to beautify through body modification and the discomfort of self alteration. She asserts her physical strength within traditionally male dominated crafts such as metal sculpture.",
+			"Calvano has exhibited her work at Var Gallery, Tooth and Nail Gallery, and The Door County Contemporary Art Fair. She has been awarded Outstanding Student Achievement in Contemporary Sculpture Award by The International Sculpture Center."
+		],
+		"status": "Available for Projects, Commissions, and Collaboration",
+		"link": "",
+		"src": "/images/Calvano_Headshot.jpg"
+	},
+	{
+		"name": "Gaia Mencagli",
+		"type": "Theater Artist",
+		"location": "Rome, Italy",
+		"paras": [
+			"Gaia Mencagli is an Italian-Danish theater artist, trained at the Dell’Arte International School of Physical Theatre in California after studying in Denmark and Italy. From 2018 to 2021, she lived in Minneapolis and in Trieste, where she performed, taught, and developed her first solo piece, “It’s Red!”, collaborated with Hangar Teatri, debuting with “Stories of Eggs and Flour”, and teaching theater. She continued her artistic research through multiple residencies across the world",
+			"As a puppeteer at Teatro Stabile del F.V.G., she brings puppet theater to schools and performs in regional and international tours. She is also co- founder of the non-profit KER, creating projects that merge art and agriculture near Rome. Although based in Italy, she maintains international collaborations, performing at the H.C. Andersen Festival in Denmark and touring the United States thanks to the Italian Cultural Institute of Chicago, San Francisco, and Los Angeles."
+		],
+		"status": "Available for Booking, Commissions, Residencies, and Collaboration",
+		"link": "",
+		"src": "/images/Gaia.jpg"
+	}
+]

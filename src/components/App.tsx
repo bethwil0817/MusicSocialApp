@@ -24,13 +24,40 @@ import lake from "../images/lakeView.jpg";
 import event from "../images/eventoverhead.jpg";
 import bioPic1 from "../images/biopic.jpg";
 import wavesComing from "../images/sunsetwaves.mp4";
+import biopic2 from "../images/Calvano_Headshot.jpg";
+import biopic3 from "../images/Gaia.jpg";
 import { Reveal } from "./Reveal";
 import { useState, useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
 import { Nav } from "./Nav";
 import Footer from "./Footer";
+import artists from "../artists.json";
+
+export type Artist = {
+	name: string;
+	type: string;
+	location: string;
+	paras: string[];
+	status: string;
+	link: string;
+	src: string;
+};
 
 export function Home() {
+	const artistsData: Artist[] = artists as Artist[];
+	const [selectedArtist, setSelectedArtist] = useState(
+		artistsData[0] ? artistsData[0].name : "Thomas Dijkstra",
+	);
+	const getArtistImage = (artistName: string): { src: string } => {
+		if (artistName === "Caroline Calvano") {
+			return { src: biopic2.src };
+		} else if (artistName === "Gaia Mencagli") {
+			return { src: biopic3.src };
+		} else {
+			return { src: bioPic1.src };
+		}
+	};
+
 	useEffect(() => {
 		// "instant" prevents jerky scrolling animations during a loader swap
 		document.documentElement.scrollTo({
@@ -212,14 +239,14 @@ export function Home() {
 											className="w-40 h-full max-h-20 object-contain mx-auto"
 											src={leftMountain.src}
 										/>
-										<div className="my-6 text-4xl md:text-5xl hidden lg:flex flex-col gap-y-2 items-center justify-center tracking-wide sm:tracking-[0.35em] text-[#b6c7c0] text-center uppercase">
+										<div className="my-6 text-4xl md:text-5xl hidden lg:flex flex-col gap-y-2 items-center justify-center tracking-wide sm:tracking-[0.35em] text-[rgb(255,228,203)] text-center uppercase">
 											Global Culture Club
 											<div className="border-b m-4 border-2 border-[#a86933] max-w-[50px] w-full"></div>
 											Artist Residency
 											<div className="border-b m-4 border-2 border-[#a86933] max-w-[50px] w-full"></div>
 											Community Consultancy
 										</div>
-										<div className="my-6 text-4xl md:text-5xl flex lg:hidden flex-col gap-y-2 items-center justify-center tracking-wide sm:tracking-[0.35em] text-[#b6c7c0] text-center uppercase">
+										<div className="my-6 text-4xl md:text-5xl flex lg:hidden flex-col gap-y-2 items-center justify-center tracking-wide sm:tracking-[0.35em] text-[rgb(255,228,203)] text-center uppercase">
 											Revolūtiō Global Culture Club
 											<div className="border-b m-4 border-2 border-[#a86933] max-w-[50px] w-full"></div>
 											Artist Residency
@@ -230,12 +257,12 @@ export function Home() {
 								</Reveal>
 								<Reveal delayVal={0.8}>
 									<>
-										<div className="text-xl md:text-2xl text-[#548868] mx-10 text-center mb-6">
+										<div className="text-xl md:text-2xl text-[rgb(253,191,133)] mx-10 text-center mb-8">
 											Meaningful travel, artist residencies, cultural
 											experiences, events, and creative partnerships across the
 											sea, woods, desert, and mountains.
 										</div>
-										<div className="mb-8 text-base sm:text-xl text-[#d4e4da] mx-auto max-w-200 text-center">
+										<div className="mb-8 text-base italic sm:text-xl text-[rgb(255,228,203)] mx-auto max-w-200 text-center">
 											We personally curate local, cultural, all-inclusive
 											experiences rooted in story, music, food, art, nature, and
 											community.
@@ -422,9 +449,9 @@ export function Home() {
 												</div>
 												<Link
 													className="p-2 z-200 pointer-events-auto mx-auto hover:cursor-pointer bg-[#e7cdb6] hover:bg-white text-[#a86933] rounded-lg w-max"
-													href="/contact?form=Residency"
+													href="/residencies"
 												>
-													Apply for a Residency
+													View Artist Residencies
 												</Link>
 											</div>
 											<div
@@ -637,7 +664,7 @@ export function Home() {
 							</Reveal>
 						</div>
 						<div className="relative w-full min-h-[200vh]">
-							<div className="w-full sticky h-screen bg-[rgba(253,240,214,0.7)] top-0 flex items-center justify-center">
+							<div className="w-full bg-[rgba(253,240,214,0.7)] flex items-center justify-center">
 								<div className="w-full py-20 relative">
 									<video
 										className="w-full h-full md:bg-center object-right object-cover absolute top-0 right-0 z-10 opacity-50"
@@ -689,10 +716,10 @@ export function Home() {
 								</div>
 							</div>
 							<div
-								className="z-20 sticky top-0"
-								style={{ overscrollBehavior: "auto" }}
+							// className="z-20 sticky top-0"
+							// style={{ overscrollBehavior: "auto" }}
 							>
-								<div
+								{/* <div
 									className="grid lg:grid-cols-2 bg-cover bg-linear-to-b to-[#a86933] from-[#4c3a2b] bg-no-repeat min-h-screen h-full"
 									style={{
 										backgroundColor: "#a86933",
@@ -786,7 +813,7 @@ export function Home() {
 											loading="lazy"
 										/>
 									</div>
-								</div>
+								</div> */}
 								<div className="relative">
 									<div
 										className="py-10 bg-cover bg-fixed bg-linear-to-b to-[#3d5e47] from-[#18281d] bg-no-repeat min-h-screen h-full"
@@ -949,9 +976,9 @@ export function Home() {
 											</Reveal>
 										</div>
 									</div>
-									<div className="mt-40 p-2 flex flex-col justify-center items-center text-center">
+									<div className="mt-40 p-2 sm:p-6 flex flex-col justify-center items-center text-center">
 										<Reveal>
-											<div className="mt-2 xl:mt-6 text-[40px] md:text-[48px] xl:text-6xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(255,226,190)] text-center justify-center items-center uppercase">
+											<div className="mt-2 xl:mt-6 text-[40px] md:text-[48px] xl:text-6xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(255,228,203)] text-center justify-center items-center uppercase">
 												Featured Artists
 											</div>
 										</Reveal>
@@ -960,72 +987,102 @@ export function Home() {
 												Artists in the Revolūtiō Network
 											</div>
 										</Reveal>
-										<Reveal>
-											<div className="m-4 md:m-10 artist-1 mt-10 p-4 md:p-4 border rounded-lg border-[rgb(232,202,162)]">
-												<div className="grid lg:grid-cols-2">
-													<div className="text-center justify-center flex flex-col items-center p-4 md:p-6">
-														<div className="mt-2 font-bold xl:mt-6 text-4xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(255,226,190)] text-center justify-center items-center uppercase">
-															Thomas Dijkstra
-														</div>
-														<div className="mt-2 xl:mt-6 text-xl md:text-2xl flex text-[rgb(211,198,178)] text-center justify-center items-center uppercase">
-															Musician and Songwriter
-														</div>
-														<div className="mt-2 xl:mt-6 text-base md:text-xl flex flex-col text-[rgb(211,198,178)] text-center justify-center items-center">
-															<img
-																src={location.src}
-																style={{
-																	height: "30px",
-																	width: "auto",
-																	opacity: "0.5",
-																}}
-																loading="lazy"
-															/>
-															Wisconsin
-														</div>
-														<div className="mt-2 xl:mt-6 text-sm md:text-base text-[rgb(211,198,178)] text-center justify-center items-center">
-															My name is Thomas Dijkstra. I've been involved in
-															the music scene since I could ride my bike to the
-															local music store. I've been so lucky to play all
-															over Wisconsin and am exapnding my music scene to
-															be international!
-															<br />
-															<br />
-															Folk and outlaw county have always been my main
-															focus and what you can expect if you see me out
-															playing! I sing a variety of covers and original
-															music and am a releasing artist on Spotify.
-														</div>
-														<div className="mt-4 md:mt-6 flex flex-col gap-6">
-															<button
-																className="bg-[#a86933] text-[rgb(255,228,203)] p-2 w-max rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]"
-																onClick={() => {
-																	window.open(
-																		"https://linktr.ee/thomasdijkstramusic",
-																		"_blank",
-																	);
-																}}
-															>
-																Link Tree
-															</button>
-														</div>
-														<div className="mt-4 xl:mt-6 text-base md:text-xl text-[rgb(255,226,190)] text-center justify-center items-center">
-															<strong className="text-[rgb(255,226,190)] mr-2">
-																Status:
-															</strong>{" "}
-															Available for Booking, Residency, and
-															Collaboration
+										<div className="m-6 md:m-10 w-full h-full artist-1 mt-10 border rounded-lg border-[rgb(255,228,203)]">
+											<div className="relative w-full flex-grow flex items-center justify-center min-h-[1180px] sm:min-h-[920px] lg:min-h-[800px]">
+												{artistsData.map((artist, index) => (
+													<div
+														className={`p-4 absolute inset-0 justify-center flex flex-col m-auto items-center text-center gap-6 transition-all ease-in-out duration-700 pointer-events-none ${selectedArtist === artist.name ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95"}`}
+														key={index}
+													>
+														<div className="grid lg:grid-cols-2">
+															<div className="text-center justify-center flex flex-col items-center p-4 md:p-6">
+																<div className="mt-2 font-bold xl:mt-6 text-4xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(255,228,203)] text-center justify-center items-center uppercase">
+																	{artist.name}
+																</div>
+																<div className="mt-2 xl:mt-6 text-xl md:text-2xl flex text-[rgb(211,198,178)] text-center justify-center items-center uppercase">
+																	{artist.type}
+																</div>
+																<div className="mt-2 xl:mt-6 text-base md:text-xl flex flex-col text-[rgb(211,198,178)] text-center justify-center items-center">
+																	{artist.location}
+																</div>
+																<div className="mt-2 overflow-y-scroll xl:mt-6 text-sm md:text-base text-[rgb(255,228,203)] text-center justify-center items-center">
+																	{artist.paras[0]}
+																	<br />
+																	<br />
+																	{artist.paras[1]}
+																</div>
+																{artist.link && (
+																	<div className="mt-4 md:mt-6 flex flex-col gap-6">
+																		<button
+																			className="bg-[#a86933] text-[rgb(255,228,203)] p-2 w-max rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]"
+																			onClick={() => {
+																				window.open(
+																					"https://linktr.ee/thomasdijkstramusic",
+																					"_blank",
+																				);
+																			}}
+																		>
+																			{artist.link}
+																		</button>
+																	</div>
+																)}
+																<div className="mt-4 xl:mt-6 text-base md:text-xl text-[rgb(255,228,203)] text-center justify-center items-center">
+																	<strong className="text-[rgb(255,228,203)] mr-2">
+																		Status:
+																	</strong>{" "}
+																	{artist.status}
+																</div>
+															</div>
+															<div className="text-center justify-center flex items-center">
+																<img
+																	className="w-[300px] lg:w-[450px] xl:w-[560px] h-auto rounded-lg"
+																	loading="lazy"
+																	src={getArtistImage(artist.name).src}
+																/>
+															</div>
 														</div>
 													</div>
-													<div className="text-center justify-center flex items-center">
-														<img
-															className="w-[80%] lg:w-[450px] xl:w-[500px] h-auto rounded-lg"
-															loading="lazy"
-															src={bioPic1.src}
-														/>
-													</div>
-												</div>
+												))}
 											</div>
-										</Reveal>
+										</div>
+										<div className="flex flex-row flex-nowrap gap-10 justify-center items-center mx-auto mt-auto">
+											<button
+												className={`rounded-[50%] cursor-pointer transition-all duration-300 opactiy-50 h-5 w-5 border-white ${
+													selectedArtist === "Thomas Dijkstra"
+														? "border-8"
+														: "border-2"
+												}`}
+												onClick={() => {
+													if (selectedArtist !== "Thomas Dijkstra") {
+														setSelectedArtist("Thomas Dijkstra");
+													}
+												}}
+											></button>
+											<button
+												className={`rounded-[50%] cursor-pointer transition-all duration-300 opactiy-50 h-5 w-5 border-white ${
+													selectedArtist === "Caroline Calvano"
+														? "border-8"
+														: "border-2"
+												}`}
+												onClick={() => {
+													if (selectedArtist !== "Caroline Calvano") {
+														setSelectedArtist("Caroline Calvano");
+													}
+												}}
+											></button>
+											<button
+												className={`rounded-[50%] cursor-pointer transition-all duration-300 opactiy-50 h-5 w-5 border-white ${
+													selectedArtist === "Gaia Mencagli"
+														? "border-8"
+														: "border-2"
+												}`}
+												onClick={() => {
+													if (selectedArtist !== "Gaia Mencagli") {
+														setSelectedArtist("Gaia Mencagli");
+													}
+												}}
+											></button>
+										</div>
 									</div>
 								</div>
 								<div className="relative w-full">

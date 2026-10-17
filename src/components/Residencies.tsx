@@ -49,15 +49,15 @@ export const Residencies = () => {
 		>
 			<div className="grid pt-20 h-full">
 				<div className="mx-auto flex flex-col justify-center items-center text-center">
-					<div className="p-6 w-full flex flex-col justify-center items-center">
-						<div className="flex gap-12 items-center justify-center p-6 pb-4 sm:pb-1">
+					<div className="p-4 md:p-6 w-full flex flex-col justify-center items-center">
+						<div className="flex gap-12 items-center justify-center pb-4 sm:pb-1">
 							<Reveal xVal={-200}>
-								<div className="whitespace-normal sm:whitespace-nowrap lg:whitespace-normal xl:whitespace-nowrap text-2xl text-[rgb(255,228,203)]">
+								<div className="whitespace-normal sm:whitespace-nowrap lg:whitespace-normal xl:whitespace-nowrap text-2xl text-[rgb(253,240,214)]">
 									<strong>Create</strong> With Purpose.
 								</div>
 							</Reveal>
 							<Reveal xVal={200}>
-								<div className="whitespace-normal sm:whitespace-nowrap lg:whitespace-normal xl:whitespace-nowrap text-2xl text-[rgb(255,228,203)]">
+								<div className="whitespace-normal sm:whitespace-nowrap lg:whitespace-normal xl:whitespace-nowrap text-2xl text-[rgb(253,240,214)]">
 									<strong>Connect</strong> With Place.
 								</div>
 							</Reveal>
@@ -65,12 +65,12 @@ export const Residencies = () => {
 						<div className="flex flex-col justify-center items-center text-center mx-auto">
 							<div>
 								<Reveal delayVal={1}>
-									<div className="mt-2 xl:mt-6 text-center mx-auto text-[50px] xl:text-6xl  tracking-wide sm:tracking-[0.35em] text-[rgb(253,191,133)] uppercase">
+									<div className="mt-2 xl:mt-6 pb-6 text-center mx-auto text-[40px] sm:text-[50px] xl:text-6xl  tracking-wide sm:tracking-[0.35em] text-[rgb(253,191,133)] uppercase">
 										Artist Residencies
 									</div>
 								</Reveal>
 								<Reveal delayVal={1}>
-									<div className="text-[rgb(255,228,203)] text-xl mt-1 m-10 items-center">
+									<div className="text-[rgb(253,240,214)] text-xl mt-1 my-10 mx-0 md:m-10 items-center">
 										Creative stays for artists who want space, inspiration,
 										community, and cultural exchange.
 									</div>
@@ -82,27 +82,27 @@ export const Residencies = () => {
 										</div>
 									</Reveal>
 									<Reveal delayVal={1.1}>
-										<div className="mt-1 m-10 max-w-[1200px] flex-wrap flex-row mx-auto text-sm sm:text-base xl:text-lg items-center flex text-[rgb(255,228,203)]">
-											<ul className="grid sm:flex flex-wrap text-center justify-center mx-auto tracking-wide text-base gap-6 text-[rgb(255,228,203)]">
-												<li className="bg-[rgb(10,25,15)] rounded-xl flex justify-center items-center text-[rgb(255,228,203)] p-4">
+										<div className="mt-1 m-10 max-w-[1200px] flex-wrap flex-row mx-auto text-sm sm:text-base xl:text-lg items-center flex text-[rgb(253,240,214)]">
+											<ul className="grid sm:flex flex-wrap text-center justify-center mx-auto tracking-wide text-base gap-6 text-[rgb(253,240,214)]">
+												<li className="bg-[rgb(10,25,15)] rounded-xl flex justify-center items-center text-[rgb(253,240,214)] p-2 md:p-4">
 													Lodging coordination
 												</li>
-												<li className="bg-[rgb(10,25,15)] rounded-xl flex justify-center items-center text-[rgb(255,228,203)] p-4">
+												<li className="bg-[rgb(10,25,15)] rounded-xl flex justify-center items-center text-[rgb(253,240,214)] p-4">
 													Creative check-ins
 												</li>
-												<li className="bg-[rgb(10,25,15)] rounded-xl flex justify-center items-center text-[rgb(255,228,203)] p-4">
+												<li className="bg-[rgb(10,25,15)] rounded-xl flex justify-center items-center text-[rgb(253,240,214)] p-2 md:p-4">
 													Local experiences
 												</li>
-												<li className="bg-[rgb(10,25,15)] rounded-xl flex justify-center items-center text-[rgb(255,228,203)] p-4">
+												<li className="bg-[rgb(10,25,15)] rounded-xl flex justify-center items-center text-[rgb(253,240,214)] p-2 md:p-4">
 													Performance opportunities
 												</li>
-												<li className="bg-[rgb(10,25,15)] rounded-xl flex justify-center items-center text-[rgb(255,228,203)] p-4">
+												<li className="bg-[rgb(10,25,15)] rounded-xl flex justify-center items-center text-[rgb(253,240,214)] p-2 md:p-4">
 													Workshops
 												</li>
-												<li className="bg-[rgb(10,25,15)] rounded-xl flex justify-center items-center text-[rgb(255,228,203)] p-4">
+												<li className="bg-[rgb(10,25,15)] rounded-xl flex justify-center items-center text-[rgb(253,240,214)] p-2 md:p-4">
 													Documentation
 												</li>
-												<li className="bg-[rgb(10,25,15)] rounded-xl flex justify-center items-center text-[rgb(255,228,203)] p-4">
+												<li className="bg-[rgb(10,25,15)] rounded-xl flex justify-center items-center text-[rgb(253,240,214)] p-2 md:p-4">
 													Cultural exchange
 												</li>
 											</ul>
@@ -116,10 +116,9 @@ export const Residencies = () => {
 												Residency Lengths:
 											</div>
 
-											<div className="text-[rgb(255,228,203)] trackin-wide flex gap-4 justify-center">
+											<div className="text-[rgb(253,240,214)] trackin-wide flex flex-col sm:flex-row gap-6 justify-center">
 												<p>1 week</p> <p>|</p> <p>2 weeks</p> <p>|</p>{" "}
-												<p>3 weeks</p> <p>|</p> <p>4 weeks</p> <p>|</p>{" "}
-												<p>Custom</p>
+												<p>4 weeks</p> <p>|</p> <p>Custom</p>
 											</div>
 										</div>
 									</Reveal>
@@ -131,12 +130,12 @@ export const Residencies = () => {
 				</div>
 			</div>
 			<Reveal>
-				<div className="text-3xl sm:text-4xl mb-6 uppercase mt-10 text-[rgb(255,228,203)] text-center mx-auto">
+				<div className="text-3xl sm:text-4xl mb-6 uppercase mt-10 text-[rgb(253,240,214)] text-center mx-auto">
 					Primary Year One Residency Locations:
 				</div>
 			</Reveal>
 			<div className="flex flex-row justify-center items-center text-center mx-auto">
-				<h1 className="text-center z-5 -mr-10 mb-6 text-2xl bg-[rgb(10,25,15)] border border-[rgb(255,228,203)] p-6 rounded-xl sm:text-3xl items-center justify-center gap-4 transition-all ease-in-out duration-300 text-[rgb(255,228,203)]">
+				<h1 className="text-center z-5 -mr-10 mb-6 text-2xl bg-[rgb(10,25,15)] border border-[rgb(253,240,214)] p-4 md:p-6 rounded-xl sm:text-3xl items-center justify-center gap-4 transition-all ease-in-out duration-300 text-[rgb(253,240,214)]">
 					<Reveal>
 						<p className="text-[rgb(251,206,165)] uppercase mb-4 text-2xl sm:text-3xl">
 							The Woods:
@@ -154,6 +153,9 @@ export const Residencies = () => {
 						style={{
 							flexShrink: 0,
 							height: "500px",
+							width: "100%",
+							objectFit: "cover" /* Prevents compression by cropping instead */,
+							objectPosition: "center",
 							display: "flex",
 							borderRadius: "12px",
 							border: "2px solid rgb(71,102,100)",
@@ -172,6 +174,9 @@ export const Residencies = () => {
 						style={{
 							flexShrink: 0,
 							height: "500px",
+							width: "100%",
+							objectFit: "cover" /* Prevents compression by cropping instead */,
+							objectPosition: "center",
 							display: "flex",
 							borderRadius: "12px",
 							border: "2px solid rgb(71,102,100)",
@@ -183,7 +188,7 @@ export const Residencies = () => {
 						src={beachView.src}
 					/>
 				</ExpandContent>
-				<h1 className="text-center z-5 -ml-10 mb-6 text-2xl bg-[rgb(10,25,15)] border border-[rgb(255,228,203)] p-6 rounded-xl sm:text-3xl items-center justify-center gap-4 transition-all ease-in-out duration-300 text-[rgb(255,228,203)]">
+				<h1 className="text-center z-5 -ml-10 mb-6 text-2xl bg-[rgb(10,25,15)] border border-[rgb(253,240,214)] p-4 md:p-6 rounded-xl sm:text-3xl items-center justify-center gap-4 transition-all ease-in-out duration-300 text-[rgb(253,240,214)]">
 					<Reveal>
 						<p className="text-[rgb(251,206,165)] uppercase mb-4 text-2xl sm:text-3xl">
 							The Sea:
@@ -198,15 +203,15 @@ export const Residencies = () => {
 			<hr className="mt-20" />
 			<div
 				ref={pricingRef}
-				className="flex flex-col text-center justify-center items-center mt-20 mb-20 p-4"
+				className="flex flex-col text-center justify-center items-center mt-20 mb-20"
 			>
 				<Reveal>
-					<div className="rounded-[20%] text-center mb-4 tracking-[0.35em] text-3xl sm:text-5xl items-center justify-center uppercase gap-4 text-[rgb(255,228,203)]">
+					<div className="rounded-[20%] text-center mb-4 tracking-[0.35em] text-3xl sm:text-5xl items-center justify-center uppercase gap-4 text-[rgb(253,240,214)]">
 						Residency Pricing
 					</div>
 				</Reveal>
 				<Reveal>
-					<div className="text-center mb-6 text-base items-center justify-center gap-4 text-[rgb(255,228,203)]">
+					<div className="text-center mb-6 text-base items-center justify-center gap-4 text-[rgb(253,240,214)]">
 						Pricing varies by location and lodging. These are starter packages
 						and can be customized to fit your needs.
 					</div>
@@ -216,19 +221,20 @@ export const Residencies = () => {
 						{pricingData.map((price, index) => {
 							return (
 								<div
-									className={`max-w-[1000px] w-full border transition-all ease-in-out hover:[&_h1]:text-[26px] border-[rgb(71,102,100)] p-8 text-center bg-[rgb(10,25,15)] hover:bg-[rgb(44,63,50)] rounded-xl`}
+									className={`max-w-[1000px] w-full border transition-all ease-in-out hover:[&_h1]:text-[26px] border-[rgb(71,102,100)] p-4 md:p-6 text-center hover:bg-[rgb(44,63,50)] rounded-xl`}
 									key={index}
+									id="residencyPricing"
 								>
 									<div>
-										<h1 className="text-center mb-6 text-xl md:text-2xl items-center justify-center uppercase gap-4 transition-all ease-in-out duration-300 text-[rgb(255,228,203)]">
+										<h1 className="text-center mb-6 text-xl md:text-2xl items-center justify-center uppercase gap-4 transition-all ease-in-out duration-300 text-[rgb(253,240,214)]">
 											{price.title}
 										</h1>
-										<div className="text-center text-base items-center justify-center gap-4 text-[rgb(255,228,203)]">
+										<div className="text-center text-base items-center justify-center gap-4 text-[rgb(253,240,214)]">
 											{price.desc}
 										</div>
 									</div>
 									<div className="pt-5 flex gap-4 text-center justify-center">
-										<div className="font-bold tracking-wide text-xl sm:text-2xl text-[rgb(255,228,203)]">
+										<div className="font-bold tracking-wide text-xl sm:text-2xl text-[rgb(253,240,214)]">
 											{price.price}
 										</div>
 									</div>
@@ -248,7 +254,7 @@ export const Residencies = () => {
 				<div>
 					<div className="text-center mt-5 flex flex-col md:flex-row gap-6 justify-center items-center">
 						<Link
-							className="p-2 sm:p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
+							className="p-2 sm:p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-[rgb(253,240,214)] cursor-pointer"
 							href="/contact?form=Residency"
 						>
 							Apply for Residency

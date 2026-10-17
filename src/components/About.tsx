@@ -60,7 +60,7 @@ export default function About() {
 						around art, food, music, nature, storytelling, and human connection.
 					</div>
 				</Reveal>
-				<div className="flex text-[rgb(88,51,5)] flex-col justify-center text-3xl items-center max-w-[1200px] mx-auto text-center p-6">
+				<div className="flex text-[rgb(88,51,5)] flex-col justify-center text-3xl items-center max-w-[1200px] mx-auto text-center p-4 md:p-6">
 					<Reveal delayVal={1.3}>
 						<div>This is not traditional tourism.</div>
 					</Reveal>
@@ -72,7 +72,7 @@ export default function About() {
 						</div>
 					</Reveal>
 				</div>
-				<div className="mt-5 md:mt-10 px-4 flex text-[rgb(88,51,5)] flex-col justify-center text-xl items-center max-w-[1200px] mx-auto text-center">
+				<div className="mt-5 md:mt-10 px-4 md:px-6 flex text-[rgb(88,51,5)] flex-col justify-center text-xl items-center max-w-[1200px] mx-auto text-center">
 					<Reveal delayVal={1.5}>
 						<div>
 							Rather than offering generic packages, Revolūtiō personally
@@ -80,7 +80,7 @@ export default function About() {
 							for, what they need, and how they want to connect.
 						</div>
 					</Reveal>
-					<div className="flex flex-col text-xl p-4 mt-5 md:mt-10 gap-6 max-w-[1200px] mx-auto">
+					<div className="flex flex-col text-xl py-4 mt-5 md:mt-10 gap-6 max-w-[1200px] mx-auto">
 						<div
 							className="flex flex-col sm:grid sm:grid-cols-2 h-full shadow-2xl"
 							style={{
@@ -90,7 +90,7 @@ export default function About() {
 								backgroundPosition: "center",
 							}}
 						>
-							<div className="p-6 sm:p-10 rounded-t-xl sm:rounded-t-none sm:rounded-l-xl flex flex-col font-bold h-full bg-[rgba(255,246,234,0.93)]">
+							<div className="p-6 sm:p-10 rounded-t-xl sm:rounded-t-none sm:rounded-l-xl flex flex-col font-bold h-full bg-[rgba(253,240,214,0.93)]">
 								<Reveal delayVal={1}>
 									<div className="flex font-normal tracking-wide sm:tracking-[0.35em] text-[rgb(195,112,10)] uppercase justify-center pb-5 text-2xl">
 										Some may want:
@@ -117,7 +117,7 @@ export default function About() {
 									</Reveal>
 								</div>
 							</div>
-							<div className="p-6 sm:p-10 flex rounded-b-xl sm:rounded-b-none sm:rounded-r-xl flex-col font-bold h-full bg-[rgba(255,209,149,0.93)]">
+							<div className="p-6 sm:p-10 flex rounded-b-xl sm:rounded-b-none sm:rounded-r-xl flex-col font-bold h-full bg-[rgba(253,240,214,0.93)]">
 								<Reveal delayVal={1}>
 									<div className="flex font-normal justify-center tracking-wide sm:tracking-[0.35em] text-[rgb(195,112,10)] uppercase pb-5 text-2xl">
 										Others may want:
@@ -150,7 +150,7 @@ export default function About() {
 						</div>
 					</div>
 				</div>
-				<div className="flex -mt-2 flex-col mx-auto max-w-[1200px]">
+				<div className="flex flex-col mx-auto max-w-[1200px]">
 					<Reveal>
 						<div className="justify-center text-[rgb(88,51,5)] text-xl items-center max-w-[1200px] text-center p-6">
 							Revolūtiō acts as the <strong>bridge</strong> between travelers,
@@ -165,7 +165,7 @@ export default function About() {
 				</div>
 				<div className="flex -mt-2 flex-col mx-auto max-w-[1200px]">
 					<Reveal>
-						<div className="justify-center text-[rgb(88,51,5)] text-2xl items-center max-w-[1200px] text-center p-6">
+						<div className="justify-center text-[rgb(88,51,5)] text-2xl items-center max-w-[1200px] text-center p-4 md:p-6">
 							A global culture club for meaningful travel, artist residencies,
 							and locally rooted experiences.
 						</div>

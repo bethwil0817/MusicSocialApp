@@ -59,11 +59,11 @@ export default function Contact() {
 				setRevealSuccess(true);
 				setResult("Form Submitted Successfully");
 				event.target.reset();
-				handleScroll(autoRef);
+				// handleScroll(autoRef);
 			} else {
 				setRevealSuccess(false);
 				setResult("Error");
-				handleScroll(autoRef);
+				// handleScroll(autoRef);
 			}
 		}
 	};
@@ -101,7 +101,7 @@ export default function Contact() {
 						</h1>
 					</Reveal>
 					<Reveal>
-						<div className="max-w-[1200px] mx-auto p-6 text-xl text-center text-[rgb(255,229,197)]">
+						<div className="py-6 max-w-[1200px] mx-auto text-xl text-center text-[rgb(253,240,214)]">
 							Whether you are an artist looking for residencies or interested in
 							partnering, you decide your path with Revolūtiō. Please complete
 							the form that aligns with your interest and we will reach out to
@@ -117,11 +117,11 @@ export default function Contact() {
 
 						<div
 							ref={autoRef}
-							className="flex flex-col whitespace-nowrap pt-6 md:flex-row text-[rgb(255,229,197)] md:flex-wrap justify-center text-center mx-auto text-lg max-w-[1000px] gap-6"
+							className="flex flex-col whitespace-nowrap pt-6 md:flex-row text-[rgb(253,240,214)] md:flex-wrap justify-center text-center mx-auto text-lg max-w-[1000px] gap-6"
 						>
 							<Reveal className="w-auto!">
 								<button
-									className={`p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)] ${formState === "Experience" ? "bg-[rgb(255,226,190)] text-[rgb(10,25,15)]" : ""}`}
+									className={`p-2 sm:p-4 rounded-lg transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)] ${formState === "Experience" ? "bg-[rgb(253,240,214)] text-[rgb(10,25,15)]" : ""}`}
 									onClick={() => {
 										setFormState("Experience");
 										handleScroll(autoRef);
@@ -134,7 +134,7 @@ export default function Contact() {
 							</Reveal>
 							<Reveal className="w-auto!">
 								<button
-									className={`p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)] ${formState === "Residency" ? "bg-[rgb(255,226,190)] text-[rgb(10,25,15)]" : ""}`}
+									className={`p-2 sm:p-4 rounded-lg transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)] ${formState === "Residency" ? "bg-[rgb(253,240,214)] text-[rgb(10,25,15)]" : ""}`}
 									onClick={() => {
 										setFormState("Residency");
 										handleScroll(autoRef);
@@ -147,7 +147,7 @@ export default function Contact() {
 							</Reveal>
 							<Reveal className="w-auto!">
 								<button
-									className={`p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)] ${formState === "Membership" ? "bg-[rgb(255,226,190)] text-[rgb(10,25,15)]" : ""}`}
+									className={`p-2 sm:p-4 rounded-lg transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)] ${formState === "Membership" ? "bg-[rgb(253,240,214)] text-[rgb(10,25,15)]" : ""}`}
 									onClick={() => {
 										setFormState("Membership");
 										handleScroll(autoRef);
@@ -160,7 +160,7 @@ export default function Contact() {
 							</Reveal>
 							<Reveal className="w-auto!">
 								<button
-									className={`p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)] ${formState === "Partner" ? "bg-[rgb(255,226,190)] text-[rgb(10,25,15)]" : ""}`}
+									className={`p-2 sm:p-4 rounded-lg transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)] ${formState === "Partner" ? "bg-[rgb(253,240,214)] text-[rgb(10,25,15)]" : ""}`}
 									onClick={() => {
 										setFormState("Partner");
 										handleScroll(autoRef);
@@ -173,7 +173,7 @@ export default function Contact() {
 							</Reveal>
 							<Reveal className="w-auto!">
 								<button
-									className={`p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(255,226,190)] ${formState === "Consulting" ? "bg-[rgb(255,226,190)] text-[rgb(10,25,15)]" : ""}`}
+									className={`p-2 sm:p-4 rounded-lg transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)] ${formState === "Consulting" ? "bg-[rgb(253,240,214)] text-[rgb(10,25,15)]" : ""}`}
 									onClick={() => {
 										setFormState("Consulting");
 										handleScroll(autoRef);
@@ -188,13 +188,13 @@ export default function Contact() {
 						<div className={`${formState === null ? "h-100 invisible" : ""}`}>
 							{formState === "Experience" && (
 								<Reveal delayVal={0}>
-									<div className="mt-10 bg-linear-210 to-[rgba(195,112,10,0.8)] from-[rgba(255,207,148,0.5)] max-w-[1000px] mx-auto p-2 rounded-lg">
-										<div className="text-2xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(255,229,197)] text-center justify-center items-center uppercase">
+									<div className="mt-10 bg-linear-210 to-[rgba(195,112,10,0.8)] from-[rgba(255,207,148,0.5)] max-w-[1000px] mx-auto p-4 md:p-6 rounded-lg">
+										<div className="text-2xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(253,240,214)] text-center justify-center items-center uppercase">
 											Plan My Experience Form
 										</div>
 										<form
 											onSubmit={onExperienceSubmit}
-											className="flex flex-col text-lg p-4 md:p-8 text-[rgb(255,229,197)]"
+											className="flex flex-col text-lg text-[rgb(253,240,214)]"
 										>
 											<input
 												type="hidden"
@@ -204,7 +204,7 @@ export default function Contact() {
 
 											<label>Name</label>
 											<input
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="name"
 												id="name"
 												type="text"
@@ -229,7 +229,7 @@ export default function Contact() {
 
 											<label>Email</label>
 											<input
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="email"
 												type="email"
 												id="email"
@@ -239,7 +239,7 @@ export default function Contact() {
 
 											<label>Phone</label>
 											<input
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="phone"
 												id="phone"
 												type="tel"
@@ -248,7 +248,7 @@ export default function Contact() {
 
 											<label>Desired Destination</label>
 											<select
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="destinations"
 												id="destinations"
 												required
@@ -262,7 +262,7 @@ export default function Contact() {
 
 											<label>Desired Start Date</label>
 											<input
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="startDate"
 												id="startDate"
 												type="date"
@@ -271,7 +271,7 @@ export default function Contact() {
 
 											<label>Desired End Date</label>
 											<input
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="endDate"
 												id="endDAte"
 												required
@@ -280,7 +280,7 @@ export default function Contact() {
 
 											<label>Number of Guests</label>
 											<input
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="guests"
 												id="guests"
 												type="text"
@@ -289,7 +289,7 @@ export default function Contact() {
 
 											<label>Budget Range</label>
 											<input
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="budget"
 												id="budget"
 												type="text"
@@ -301,7 +301,7 @@ export default function Contact() {
 												What kind of experience are you looking for?
 											</label>
 											<textarea
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="experience"
 												id="experience"
 												required
@@ -309,7 +309,7 @@ export default function Contact() {
 
 											<label>What are your interests?</label>
 											<textarea
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												placeholder="examples: food, music, art, wellness, nature, culture, history, photography, retreat, celebration, residency, private event"
 												name="interests"
 												id="interests"
@@ -318,7 +318,7 @@ export default function Contact() {
 
 											<label>Lodging needs</label>
 											<textarea
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="lodging"
 												id="lodging"
 												required
@@ -326,20 +326,20 @@ export default function Contact() {
 
 											<label>Anything else we should know?</label>
 											<textarea
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="comment"
 												id="comment"
 											/>
 
 											<div className="flex gap-6 w-full">
 												<button
-													className="mb-6 w-full bg-[rgb(251,217,174)] p-4 border rounded-lg text-[#3a250b] border-[rgb(255,229,197)] hover:cursor-pointer hover:bg-[rgb(255,239,220)] hover:text-[#3a250b]"
+													className="mb-6 w-full hover:cursor-pointer bg-[rgb(253,240,214)] p-4 border rounded-lg text-[#3a250b] border-[rgb(255,229,197)] hover:bg-[rgb(251,217,174)] hover:text-[#3a250b]"
 													type="submit"
 												>
 													Submit
 												</button>
 												<button
-													className="mb-6 w-full hover:cursor-pointer p-4 border rounded-lg border-[rgb(255,229,197)] hover:bg-[rgb(255,239,220)] hover:text-[#3a250b]"
+													className="mb-6 w-full hover:cursor-pointer p-4 border rounded-lg border-[rgb(253,240,214)] hover:bg-[rgb(251,217,174)] hover:text-[#3a250b]"
 													type="reset"
 												>
 													Reset
@@ -360,13 +360,13 @@ export default function Contact() {
 							)}
 							{formState === "Residency" && (
 								<Reveal delayVal={0}>
-									<div className="mt-10 bg-linear-210 to-[rgba(255,207,148,0.5)] from-[rgba(195,112,10,0.8)] max-w-[1000px] mx-auto p-2 rounded-lg">
-										<div className="text-2xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(255,229,197)] text-center justify-center items-center uppercase">
+									<div className="mt-10 bg-linear-210 to-[rgba(255,207,148,0.5)] from-[rgba(195,112,10,0.8)] max-w-[1000px] mx-auto p-4 md:p-6 rounded-lg">
+										<div className="text-2xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(253,240,214)] text-center justify-center items-center uppercase">
 											Artist Residency Application
 										</div>
 										<form
 											onSubmit={onResidencySubmit}
-											className="flex flex-col text-lg p-4 md:p-8 text-[rgb(255,229,197)]"
+											className="flex flex-col text-lg text-[rgb(253,240,214)]"
 										>
 											<input
 												type="hidden"
@@ -376,7 +376,7 @@ export default function Contact() {
 
 											<label>Name</label>
 											<input
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="name"
 												id="name"
 												type="text"
@@ -401,7 +401,7 @@ export default function Contact() {
 
 											<label>Email</label>
 											<input
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="email"
 												id="email"
 												type="email"
@@ -411,7 +411,7 @@ export default function Contact() {
 
 											<label>Location</label>
 											<input
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="location"
 												id="location"
 												type="text"
@@ -420,7 +420,7 @@ export default function Contact() {
 
 											<label>Art Form</label>
 											<input
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="art"
 												id="art"
 												type="text"
@@ -429,7 +429,7 @@ export default function Contact() {
 
 											<label>Website / Social Links</label>
 											<input
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="socials"
 												id="socials"
 												required
@@ -438,7 +438,7 @@ export default function Contact() {
 
 											<label>Desired Destination</label>
 											<select
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="destinations"
 												id="destinations"
 												required
@@ -452,7 +452,7 @@ export default function Contact() {
 
 											<label>Preferred Residency Length</label>
 											<input
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="length"
 												id="length"
 												type="text"
@@ -461,7 +461,7 @@ export default function Contact() {
 
 											<label>Preferred Start Date</label>
 											<input
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="startDate"
 												id="startDate"
 												type="date"
@@ -470,7 +470,7 @@ export default function Contact() {
 
 											<label>Preferred End Date</label>
 											<input
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="endDate"
 												id="endDate"
 												type="date"
@@ -479,7 +479,7 @@ export default function Contact() {
 
 											<label>Budget Range</label>
 											<input
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="budget"
 												id="budget"
 												type="text"
@@ -489,7 +489,7 @@ export default function Contact() {
 
 											<label>Project Description</label>
 											<textarea
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="project"
 												id="project"
 												required
@@ -497,7 +497,7 @@ export default function Contact() {
 
 											<label>What support do you need?</label>
 											<textarea
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="support"
 												id="support"
 												required
@@ -508,7 +508,7 @@ export default function Contact() {
 												or community engagement?
 											</label>
 											<textarea
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="interests"
 												id="interests"
 												required
@@ -516,7 +516,7 @@ export default function Contact() {
 
 											<label>Lodging Needs</label>
 											<textarea
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="lodging"
 												id="lodging"
 												required
@@ -524,7 +524,7 @@ export default function Contact() {
 
 											<label>Anything else we should know?</label>
 											<textarea
-												className="mb-6 p-2 border rounded border-[rgb(255,229,197)]"
+												className="mb-6 p-2 border rounded border-[rgb(253,240,214)]"
 												name="comment"
 												id="comment"
 												required
@@ -532,13 +532,13 @@ export default function Contact() {
 
 											<div className="flex gap-6 w-full">
 												<button
-													className="mb-6 w-full hover:cursor-pointer bg-[rgb(251,217,174)] p-4 border rounded-lg text-[#3a250b] border-[rgb(255,229,197)] hover:bg-[rgb(255,239,220)] hover:text-[#3a250b]"
+													className="mb-6 w-full hover:cursor-pointer bg-[rgb(253,240,214)] p-4 border rounded-lg text-[#3a250b] border-[rgb(255,229,197)] hover:bg-[rgb(251,217,174)] hover:text-[#3a250b]"
 													type="submit"
 												>
 													Submit
 												</button>
 												<button
-													className="mb-6 w-full hover:cursor-pointer p-4 border rounded-lg border-[rgb(255,229,197)] hover:bg-[rgb(255,239,220)] hover:text-[#3a250b]"
+													className="mb-6 w-full hover:cursor-pointer p-4 border rounded-lg border-[rgb(253,240,214)] hover:bg-[rgb(251,217,174)] hover:text-[#3a250b]"
 													type="reset"
 												>
 													Reset
@@ -559,13 +559,13 @@ export default function Contact() {
 							)}
 							{formState === "Membership" && (
 								<Reveal delayVal={0}>
-									<div className="mt-10 bg-linear-210 to-[rgba(195,112,10,0.8)] from-[rgba(255,207,148,0.5)] max-w-[1000px] mx-auto p-2 rounded-lg">
+									<div className="mt-10 bg-linear-210 to-[rgba(195,112,10,0.8)] from-[rgba(255,207,148,0.5)] max-w-[1000px] mx-auto p-4 md:p-6 rounded-lg">
 										<div className="text-2xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(255,229,197)] text-center justify-center items-center uppercase">
 											Membership Inquiry
 										</div>
 										<form
 											onSubmit={onMembershipSubmit}
-											className="flex flex-col text-lg p-4 md:p-8 text-[rgb(255,229,197)]"
+											className="flex flex-col text-lg text-[rgb(255,229,197)]"
 										>
 											<input
 												type="hidden"
@@ -647,13 +647,13 @@ export default function Contact() {
 
 											<div className="flex gap-6 w-full">
 												<button
-													className="mb-6 w-full hover:cursor-pointer bg-[rgb(251,217,174)] p-4 border rounded-lg text-[#3a250b] border-[rgb(255,229,197)] hover:bg-[rgb(255,239,220)] hover:text-[#3a250b]"
+													className="mb-6 w-full hover:cursor-pointer bg-[rgb(253,240,214)] p-4 border rounded-lg text-[#3a250b] border-[rgb(255,229,197)] hover:bg-[rgb(251,217,174)] hover:text-[#3a250b]"
 													type="submit"
 												>
 													Submit
 												</button>
 												<button
-													className="mb-6 w-full hover:cursor-pointer p-4 border rounded-lg border-[rgb(255,229,197)] hover:bg-[rgb(255,239,220)] hover:text-[#3a250b]"
+													className="mb-6 w-full hover:cursor-pointer p-4 border rounded-lg border-[rgb(253,240,214)] hover:bg-[rgb(251,217,174)] hover:text-[#3a250b]"
 													type="reset"
 												>
 													Reset
@@ -675,13 +675,13 @@ export default function Contact() {
 							{formState === "Partner" && (
 								<Reveal delayVal={0}>
 									<div>
-										<div className="mt-10 bg-linear-210 to-[rgba(255,207,148,0.5)] from-[rgba(195,112,10,0.8)] max-w-[1000px] mx-auto p-2 rounded-lg">
+										<div className="mt-10 bg-linear-210 to-[rgba(255,207,148,0.5)] from-[rgba(195,112,10,0.8)] max-w-[1000px] mx-auto p-4 md:p-6 rounded-lg">
 											<div className="text-2xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(255,229,197)] text-center justify-center items-center uppercase">
 												Partner Inquiry
 											</div>
 											<form
 												onSubmit={onPartnerSubmit}
-												className="flex flex-col text-lg p-4 md:p-8 text-[rgb(255,229,197)]"
+												className="flex flex-col text-lg text-[rgb(255,229,197)]"
 											>
 												<input
 													type="hidden"
@@ -761,13 +761,13 @@ export default function Contact() {
 												/>
 												<div className="flex gap-6 w-full">
 													<button
-														className="mb-6 w-full hover:cursor-pointer bg-[rgb(251,217,174)] p-4 border rounded-lg text-[#3a250b] border-[rgb(255,229,197)] hover:bg-[rgb(255,239,220)] hover:text-[#3a250b]"
+														className="mb-6 w-full hover:cursor-pointer bg-[rgb(253,240,214)] p-4 border rounded-lg text-[#3a250b] border-[rgb(255,229,197)] hover:bg-[rgb(251,217,174)] hover:text-[#3a250b]"
 														type="submit"
 													>
 														Submit
 													</button>
 													<button
-														className="mb-6 w-full hover:cursor-pointer p-4 border rounded-lg border-[rgb(255,229,197)] hover:bg-[rgb(255,239,220)] hover:text-[#3a250b]"
+														className="mb-6 w-full hover:cursor-pointer p-4 border rounded-lg border-[rgb(253,240,214)] hover:bg-[rgb(251,217,174)] hover:text-[#3a250b]"
 														type="reset"
 													>
 														Reset
@@ -790,11 +790,11 @@ export default function Contact() {
 							{formState === "Consulting" && (
 								<Reveal delayVal={0}>
 									<div>
-										<div className="mt-10 bg-linear-210 to-[rgba(195,112,10,0.8)] from-[rgba(255,207,148,0.5)] max-w-[1000px] mx-auto p-2 rounded-lg">
+										<div className="mt-10 bg-linear-210 to-[rgba(195,112,10,0.8)] from-[rgba(255,207,148,0.5)] max-w-[1000px] mx-auto p-4 md:p-6 rounded-lg">
 											<div className="text-2xl flex tracking-wide sm:tracking-[0.35em] text-[rgb(255,229,197)] text-center justify-center items-center uppercase">
 												Consulting Inquiry
 											</div>
-											<div className="flex flex-col text-lg p-4 md:p-8 text-[rgb(255,229,197)]">
+											<div className="flex flex-col text-lg text-[rgb(255,229,197)]">
 												<input
 													type="hidden"
 													name="_captcha"
@@ -878,13 +878,13 @@ export default function Contact() {
 
 												<div className="flex gap-6 w-full">
 													<button
-														className="mb-6 w-full hover:cursor-pointer bg-[rgb(251,217,174)] p-4 border rounded-lg text-[#3a250b] border-[rgb(255,229,197)] hover:bg-[rgb(255,239,220)] hover:text-[#3a250b]"
+														className="mb-6 w-full hover:cursor-pointer bg-[rgb(253,240,214)] p-4 border rounded-lg text-[#3a250b] border-[rgb(255,229,197)] hover:bg-[rgb(251,217,174)] hover:text-[#3a250b]"
 														type="submit"
 													>
 														Submit
 													</button>
 													<button
-														className="mb-6 w-full hover:cursor-pointer p-4 border rounded-lg border-[rgb(255,229,197)] hover:bg-[rgb(255,239,220)] hover:text-[#3a250b]"
+														className="mb-6 w-full hover:cursor-pointer p-4 border rounded-lg border-[rgb(253,240,214)] hover:bg-[rgb(251,217,174)] hover:text-[#3a250b]"
 														type="reset"
 													>
 														Reset

@@ -72,6 +72,57 @@
 	animation: colorAni 7s ease-in-out infinite;
 }
 
+#membershipPricing {
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(
+		45deg,
+		rgb(10, 25, 15),
+		rgb(52, 69, 58),
+		rgb(10, 25, 15),
+		rgb(52, 69, 58)
+	);
+	background-size: 300% 300%;
+	animation: colorAni 5s ease-in-out infinite;
+}
+
+#membershipPricing:hover {
+	background-color: rgb(52, 69, 58) !important;
+	animation: none;
+}
+
+#residencyPricing {
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(
+		45deg,
+		rgb(10, 25, 15),
+		rgb(44, 63, 50),
+		rgb(10, 25, 15),
+		rgb(44, 63, 50)
+	);
+	background-size: 300% 300%;
+	animation: colorAni 5s ease-in-out infinite;
+}
+
+#residencyPricing:hover {
+	background-color: rgb(44, 63, 50) !important;
+	animation: none;
+}
+
+#experiencePricing {
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(45deg, #1c3639, #2b5055, #1c3639, #2b5055);
+	background-size: 300% 300%;
+	animation: colorAni 5s ease-in-out infinite;
+}
+
+#experiencePricing:hover {
+	background-color: #2b5055 !important;
+	animation: none;
+}
+
 @keyframes colorAni {
 	0% {
 		background-position: 0 50%;

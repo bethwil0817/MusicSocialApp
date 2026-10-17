@@ -112,7 +112,7 @@ export default function Experiences() {
 			/>
 			<div className="mx-auto">
 				<div
-					className="px-2 md:px-6 pt-20 pb-10"
+					className="px-4 md:px-6 pt-20 pb-10"
 					style={{
 						backgroundImage: `linear-gradient(to bottom, rgba(10,25,15,.7), rgba(10,25,15,.7) 100%), url(${guatmount.src})`,
 						backgroundRepeat: "no-repeat",
@@ -120,20 +120,20 @@ export default function Experiences() {
 						backgroundAttachment: "fixed",
 					}}
 				>
-					<div className="mx-4">
+					<div>
 						<Reveal>
-							<div className="text-[28px] sm:text-[48px] mb-6 md:mb-20 pt-10 md:pt-20 xl:text-6xl flex tracking-[0.35em] text-[rgb(255,228,203)] whitespace-break-spaces text-center justify-center items-center uppercase">
+							<div className="text-[28px] sm:text-[48px] mb-6 md:mb-20 pt-10 md:pt-20 xl:text-6xl flex tracking-[0.35em] text-[rgb(253,240,214)] whitespace-break-spaces text-center justify-center items-center uppercase">
 								Travel Experiences
 							</div>
 						</Reveal>
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 md:mb-25">
 							<Reveal delayVal={1}>
-								<div className="p-6 border-b border-dashed border-b-[rgb(237,242,239)] md:border-b-0 md:border-r md:border-r-[rgb(237,242,239)] pt-10 text-xl sm:text-4xl flex tracking-[0.35em] text-[rgb(255,228,203)] leading-15 text-center justify-center items-center uppercase">
+								<div className="p-4 md:p-6 border-b border-dashed border-b-[rgb(237,242,239)] md:border-b-0 md:border-r md:border-r-[rgb(237,242,239)] pt-10 text-xl sm:text-4xl flex tracking-[0.35em] text-[rgb(253,240,214)] leading-15 text-center justify-center items-center uppercase">
 									Curated and meaningful experiences for all
 								</div>
 							</Reveal>
 							<Reveal delayVal={1}>
-								<div className="p-6 text-center text-base sm:text-xl leading-10 justify-center flex items-center text-[rgb(255,228,203)]">
+								<div className="p-4 md:p-6 text-center text-base sm:text-xl leading-10 justify-center flex items-center text-[rgb(253,240,214)]">
 									We aim to personally curate your travel experience to you. To
 									create a meaninful experience we seek personally designed
 									trips and stays for individuals, couples, families, groups,
@@ -146,14 +146,14 @@ export default function Experiences() {
 					</div>
 				</div>
 
-				<div className="bg-linear-to-b py-20 px-6 flex flex-col w-full justify-center text-center items-center mx-auto from-[rgb(10,25,15)] to-[#161e19]">
+				<div className="bg-linear-to-b py-20 px-4 md:px-6 flex flex-col w-full justify-center text-center items-center mx-auto from-[rgb(10,25,15)] to-[#161e19]">
 					<Reveal>
-						<div className="bg-linear-to-b mx-auto from-[#1c3639] to-[#424d44] rounded-lg sm:rounded-[20%] w-full max-w-[1200px] py-10 border border-[rgb(71,102,100)] p-4 sm:p-10">
-							<div className="m-6 rounded-[20%] text-center mb-6 tracking-[0.35em] text-2xl sm:text-3xl items-center justify-center uppercase gap-4 text-[rgb(255,228,203)]">
+						<div className="bg-linear-to-b mx-auto from-[#1c3639] to-[#424d44] rounded-lg sm:rounded-[20%] w-full max-w-[1200px] border border-[rgb(71,102,100)] p-4 sm:p-10">
+							<div className="m-6 rounded-[20%] text-center mb-6 tracking-[0.35em] text-2xl sm:text-3xl items-center justify-center uppercase gap-4 text-[rgb(253,240,214)]">
 								Experiences can include:
 							</div>
 
-							<div className="flex flex-col rounded-[50%] text-center gap-4 text-base sm:text-lg text-[rgb(255,228,203)]">
+							<div className="flex flex-col rounded-[50%] text-center gap-4 text-base sm:text-lg text-[rgb(253,240,214)]">
 								<div>Lodging recommendations and coordination</div>
 								<div>Local guides</div>
 								<div>Private chefs</div>
@@ -168,13 +168,13 @@ export default function Experiences() {
 							</div>
 							<div className="text-center mt-10 flex flex-col md:flex-row gap-6 justify-center items-center">
 								<Link
-									className="p-2 sm:p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
+									className="p-2 sm:p-4 rounded-lg bg-[#a86933] hover:bg-[#a57245] text-[rgb(253,240,214)] cursor-pointer"
 									href="/contact?form=Experience"
 								>
 									Experience Inquiry Form
 								</Link>
 								<button
-									className="p-2 sm:p-4 md:min-w-[230px] rounded-lg bg-[#a86933] hover:bg-[#a57245] text-white cursor-pointer"
+									className="p-2 sm:p-4 md:min-w-[230px] rounded-lg bg-[#a86933] hover:bg-[#a57245] text-[rgb(253,240,214)] cursor-pointer"
 									onClick={() => {
 										if (pricingRef.current) {
 											pricingRef.current?.scrollIntoView({
@@ -193,35 +193,36 @@ export default function Experiences() {
 						ref={pricingRef}
 					>
 						<Reveal>
-							<div className="rounded-[20%] text-center mb-0 sm:mb-10 tracking-[0.35em] text-3xl sm:text-5xl items-center justify-center uppercase gap-4 text-[rgb(255,228,203)]">
+							<div className="rounded-[20%] text-center mb-0 sm:mb-10 tracking-[0.35em] text-3xl sm:text-5xl items-center justify-center uppercase gap-4 text-[rgb(253,240,214)]">
 								Experience Pricing
 							</div>
 						</Reveal>
 						<div className="pb-20">
 							<Reveal>
-								<div className="m-6 mt-15 sm:mt-20 mb-0 text-center tracking-[0.35em] text-2xl sm:text-3xl items-center justify-center uppercase gap-4 text-[rgb(255,228,203)]">
+								<div className="mt-15 sm:mt-20 mb-0 text-center tracking-[0.35em] text-2xl sm:text-3xl items-center justify-center uppercase gap-4 text-[rgb(253,240,214)]">
 									Custom Experience Planning Fees
 								</div>
 							</Reveal>
 							<Reveal>
-								<div className="m-6 text-center mb-6 text-base items-center justify-center gap-4 text-[rgb(255,228,203)]">
+								<div className="my-6 text-center text-base items-center justify-center gap-4 text-[rgb(253,240,214)]">
 									These fees compensate Revolūtiō for designing the client’s
 									experience.
 								</div>
 							</Reveal>
 							<Reveal>
-								<div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-2">
+								<div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
 									{planningPricingData.map((price, index) => {
 										return (
 											<div
-												className={`border transition-all ease-in-out hover:[&_h1]:text-[26px] border-[rgb(71,102,100)] p-8 text-center bg-[#1c3639] hover:bg-[#2b5055] rounded-xl${index === 2 ? " sm:col-span-2" : ""}`}
+												className={`border transition-all ease-in-out hover:[&_h1]:text-[26px] border-[rgb(71,102,100)] p-4 md:p-6 text-center bg-[#1c3639] hover:bg-[#2b5055] rounded-xl${index === 2 ? " sm:col-span-2" : ""}`}
 												key={index}
+												id="experiencePricing"
 											>
 												<div>
-													<h1 className="text-center mb-6 text-xl md:text-2xl items-center justify-center uppercase gap-4 transition-all ease-in-out duration-300 text-[rgb(255,228,203)]">
+													<h1 className="text-center mb-6 text-xl md:text-2xl items-center justify-center uppercase gap-4 transition-all ease-in-out duration-300 text-[rgb(253,240,214)]">
 														{price.title}
 													</h1>
-													<div className="text-center text-base items-center justify-center gap-4 text-[rgb(255,228,203)]">
+													<div className="text-center text-base items-center justify-center gap-4 text-[rgb(253,240,214)]">
 														{price.desc}
 													</div>
 												</div>
@@ -230,22 +231,22 @@ export default function Experiences() {
 														{price.price}
 													</div> */}
 													{/* {price.time && (
-														<div className=" tracking-wide text-xl sm:text-2xl text-[rgb(180,205,203)]">
+														<div className=" tracking-wide text-xl sm:text-2xl text-[rgb(253,240,214)]">
 															|
 														</div>
 													)} */}
 													{price.time && (
-														<div className="font-bold  tracking-wide text-xl sm:text-2xl text-[rgb(255,228,203)]">
+														<div className="font-bold  tracking-wide text-xl sm:text-2xl text-[rgb(253,240,214)]">
 															{price.time}
 														</div>
 													)}
 												</div>
 												{price.subTitle && (
 													<div>
-														<div className="mt-6 mb-2 font-bold text-lg text-[rgb(255,228,203)]">
+														<div className="mt-6 mb-2 font-bold text-lg text-[rgb(253,240,214)]">
 															<div>{price.subTitle}</div>
 														</div>
-														<ul className="flex flex-col text-center justify-center tracking-wide text-base gap-y-2 text-[rgb(255,228,203)]">
+														<ul className="flex flex-col text-center justify-center tracking-wide text-base gap-y-2 text-[rgb(253,240,214)]">
 															{price.bulletPoints?.map((bullet, index) => {
 																return <li key={index}>{bullet}</li>;
 															})}
@@ -260,26 +261,27 @@ export default function Experiences() {
 						</div>
 						<div className="border-t border-dashed border-t-[rgb(132,161,159)]">
 							<Reveal>
-								<div className="m-6 mt-20 mb-0 text-center tracking-[0.35em] text-2xl sm:text-3xl items-center justify-center uppercase gap-4 text-[rgb(255,228,203)]">
+								<div className="mt-20 mb-0 text-center tracking-[0.35em] text-2xl sm:text-3xl items-center justify-center uppercase gap-4 text-[rgb(253,240,214)]">
 									Curated Travel Experience Packages
 								</div>
 							</Reveal>
 							<Reveal>
-								<div className="m-6 text-center mb-6 text-base items-center justify-center gap-4 text-[rgb(255,228,203)]">
+								<div className="my-6 text-center text-base items-center justify-center gap-4 text-[rgb(253,240,214)]">
 									Pricing depends on lodging, group size, chef services,
 									entertainment, experiences, staffing, and destination.
 								</div>
 							</Reveal>
 							<Reveal>
-								<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mx-2">
+								<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 									{packagePricingData.map((price, index) => {
 										return (
 											<div
-												className={`border transition-all hover:[&_h1]:text-[26px] ease-in-out border-[rgb(71,102,100)] p-8 text-center bg-[#1c3639] hover:bg-[#2b5055] rounded-xl`}
+												className={`border transition-all hover:[&_h1]:text-[26px] ease-in-out border-[rgb(71,102,100)] p-4 md:p-6 text-center bg-[#1c3639] hover:bg-[#2b5055] rounded-xl`}
 												key={index}
+												id="experiencePricing"
 											>
 												<div>
-													<h1 className="text-center mb-6 duration-300 text-xl sm:text-2xl transition-all ease-in-out items-center justify-center uppercase gap-4 text-[rgb(255,228,203)]">
+													<h1 className="text-center mb-6 duration-300 text-xl sm:text-2xl transition-all ease-in-out items-center justify-center uppercase gap-4 text-[rgb(253,240,214)]">
 														{price.title}
 													</h1>
 												</div>
@@ -289,10 +291,10 @@ export default function Experiences() {
 													</div>
 												</div> */}
 												<div>
-													<div className="mt-6 mb-2 font-bold text-base sm:text-lg text-[rgb(255,228,203)]">
+													<div className="mt-6 mb-2 font-bold text-base sm:text-lg text-[rgb(253,240,214)]">
 														<div>{price.desc}</div>
 													</div>
-													<ul className="flex flex-col text-center justify-center tracking-wide text-base gap-y-2 text-[rgb(255,228,203)]">
+													<ul className="flex flex-col text-center justify-center tracking-wide text-base gap-y-2 text-[rgb(253,240,214)]">
 														{price.bulletPoints?.map((bullet, index) => {
 															return <li key={index}>{bullet}</li>;
 														})}

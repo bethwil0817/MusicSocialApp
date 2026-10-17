@@ -56,7 +56,7 @@ export function Nav() {
 						<button
 							id="mobile-menu-button"
 							type="button"
-							className="text-[rgb(255,228,203)] w-auto bg-transparent focus:outline-none cursor-pointer justify-self-end"
+							className="text-[rgb(253,240,214)] w-auto bg-transparent focus:outline-none cursor-pointer justify-self-end"
 							onClick={() => {
 								setShowMobileMenu(!showMobileMenu);
 							}}
@@ -78,7 +78,7 @@ export function Nav() {
 						</button>
 					</div>
 					<div
-						className={`bg-[rgba(10,25,15,0.7)] fixed -ml-4 top-15 text-[rgb(255,228,203)] flex-col flex p-3 w-full text-xl gap-2 rounded-b-lg transition-all ease-in-out ${showMobileMenu ? "visible opacity-100" : "hidden invisible opacity-0"}`}
+						className={`bg-[rgba(10,25,15,0.7)] fixed -ml-4 top-15 text-[rgb(253,240,214)] flex-col flex p-3 w-full text-xl gap-2 rounded-b-lg transition-all ease-in-out ${showMobileMenu ? "visible opacity-100" : "hidden invisible opacity-0"}`}
 					>
 						<Link
 							className="hover:text-[#88572c] cursor-pointer"
@@ -106,6 +106,12 @@ export function Nav() {
 							className="hover:text-[#88572c] cursor-pointer"
 						>
 							EXPERIENCES
+						</Link>
+						<Link
+							href="/memberships"
+							className="hover:text-[#88572c] cursor-pointer"
+						>
+							MEMBERSHIPS
 						</Link>
 						<hr></hr>
 						{/* <a className="hover:text-[#ffffff] cursor-pointer">
@@ -143,57 +149,53 @@ export function Nav() {
 					</Link>
 				</div>
 				<div className="flex justify-end w-full gap-16 py-6.5">
-					<Link
-						href="/residencies"
-						className="text-[rgb(255,228,203)] hover:text-[#88572c] hover:cursor-pointer text-xl montserrat"
-					>
-						RESIDENCIES
-					</Link>
-					<Link
-						href="/experiences"
-						className="text-[rgb(255,228,203)] hover:text-[#88572c] hover:cursor-pointer text-xl montserrat"
-					>
-						EXPERIENCES
-					</Link>
-					{/* <div
-						className="text-2xl montserrat"
-						onMouseOver={() => {
-							setShowExperienceNav(true);
-						}}
-						onMouseLeave={() => {
-							setShowExperienceNav(false);
-						}}
+					<div
+						className="text-xl montserrat"
+						onMouseOver={() => setShowExperienceNav(true)}
+						onMouseOut={() => setShowExperienceNav(false)}
 					>
 						<div
-							className={`bg-[rgba(255,255,255,0.9)] text-[#88572c] flex-col flex p-3 text-xl gap-2 rounded-lg transition-all ease-in-out ${showExperienceNav ? "visible opacity-100" : "invisible opacity-0"}`}
+							className={`uppercase hover:cursor-pointer ${showExperienceNav ? "text-[#88572c]" : "text-[rgb(253,240,214)] hover:text-[#88572c]"}`}
 						>
-							<a
-								className="hover:text-[#8c6e56] cursor-pointer"
-								id="montFont"
+							JOIN Revolūtiō
+						</div>
+						<div
+							className={`bg-[rgba(10,25,15,0.9)] mr-10 text-[#88572c] flex-col flex p-3 text-xl gap-2 rounded-lg ${showExperienceNav ? "visible opacity-100" : "invisible opacity-0"}`}
+						>
+							{/* 
+									<a className="hover:text-[#8c6e56] cursor-pointer">EVENTS</a>
+									<a className="hover:text-[#8c6e56] cursor-pointer">
+										CONSULTING
+									</a>
+									<a className="hover:text-[#8c6e56] cursor-pointer">ARTISTS</a> */}
+							<Link
+								href="/experiences"
+								className="text-[rgb(253,240,214)] hover:text-[#88572c] hover:cursor-pointer text-xl montserrat"
 							>
-								DESTINATIONS
-							</a>
+								EXPERIENCES
+							</Link>
 							<Link
 								href="/residencies"
-								className="hover:text-[#8c6e56] cursor-pointer"
-								id="montFont"
+								className="text-[rgb(253,240,214)] hover:text-[#88572c] hover:cursor-pointer text-xl montserrat"
 							>
 								RESIDENCIES
 							</Link>
 							<Link
-								href="/experiences"
-								className="hover:text-[#8c6e56] cursor-pointer"
+								href="/memberships"
+								className="text-[rgb(253,240,214)] hover:text-[#88572c] hover:cursor-pointer text-xl montserrat"
 							>
-								EXPERIENCES
+								MEMBERSHIPS
 							</Link>
 						</div>
-					</div> */}
+					</div>
 					<div
 						className="text-xl montserrat"
 						onMouseOver={() => setShowAboutNav(true)}
 						onMouseOut={() => setShowAboutNav(false)}
 					>
-						<div className="text-[rgb(255,228,203)] hover:text-[#88572c] hover:cursor-pointer">
+						<div
+							className={` hover:cursor-pointer ${showAboutNav ? "text-[#88572c]" : "text-[rgb(253,240,214)] hover:text-[#88572c]"}`}
+						>
 							ABOUT
 						</div>
 						<div
@@ -209,13 +211,13 @@ export function Nav() {
 									<a className="hover:text-[#8c6e56] cursor-pointer">ARTISTS</a> */}
 							<Link
 								href="/contact"
-								className="hover:text-[rgb(255,228,203)] cursor-pointer"
+								className="text-[rgb(253,240,214)] hover:text-[#88572c] hover:cursor-pointer text-xl montserrat"
 							>
 								CONTACT/APPLY
 							</Link>
 							<Link
 								href="/about"
-								className="hover:text-[rgb(255,228,203)] cursor-pointer"
+								className="text-[rgb(253,240,214)] hover:text-[#88572c] hover:cursor-pointer text-xl montserrat"
 							>
 								ABOUT
 							</Link>

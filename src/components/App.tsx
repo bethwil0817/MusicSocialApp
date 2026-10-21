@@ -16,7 +16,6 @@ import wisco from "../images/wisco.jpg";
 import location from "../images/locationIcon.png";
 import saverDesktop from "../images/saverDesktopjp.jpg";
 import mobileSaver from "../images/mobilesaverjp.jpg";
-import airplaneVideo from "../images/Airplane.mp4";
 import event from "../images/eventoverhead.jpg";
 import bioPic1 from "../images/biopic.jpg";
 import wavesComing from "../images/sunsetwaves.mp4";
@@ -282,7 +281,7 @@ export function Home() {
 										</Link>
 										<Link
 											className="p-2 sm:p-4 text-xl rounded-lg bg-[#a86933] hover:bg-[#a57245] text-[rgb(253,240,214)] cursor-pointer"
-											href=""
+											href="/memberships"
 										>
 											Join the Culture Club
 										</Link>
@@ -451,7 +450,7 @@ export function Home() {
 												className="p-2 z-200 pointer-events-auto mx-auto hover:cursor-pointer bg-[rgb(253,240,214)] hover:bg-[rgb(253,240,214)] text-[#a86933] rounded-lg w-max"
 												href="/residencies"
 											>
-												View More About Residencies
+												Learn More About Residencies
 											</Link>
 										</div>
 										<div
@@ -469,7 +468,7 @@ export function Home() {
 											</div>
 											<Link
 												className="p-2 z-200 pointer-events-auto mx-auto hover:cursor-pointer bg-[rgb(253,240,214)] hover:bg-[rgb(253,240,214)] text-[#a86933] rounded-lg w-max"
-												href="/contact?path=Membership"
+												href="/memberships"
 											>
 												Join the Culture Club
 											</Link>
@@ -994,7 +993,7 @@ export function Home() {
 											{artistsData.map((artist, index) => {
 												if (selectedArtist === artist.name) {
 													return (
-														<Reveal>
+														<Reveal key={artist.name}>
 															<div
 																className={` h-full place-content-center justify-center flex flex-col m-auto items-center text-center gap-6 transition-all ease-in-out duration-700 pointer-events-none`}
 																key={index}
@@ -1171,23 +1170,19 @@ export function Home() {
 											</Reveal>
 											<Reveal xVal={-200}>
 												<button className="bg-[#a86933] text-[rgb(253,240,214)] mt-4 p-2 sm:p-4 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-													<Link href="/contact?path=Residency">
-														Apply as an Artist
-													</Link>
+													<Link href="/residencies">Apply as an Artist</Link>
 												</button>
 											</Reveal>
 										</div>
 										<div className="md:px-6 py-4 md:py-10">
 											<Reveal xVal={200}>
 												<button className="bg-[#a86933] text-[rgb(253,240,214)] mt-4 p-2 sm:p-4 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-													<Link href="/contact?path=Membership">
-														Join the Culture Club
-													</Link>
+													<Link href="/memberships">Join the Culture Club</Link>
 												</button>
 											</Reveal>
 											<Reveal xVal={200}>
 												<button className="bg-[#a86933] text-[rgb(253,240,214)] mt-4 p-2 sm:p-4 w-full text-xl rounded-lg hover:cursor-pointer border border-transparent transition-all ease-in-out hover:bg-transparent hover:text-[#a86933] hover:border-[#a86933]">
-													<Link href="/contact?path=Partner">
+													<Link href="/contact?form=Partner">
 														Partner With Us
 													</Link>
 												</button>

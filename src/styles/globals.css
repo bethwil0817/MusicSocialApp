@@ -3,6 +3,9 @@
 
 @import "tailwindcss";
 
+@source "../src/components/**/*.{js,ts,jsx,tsx,mdx}";
+@source "./**/*.{js,ts,jsx,tsx,mdx}";
+
 .cursive {
 	font-size: large;
 }

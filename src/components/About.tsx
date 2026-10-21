@@ -1,9 +1,8 @@
-import { Nav } from "./Nav";
+"use client";
 import revlogo from "../images/revlogoonly.png";
 import footprints from "../images/footprints.png";
 import bridge from "../images/bridge.png";
 import { Reveal } from "./Reveal";
-import Footer from "./Footer";
 
 export default function About() {
 	return (

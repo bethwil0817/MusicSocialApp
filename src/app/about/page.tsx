@@ -1,40 +1,45 @@
-"use client";
-import { useEffect, useState } from "react";
-import React from "react";
+import type { Metadata } from "next";
+import logo from "../../images/iconrev.png";
 import About from "../../components/About";
 import App from "../../components/App";
+import "../../styles/globals.css";
+
+export const metadata: Metadata = {
+	title: "About Revolūtiō | Global Culture Club",
+	description:
+		"Learn about Revolūtiō, a global culture club connecting meaningful travel, artists, local communities, and creative experiences.",
+	alternates: {
+		canonical: "/about",
+	},
+	openGraph: {
+		title: "About Revolūtiō | Global Culture Club",
+		description:
+			"Learn about Revolūtiō, a global culture club connecting meaningful travel, artists, local communities, and creative experiences.",
+		url: "https://joinrevolutio.com/about",
+		siteName: "Revolūtiō",
+		images: [
+			{
+				url: logo.src,
+				width: logo.width,
+				height: logo.height,
+				alt: "Revolūtiō logo",
+			},
+		],
+		locale: "en_US",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "About Revolūtiō | Global Culture Club",
+		description:
+			"Learn about Revolūtiō, a global culture club connecting meaningful travel, artists, local communities, and creative experiences.",
+		images: [logo.src],
+	},
+};
 
 export default function NextAboutPage() {
-	const [mounted, setMounted] = useState(false);
-
-	useEffect(() => {
-		setMounted(true);
-	}, []);
-
-	if (!mounted) {
-		return (
-			<div
-				style={{
-					minHeight: "100vh",
-					width: "100%",
-					background:
-						"linear-gradient(45deg, rgb(255,246,234), rgb(255,246,234)",
-				}}
-			/>
-		);
-	}
-
 	return (
 		<App>
-			<title>Home | Music Social App</title>
-			<meta
-				name="description"
-				content="Welcome to the ultimate music social app."
-			/>
-			<meta
-				property="og:title"
-				content="Home | Music Social App"
-			/>
 			<About />
 		</App>
 	);

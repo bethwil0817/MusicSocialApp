@@ -1,29 +1,43 @@
-"use client";
-import { useEffect, useState } from "react";
-import React from "react";
+import type { Metadata } from "next";
+import logo from "../../images/iconrev.png";
 import Experiences from "../../components/Experiences";
 import App from "../../components/App";
+import "../../styles/globals.css";
+
+export const metadata: Metadata = {
+	title: "Curated Cultural Experiences | Revolūtiō",
+	description:
+		"Discover meaningful travel, local culture, music, food, art, and community through curated experiences with Revolūtiō.",
+	alternates: {
+		canonical: "/experiences",
+	},
+	openGraph: {
+		title: "Curated Cultural Experiences | Revolūtiō",
+		description:
+			"Discover meaningful travel, local culture, music, food, art, and community through curated experiences with Revolūtiō.",
+		url: "https://joinrevolutio.com/experiences",
+		siteName: "Revolūtiō",
+		images: [
+			{
+				url: logo.src,
+				width: logo.width,
+				height: logo.height,
+				alt: "Revolūtiō logo",
+			},
+		],
+		locale: "en_US",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Curated Cultural Experiences | Revolūtiō",
+		description:
+			"Discover meaningful travel, local culture, music, food, art, and community through curated experiences with Revolūtiō.",
+		images: [logo.src],
+	},
+};
 
 export default function NextExperiencesPage() {
-	const [mounted, setMounted] = useState(false);
-
-	useEffect(() => {
-		setMounted(true);
-	}, []);
-
-	if (!mounted) {
-		return (
-			<div
-				style={{
-					minHeight: "100vh",
-					width: "100%",
-					background:
-						"linear-gradient(45deg, rgb(10, 25, 15), rgb(86, 109, 94))",
-				}}
-			/>
-		);
-	}
-
 	return (
 		<App>
 			<Experiences />

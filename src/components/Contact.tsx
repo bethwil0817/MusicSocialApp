@@ -10,25 +10,29 @@ export default function Contact() {
 	const autoRef = useRef<HTMLDivElement | null>(null);
 
 	useEffect(() => {
-		if (formSearch) {
-			if (formSearch.includes("Experience")) {
-				setFormState("Experience");
-			} else if (formSearch.includes("Residency")) {
-				setFormState("Residency");
-			} else if (formSearch.includes("Membership")) {
-				setFormState("Membership");
-			} else if (formSearch.includes("Partner")) {
-				setFormState("Partner");
-			} else if (formSearch.includes("Consulting")) {
-				setFormState("Consulting");
-			}
-			handleScroll(autoRef);
+		const requestedForm = new URLSearchParams(window.location.search).get(
+			"form",
+		);
+
+		if (
+			requestedForm === "Experience" ||
+			requestedForm === "Residency" ||
+			requestedForm === "Membership" ||
+			requestedForm === "Partner" ||
+			requestedForm === "Consulting"
+		) {
+			setFormState(requestedForm);
 		}
 	}, []);
 
-	const handleScroll = (refName: any) => {
-		refName.current?.scrollIntoView({ behavior: "smooth" });
-	};
+	useEffect(() => {
+		if (formState) {
+			autoRef.current?.scrollIntoView({
+				behavior: "smooth",
+				block: "start",
+			});
+		}
+	}, [formState]);
 
 	const [honeypot, setHoneypot] = useState("");
 	const [revealSuccess, setRevealSuccess] = useState(false);
@@ -59,11 +63,9 @@ export default function Contact() {
 				setRevealSuccess(true);
 				setResult("Form Submitted Successfully");
 				event.target.reset();
-				// handleScroll(autoRef);
 			} else {
 				setRevealSuccess(false);
 				setResult("Error");
-				// handleScroll(autoRef);
 			}
 		}
 	};
@@ -124,7 +126,6 @@ export default function Contact() {
 									className={`p-2 sm:p-4 rounded-lg transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)] ${formState === "Experience" ? "bg-[rgb(253,240,214)] text-[rgb(10,25,15)]" : ""}`}
 									onClick={() => {
 										setFormState("Experience");
-										handleScroll(autoRef);
 										setHoneypot("");
 										setRevealSuccess(false);
 									}}
@@ -137,7 +138,6 @@ export default function Contact() {
 									className={`p-2 sm:p-4 rounded-lg transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)] ${formState === "Residency" ? "bg-[rgb(253,240,214)] text-[rgb(10,25,15)]" : ""}`}
 									onClick={() => {
 										setFormState("Residency");
-										handleScroll(autoRef);
 										setHoneypot("");
 										setRevealSuccess(false);
 									}}
@@ -150,7 +150,6 @@ export default function Contact() {
 									className={`p-2 sm:p-4 rounded-lg transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)] ${formState === "Membership" ? "bg-[rgb(253,240,214)] text-[rgb(10,25,15)]" : ""}`}
 									onClick={() => {
 										setFormState("Membership");
-										handleScroll(autoRef);
 										setHoneypot("");
 										setRevealSuccess(false);
 									}}
@@ -163,7 +162,6 @@ export default function Contact() {
 									className={`p-2 sm:p-4 rounded-lg transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)] ${formState === "Partner" ? "bg-[rgb(253,240,214)] text-[rgb(10,25,15)]" : ""}`}
 									onClick={() => {
 										setFormState("Partner");
-										handleScroll(autoRef);
 										setHoneypot("");
 										setRevealSuccess(false);
 									}}
@@ -176,7 +174,6 @@ export default function Contact() {
 									className={`p-2 sm:p-4 rounded-lg transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)] ${formState === "Consulting" ? "bg-[rgb(253,240,214)] text-[rgb(10,25,15)]" : ""}`}
 									onClick={() => {
 										setFormState("Consulting");
-										handleScroll(autoRef);
 										setHoneypot("");
 										setRevealSuccess(false);
 									}}

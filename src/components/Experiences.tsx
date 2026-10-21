@@ -1,7 +1,6 @@
-import { Nav } from "./Nav";
+"use client";
 import guatmount from "../images/guatmount.jpg";
 import { Reveal } from "./Reveal";
-import Footer from "./Footer";
 import Link from "next/link";
 import { useRef } from "react";
 

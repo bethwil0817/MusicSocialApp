@@ -3,7 +3,6 @@ import { Reveal } from "./Reveal";
 import lake from "../images/lakeView.jpg";
 import beachView from "../images/beachview.jpg";
 import { useRef } from "react";
-import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import { ExpandContent } from "./Expand";
 import Link from "next/link";
 
@@ -233,11 +232,11 @@ export const Residencies = () => {
 											{price.desc}
 										</div>
 									</div>
-									<div className="pt-5 flex gap-4 text-center justify-center">
+									{/* <div className="pt-5 flex gap-4 text-center justify-center">
 										<div className="font-bold tracking-wide text-xl sm:text-2xl text-[rgb(253,240,214)]">
 											{price.price}
 										</div>
-									</div>
+									</div> */}
 								</div>
 							);
 						})}

@@ -14,6 +14,8 @@ export function Nav() {
 	useEffect(() => {
 		let timeoutRef: any = null;
 
+		if (typeof window === "undefined") return;
+
 		const handleScrollUp = () => {
 			setScrollUp(window.scrollY);
 
@@ -36,7 +38,7 @@ export function Nav() {
 				clearTimeout(timeoutRef);
 			}
 		};
-	}, [window.scrollY, scrollUp, originalScroll]);
+	}, [scrollUp, originalScroll]);
 
 	return (
 		<div>

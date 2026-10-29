@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+	output: "export",
 	// 2. Disables Next.js default image optimization server
 	// (Required for SSG because static hosting can't optimize images on the fly)
 	images: {

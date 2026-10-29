@@ -3,13 +3,14 @@ import { useEffect, useRef, useState } from "react";
 import { Reveal } from "./Reveal";
 
 export default function Contact() {
-	const formSearch = window.location.search || null;
 	const [formState, setFormState] = useState<
 		"Experience" | "Residency" | "Membership" | "Partner" | "Consulting" | null
 	>(null);
 	const autoRef = useRef<HTMLDivElement | null>(null);
 
 	useEffect(() => {
+		if (typeof window === "undefined") return;
+
 		const requestedForm = new URLSearchParams(window?.location?.search).get(
 			"form",
 		);

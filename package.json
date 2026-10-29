@@ -24,7 +24,7 @@
 	"contributors": [],
 	"scripts": {
 		"dev": "next dev --webpack",
-		"build": "next build",
+		"build": "next build && npx @opennextjs/cloudflare",
 		"start": "next start"
 	},
 	"dependencies": {

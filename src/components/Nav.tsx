@@ -41,7 +41,7 @@ export function Nav() {
 	return (
 		<div>
 			<div
-				className={`flex flex-col transition-all ease-in-out duration-200 md:hidden bg-[rgba(10,25,15,0.7)] justify-end h-15 w-full fixed top-0 right-0 z-40 px-6 ${showNav ? "opacity-100 visible" : "pointer-events-none opacity-0 invisible"}`}
+				className={`flex flex-col transition-all ease-in-out duration-200 md:hidden bg-[rgba(10,25,15,0.9)] justify-end h-15 w-full fixed top-0 right-0 z-40 px-6 ${showNav ? "opacity-100 visible" : "pointer-events-none opacity-0 invisible"}`}
 			>
 				<div>
 					<div className="flex flex-row justify-between">
@@ -122,6 +122,12 @@ export function Nav() {
 										CONSULTING
 									</a> */}
 						{/* <a className="hover:text-[#ffffff] cursor-pointer">ARTISTS</a> */}
+						<Link
+							href="/destinations"
+							className="hover:text-[#88572c] cursor-pointer"
+						>
+							DESTINATIONS
+						</Link>
 						<Link
 							href="/contact"
 							className="hover:text-[#88572c] cursor-pointer"
@@ -209,6 +215,12 @@ export function Nav() {
 										CONSULTING
 									</a>
 									<a className="hover:text-[#8c6e56] cursor-pointer">ARTISTS</a> */}
+							<Link
+								href="/destinations"
+								className="text-[rgb(253,240,214)] hover:text-[#88572c] hover:cursor-pointer text-xl montserrat"
+							>
+								DESTINATIONS
+							</Link>
 							<Link
 								href="/contact"
 								className="text-[rgb(253,240,214)] hover:text-[#88572c] hover:cursor-pointer text-xl montserrat"

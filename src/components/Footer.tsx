@@ -19,7 +19,7 @@ export default function Footer() {
 					<div className="underline uppercase flex text-center text-[rgb(253,240,214)] justify-center underline-offset-8 text-xl tracking-wide sm:tracking-[0.35em] pb-6">
 						Navigation
 					</div>
-					<div className="grid text-center grid-cols-1 text-[rgb(253,240,214)]">
+					<div className="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 text-center text-[rgb(253,240,214)]">
 						<Link
 							className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)]"
 							href="/"
@@ -32,27 +32,24 @@ export default function Footer() {
 						>
 							Experiences
 						</Link>
-						{/* <button className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)]">
+						<Link
+							className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)]"
+							href="/experiences"
+						>
 							Residencies
-						</button> */}
+						</Link>
+						<Link
+							className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)]"
+							href="/experiences"
+						>
+							Memberships
+						</Link>
 						<Link
 							className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)]"
 							href="/destinations"
 						>
 							Destinations
 						</Link>
-						{/* <button className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)]">
-							Membership
-						</button> */}
-						{/* <button className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)]">
-							Events
-						</button> */}
-						{/* <button className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)]">
-							Consulting
-						</button> */}
-						{/* <button className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)]">
-							Artists
-						</button> */}
 						<Link
 							className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)]"
 							href="/about"
@@ -63,7 +60,7 @@ export default function Footer() {
 							className="p-2 rounded-lg lg:p-6 transition-all hover:cursor-pointer ease-in-out hover:border-transparent hover:text-[rgb(10,25,15)] hover:bg-[rgb(253,240,214)]"
 							href="/contact"
 						>
-							Contact
+							Contact/Apply
 						</Link>
 					</div>
 				</div>

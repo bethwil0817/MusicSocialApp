@@ -10,7 +10,7 @@ export default function Contact() {
 	const autoRef = useRef<HTMLDivElement | null>(null);
 
 	useEffect(() => {
-		const requestedForm = new URLSearchParams(window.location.search).get(
+		const requestedForm = new URLSearchParams(window?.location?.search).get(
 			"form",
 		);
 
